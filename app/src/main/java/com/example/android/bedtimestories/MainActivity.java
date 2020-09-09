@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -19,9 +20,10 @@ public class MainActivity extends AppCompatActivity {
     // loads data in the memory and displays the main buttons
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        StoryUtils.loadStoryLists(this);
+
 
         Button categoriesView = findViewById(R.id.categoriesButton);
         categoriesView.setOnClickListener(new View.OnClickListener() {

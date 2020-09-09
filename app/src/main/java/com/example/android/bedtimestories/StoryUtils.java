@@ -51,8 +51,8 @@ public class StoryUtils {
      * @return int ID of the last read story
      */
     public static int last() {
-        //TODO
-        return 0;
+        int last = sharedPref.getInt("last_read", 0);
+        return last;
     }
 
     /**
@@ -144,6 +144,12 @@ public class StoryUtils {
         story.setCode(newCode);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putInt(String.valueOf(ID), newCode);
+        editor.apply();
+    }
+
+    public static void setLastRead(int storyID) {
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt("last_read", storyID);
         editor.apply();
     }
 }

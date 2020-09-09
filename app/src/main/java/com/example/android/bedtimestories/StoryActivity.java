@@ -3,12 +3,17 @@ package com.example.android.bedtimestories;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.MenuItem;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * The class displays a single story on the screen
@@ -17,6 +22,9 @@ import androidx.appcompat.app.AppCompatActivity;
  */
 
 public class StoryActivity extends AppCompatActivity {
+
+    private final int DELAY_FOR_LAST = 5000;
+    private boolean stopped = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,25 +44,47 @@ public class StoryActivity extends AppCompatActivity {
 
         final ToggleButton favButton = findViewById(R.id.favoriteToggle);
         if (story.isFavorite()){
-            favButton.setBackgroundColor(Color.YELLOW);
+            favButton.setChecked(true);
         }
         else {
-            favButton.setBackgroundColor(Color.WHITE);
+            favButton.setChecked(false);
         }
-        favButton.setBackgroundColor(Color.WHITE);
         favButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    favButton.setBackgroundColor(Color.YELLOW);
                     StoryUtils.changeFavoriteStatus(storyID, true);
                 }
                 else {
-                    favButton.setBackgroundColor(Color.WHITE);
                     StoryUtils.changeFavoriteStatus(storyID, false);
                 }
             }
         });
+
+        final Handler handler = new Handler(Looper.getMainLooper());
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (!stopped){
+                    setAsLast(storyID);
+                }
+            }
+        }, DELAY_FOR_LAST);
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        stopped = true;
+    }
+
+    private void setAsLast(int storyID){
+        StoryUtils.setLastRead(storyID);
+    }
+
+    private void markAsRead(){
+        //TODO
     }
 
 

@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/darker_gray">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/storyNameView"
@@ -34,11 +33,12 @@
         android:id="@+id/favoriteToggle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/style_favorite_button"
+        android:scaleX="0.6"
+        android:textOff=""
+        android:textOn=""
         app:layout_constraintBottom_toTopOf="@+id/storyTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/storyNameView"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/baseline_favorite_white_24"
-        android:textOn=""
-        android:textOff=""/>
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
