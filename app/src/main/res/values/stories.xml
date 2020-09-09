@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="story_arrays">
+        <item>@array/story0</item>
+        <item>@array/story1</item>
+        <item>@array/story2</item>
+    </array>
+    <array name="story0">
+        <item>"Story 0"</item>
+        <item>@string/story0text</item>
+    </array>
+    <array name="story1">
+        <item>"Story 1"</item>
+        <item>@string/story1text</item>
+    </array>
+    <array name="story2">
+        <item>"Story 2"</item>
+        <item>@string/story2text</item>
+    </array>
+</resources>

@@ -1,8 +1,15 @@
 package com.example.android.bedtimestories;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.util.Log;
 
 import java.util.ArrayList;
+
+import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 
 /**
  * The class contains different utility methods
@@ -14,15 +21,18 @@ import java.util.ArrayList;
 public class StoryUtils {
 
     private static int[] animalIDs = {0, 1, 2};
-    private static int[] kidIDs = {0};
+    private static int[] kidIDs = {1};
 
     private static ArrayList<Story> allStories;
+
+    private static SharedPreferences sharedPref;
+
 
     /**
      * This method does all necessary initializations. This is called on start of the app.
      */
-    public static void loadStoryLists() {
-        initializeAllStories();
+    public static void loadStoryLists(Context context) {
+        initializeAllStories(context);
     }
 
     /**
@@ -62,8 +72,8 @@ public class StoryUtils {
      * @return ArrayList<Story> all stories in the given category
      */
     public static ArrayList<Story> getStoryList(String categoryName) {
-        Log.i("StoryUtils", categoryName);
         if (categoryName.equals("All")) return allStories;
+        if (categoryName.equals("Favorites")) return getFavorites();
 
         ArrayList<Story> categoryStoryList = new ArrayList<>();
 
@@ -77,14 +87,63 @@ public class StoryUtils {
         return categoryStoryList;
     }
 
+    public static ArrayList<Story> getFavorites(){
+        ArrayList<Story> favorites = new ArrayList<>();
+        for (Story story : allStories){
+            if (story.isFavorite())
+                favorites.add(story);
+        }
+        return favorites;
+    }
+
     /**
      * Helper method that creates the story list with all stories
      */
-    private static void initializeAllStories() {
-        int ID = 0;
+    private static void initializeAllStories(Context context) {
+        sharedPref = getDefaultSharedPreferences(context);
         allStories = new ArrayList<>();
-        allStories.add(new Story(ID++, "Story 0", R.string.story0text));
-        allStories.add(new Story(ID++, "Story 1", R.string.story1text));
-        allStories.add(new Story(ID++, "Story 2", R.string.story2text));
+        Resources res = context.getResources();
+        TypedArray storiesArray = res.obtainTypedArray(R.array.story_arrays);
+        for (int id = 0; id < storiesArray.length(); id++){
+            int arrayResourceId = storiesArray.getResourceId(id, 0);
+            TypedArray storyArray = res.obtainTypedArray(arrayResourceId);
+            String storyName = storyArray.getString(0);
+            @SuppressLint("ResourceType")
+            int resourceId = storyArray.getResourceId(1,0);
+            int code = sharedPref.getInt(String.valueOf(id), 0);
+            allStories.add(new Story(id, storyName, resourceId, code));
+            storyArray.recycle();
+        }
+        storiesArray.recycle();
+    }
+
+    /**
+     * This method marks/un-marks a story as favorite and saves the settings
+     * @param ID int ID of the story
+     * @param status boolean true if the story should be favorite, false otherwise
+     */
+    public static void changeFavoriteStatus(int ID, boolean status){
+        Story story = getStory(ID);
+        int oldCode = story.getCode();
+        int newCode = (status)? oldCode | 2 : oldCode & 1;
+        story.setCode(newCode);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(String.valueOf(ID), newCode);
+        editor.apply();
+    }
+
+    /**
+     * This method marks/un-marks a story as read and saves the settings
+     * @param ID int ID of the story
+     * @param status boolean true if the story should be read, false otherwise
+     */
+    public static void changeReadStatus(int ID, boolean status){
+        Story story = getStory(ID);
+        int oldCode = story.getCode();
+        int newCode = (status)? oldCode | 1 : oldCode & 2;
+        story.setCode(newCode);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(String.valueOf(ID), newCode);
+        editor.apply();
     }
 }

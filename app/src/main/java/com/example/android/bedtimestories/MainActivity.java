@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        StoryUtils.loadStoryLists();
+        StoryUtils.loadStoryLists(this);
 
         Button categoriesView = findViewById(R.id.categoriesButton);
         categoriesView.setOnClickListener(new View.OnClickListener() {
