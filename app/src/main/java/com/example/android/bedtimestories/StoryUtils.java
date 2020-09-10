@@ -41,8 +41,13 @@ public class StoryUtils {
      * @return int ID of a random unread story
      */
     public static int random() {
-        //TODO
-        return 0;
+        ArrayList<Integer> indices = new ArrayList<>();
+        for (int id = 0; id < allStories.size(); id++){
+            Story story = allStories.get(id);
+            if (!story.isRead()) indices.add(id);
+        }
+        if (indices.size() == 0) return (int)(Math.random() * allStories.size());
+        return indices.get((int)(Math.random() * indices.size()));
     }
 
     /**
@@ -51,8 +56,7 @@ public class StoryUtils {
      * @return int ID of the last read story
      */
     public static int last() {
-        int last = sharedPref.getInt("last_read", 0);
-        return last;
+        return sharedPref.getInt("last_read", 0);
     }
 
     /**

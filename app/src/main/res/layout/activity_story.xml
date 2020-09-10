@@ -33,12 +33,24 @@
         android:id="@+id/favoriteToggle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="66dp"
         android:background="@drawable/style_favorite_button"
         android:scaleX="0.6"
         android:textOff=""
         android:textOn=""
         app:layout_constraintBottom_toTopOf="@+id/storyTextView"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/unreadButton"
         app:layout_constraintStart_toEndOf="@+id/storyNameView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/unreadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mark unread"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/storyTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/favoriteToggle"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

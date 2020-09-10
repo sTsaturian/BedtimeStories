@@ -1,30 +1,29 @@
 package com.example.android.bedtimestories;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 /**
- * The class displays a single story on the screen
+ * This activity displays a single story on the screen
  *
  * @author Sergei Tsaturian
  */
 
 public class StoryActivity extends AppCompatActivity {
 
+    private static final int DELAY_FOR_READ = 10000;
     private final int DELAY_FOR_LAST = 5000;
-    private boolean stopped = false;
+    private Handler mHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,30 +60,51 @@ public class StoryActivity extends AppCompatActivity {
             }
         });
 
-        final Handler handler = new Handler(Looper.getMainLooper());
-        handler.postDelayed(new Runnable() {
+        final Button unreadButton = findViewById(R.id.unreadButton);
+        if (story.isRead()){
+            unreadButton.setVisibility(View.VISIBLE);
+        }
+        unreadButton.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                markAsUnread(storyID);
+            }
+        })
+;
+
+        mHandler = new Handler(Looper.getMainLooper());
+        mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                if (!stopped){
                     setAsLast(storyID);
-                }
             }
         }, DELAY_FOR_LAST);
+        if (!story.isRead()) mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                markAsRead(storyID);
+                unreadButton.setVisibility(View.VISIBLE);
+            }
+        }, DELAY_FOR_READ);
 
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
-        stopped = true;
+    protected void onPause() {
+        super.onPause();
+        mHandler.removeCallbacksAndMessages(null);
     }
 
     private void setAsLast(int storyID){
         StoryUtils.setLastRead(storyID);
     }
 
-    private void markAsRead(){
-        //TODO
+    private void markAsRead(int storyID){
+        StoryUtils.changeReadStatus(storyID, true);
+    }
+
+    private void markAsUnread(int storyID){
+        StoryUtils.changeReadStatus(storyID, false);
     }
 
 
