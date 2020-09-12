@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 
 /**
- * The class contains different utility methods
+ * The class contains various utility methods
  *
  * @author Sergei Tsaturian
  */
