@@ -1,12 +1,14 @@
 package com.example.android.bedtimestories;
 
+import java.io.Serializable;
+
 /**
  * The class holds information about a single story: id, name and path to the resource
  *
  * @author Sergei Tsaturian
  */
 
-public class Story {
+public class Story implements Serializable {
     private int ID;
     private String name;
     private int resourceID;

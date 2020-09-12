@@ -4,6 +4,33 @@
         <item>@array/story0</item>
         <item>@array/story1</item>
         <item>@array/story2</item>
+        <item>@array/story3</item>
+        <item>@array/story4</item>
+        <item>@array/story5</item>
+        <item>@array/story6</item>
+        <item>@array/story7</item>
+        <item>@array/story8</item>
+        <item>@array/story9</item>
+        <item>@array/story10</item>
+        <item>@array/story11</item>
+        <item>@array/story12</item>
+        <item>@array/story13</item>
+        <item>@array/story14</item>
+        <item>@array/story15</item>
+        <item>@array/story16</item>
+        <item>@array/story17</item>
+        <item>@array/story18</item>
+        <item>@array/story19</item>
+        <item>@array/story20</item>
+        <item>@array/story21</item>
+        <item>@array/story22</item>
+        <item>@array/story23</item>
+        <item>@array/story24</item>
+        <item>@array/story25</item>
+        <item>@array/story26</item>
+        <item>@array/story27</item>
+        <item>@array/story28</item>
+        <item>@array/story29</item>
     </array>
     <array name="story0">
         <item>"Story 0"</item>
@@ -15,6 +42,115 @@
     </array>
     <array name="story2">
         <item>"Story 2"</item>
-        <item>@string/story2text</item>
+        <item>@string/story1text</item>
     </array>
+    <array name="story3">
+        <item>"Story 3"</item>
+        <item>@string/story3text</item>
+    </array>
+    <array name="story4">
+        <item>"Story 4"</item>
+        <item>@string/story4text</item>
+    </array>
+    <array name="story5">
+        <item>"Story 5"</item>
+        <item>@string/story5text</item>
+    </array>
+    <array name="story6">
+        <item>"Story 6"</item>
+        <item>@string/story6text</item>
+    </array>
+    <array name="story7">
+        <item>"Story 7"</item>
+        <item>@string/story7text</item>
+    </array>
+    <array name="story8">
+        <item>"Story 8"</item>
+        <item>@string/story8text</item>
+    </array>
+    <array name="story9">
+        <item>"Story 9"</item>
+        <item>@string/story9text</item>
+    </array>
+    <array name="story10">
+        <item>"Story 10"</item>
+        <item>@string/story10text</item>
+    </array>
+    <array name="story11">
+        <item>"Story 11"</item>
+        <item>@string/story11text</item>
+    </array>
+    <array name="story12">
+        <item>"Story 12"</item>
+        <item>@string/story12text</item>
+    </array>
+    <array name="story13">
+        <item>"Story 13"</item>
+        <item>@string/story13text</item>
+    </array>
+    <array name="story14">
+        <item>"Story 14"</item>
+        <item>@string/story14text</item>
+    </array>
+    <array name="story15">
+        <item>"Story 15"</item>
+        <item>@string/story15text</item>
+    </array>
+    <array name="story16">
+        <item>"Story 16"</item>
+        <item>@string/story16text</item>
+    </array>
+    <array name="story17">
+        <item>"Story 17"</item>
+        <item>@string/story17text</item>
+    </array>
+    <array name="story18">
+        <item>"Story 18"</item>
+        <item>@string/story18text</item>
+    </array>
+    <array name="story19">
+        <item>"Story 19"</item>
+        <item>@string/story19text</item>
+    </array>
+    <array name="story20">
+        <item>"Story 20"</item>
+        <item>@string/story20text</item>
+    </array>
+    <array name="story21">
+        <item>"Story 21"</item>
+        <item>@string/story21text</item>
+    </array>
+    <array name="story22">
+        <item>"Story 22"</item>
+        <item>@string/story22text</item>
+    </array>
+    <array name="story23">
+        <item>"Story 23"</item>
+        <item>@string/story23text</item>
+    </array>
+    <array name="story24">
+        <item>"Story 24"</item>
+        <item>@string/story24text</item>
+    </array>
+    <array name="story25">
+        <item>"Story 25"</item>
+        <item>@string/story25text</item>
+    </array>
+    <array name="story26">
+        <item>"Story 26"</item>
+        <item>@string/story26text</item>
+    </array>
+    <array name="story27">
+        <item>"Story 27"</item>
+        <item>@string/story27text</item>
+    </array>
+    <array name="story28">
+        <item>"Story 28"</item>
+        <item>@string/story28text</item>
+    </array>
+    <array name="story29">
+        <item>"Story 29"</item>
+        <item>@string/story29text</item>
+    </array>
+
 </resources>

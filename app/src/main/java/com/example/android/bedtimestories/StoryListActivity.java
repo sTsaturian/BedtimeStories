@@ -4,9 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -28,9 +31,20 @@ public class StoryListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_storylist);
 
-        Intent intent = getIntent();
-        String categoryName = intent.getStringExtra("categoryName");
+        final ViewGroup actionBarLayout = (ViewGroup) getLayoutInflater().inflate(
+                R.layout.action_bar,null);
+        // Set up your ActionBar
+        final ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setDisplayShowCustomEnabled(true);
+        actionBar.setCustomView(actionBarLayout);
 
+        Intent intent = getIntent();
+        final String categoryName = intent.getStringExtra("categoryName");
+
+        TextView titleView = findViewById(R.id.action_bar_title);
+        titleView.setText(categoryName);
 
         final ArrayList<Story> stories = StoryUtils.getStoryList(categoryName);
 
@@ -43,6 +57,8 @@ public class StoryListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(StoryListActivity.this, StoryActivity.class);
                 intent.putExtra("storyID", stories.get(position).getID());
+                intent.putExtra("storyList", stories);
+                intent.putExtra("index", position);
                 startActivity(intent);
             }
         });

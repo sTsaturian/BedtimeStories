@@ -25,7 +25,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:padding="16dp"
-        android:text="Kids Stories"
+        android:text="Kid Stories"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

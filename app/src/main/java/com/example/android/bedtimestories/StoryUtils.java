@@ -20,8 +20,9 @@ import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 
 public class StoryUtils {
 
-    private static int[] animalIDs = {0, 1, 2};
-    private static int[] kidIDs = {1};
+    private static int[] animalIDs = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
+    17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29};
+    private static int[] kidIDs = {1, 4, 10};
 
     private static ArrayList<Story> allStories;
 
@@ -72,18 +73,18 @@ public class StoryUtils {
     /**
      * This method retrieves all stories with given category
      *
-     * @param categoryName the name of the category. Could be "All"
+     * @param categoryName the name of the category. Could be "All Stories"
      * @return ArrayList<Story> all stories in the given category
      */
     public static ArrayList<Story> getStoryList(String categoryName) {
-        if (categoryName.equals("All")) return allStories;
+        if (categoryName.equals("All Stories")) return allStories;
         if (categoryName.equals("Favorites")) return getFavorites();
 
         ArrayList<Story> categoryStoryList = new ArrayList<>();
 
         int[] idList = new int[0];
-        if (categoryName.equals("Animals")) idList = animalIDs;
-        else if (categoryName.equals("Kids")) idList = kidIDs;
+        if (categoryName.equals("Animal Stories")) idList = animalIDs;
+        else if (categoryName.equals("Kid Stories")) idList = kidIDs;
 
         for (int ID : idList) {
             categoryStoryList.add(allStories.get(ID));
