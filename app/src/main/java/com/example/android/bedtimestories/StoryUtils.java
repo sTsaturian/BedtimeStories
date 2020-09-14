@@ -157,4 +157,8 @@ public class StoryUtils {
         editor.putInt("last_read", storyID);
         editor.apply();
     }
+
+    public static int getNumberOfStories() {
+        return allStories.size();
+    }
 }
