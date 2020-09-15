@@ -33,47 +33,47 @@
         <item>@array/story29</item>
     </array>
     <array name="story0">
-        <item>"Story 0"</item>
+        <item>"The boy who cried wolf"</item>
         <item>@string/story0text</item>
     </array>
     <array name="story1">
-        <item>"Story 1"</item>
+        <item>"The bundle of sticks"</item>
         <item>@string/story1text</item>
     </array>
     <array name="story2">
-        <item>"Story 2"</item>
+        <item>"The fox and the crow"</item>
         <item>@string/story1text</item>
     </array>
     <array name="story3">
-        <item>"Story 3"</item>
+        <item>"The lion and the mouse"</item>
         <item>@string/story3text</item>
     </array>
     <array name="story4">
-        <item>"Story 4"</item>
+        <item>"The tortoise and the hare"</item>
         <item>@string/story4text</item>
     </array>
     <array name="story5">
-        <item>"Story 5"</item>
+        <item>"The wind and the sun"</item>
         <item>@string/story5text</item>
     </array>
     <array name="story6">
-        <item>"Story 6"</item>
+        <item>"The wolf in sheep\'s clothing"</item>
         <item>@string/story6text</item>
     </array>
     <array name="story7">
-        <item>"Story 7"</item>
+        <item>"Little Red Riding Hood"</item>
         <item>@string/story7text</item>
     </array>
     <array name="story8">
-        <item>"Story 8"</item>
+        <item>"Rapunzel"</item>
         <item>@string/story8text</item>
     </array>
     <array name="story9">
-        <item>"Story 9"</item>
+        <item>"Rumpelstiltskin"</item>
         <item>@string/story9text</item>
     </array>
     <array name="story10">
-        <item>"Story 10"</item>
+        <item>"The Frog Prince"</item>
         <item>@string/story10text</item>
     </array>
     <array name="story11">
