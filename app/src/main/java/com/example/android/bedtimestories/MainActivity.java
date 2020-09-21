@@ -38,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
         TextView titleView = findViewById(R.id.action_bar_title);
         titleView.setText("Bedtime Stories");
 
+        Button allStoriesView = findViewById(R.id.allStories);
+        allStoriesView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, StoryListActivity.class);
+                intent.putExtra("categoryName", "All Stories");
+                startActivity(intent);
+            }
+        });
+
         Button categoriesView = findViewById(R.id.categoriesButton);
         categoriesView.setOnClickListener(new View.OnClickListener() {
             @Override

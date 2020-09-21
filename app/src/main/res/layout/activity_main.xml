@@ -7,6 +7,18 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/allStories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="All stories"
+        app:layout_constraintBottom_toTopOf="@id/categoriesButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/categoriesButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,7 +28,7 @@
         app:layout_constraintBottom_toTopOf="@id/favoritesButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/allStories" />
 
     <Button
         android:id="@+id/favoritesButton"
@@ -49,8 +61,11 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:text="Random Story"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/continueLastButton" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

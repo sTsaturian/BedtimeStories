@@ -42,7 +42,7 @@
     </array>
     <array name="story2">
         <item>"The fox and the crow"</item>
-        <item>@string/story1text</item>
+        <item>@string/story2text</item>
     </array>
     <array name="story3">
         <item>"The lion and the mouse"</item>
