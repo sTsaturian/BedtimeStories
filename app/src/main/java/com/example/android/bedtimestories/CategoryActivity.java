@@ -51,5 +51,35 @@ public class CategoryActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        TextView aesopView = findViewById(R.id.aesopCategory);
+        aesopView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CategoryActivity.this, StoryListActivity.class);
+                intent.putExtra("categoryName", "Aesop Fables");
+                startActivity(intent);
+            }
+        });
+
+        TextView grimmView = findViewById(R.id.grimmCategory);
+        grimmView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CategoryActivity.this, StoryListActivity.class);
+                intent.putExtra("categoryName", "Brothers Grimm Stories");
+                startActivity(intent);
+            }
+        });
+
+        TextView andersenView = findViewById(R.id.andersenCategory);
+        andersenView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CategoryActivity.this, StoryListActivity.class);
+                intent.putExtra("categoryName", "Andersen Stories");
+                startActivity(intent);
+            }
+        });
     }
 }
