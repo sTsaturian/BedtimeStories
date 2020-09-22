@@ -31,6 +31,16 @@
         <item>@array/story27</item>
         <item>@array/story28</item>
         <item>@array/story29</item>
+        <item>@array/story30</item>
+        <item>@array/story31</item>
+        <item>@array/story32</item>
+        <item>@array/story33</item>
+        <item>@array/story34</item>
+        <item>@array/story35</item>
+        <item>@array/story36</item>
+        <item>@array/story37</item>
+        <item>@array/story38</item>
+        <item>@array/story39</item>
     </array>
     <array name="story0">
         <item>"The boy who cried wolf"</item>
@@ -73,84 +83,124 @@
         <item>@string/story9text</item>
     </array>
     <array name="story10">
-        <item>"The Frog Prince"</item>
+        <item>"The frog prince"</item>
         <item>@string/story10text</item>
     </array>
     <array name="story11">
-        <item>"Story 11"</item>
+        <item>"The drop of water"</item>
         <item>@string/story11text</item>
     </array>
     <array name="story12">
-        <item>"Story 12"</item>
+        <item>"The emperor's new suit"</item>
         <item>@string/story12text</item>
     </array>
     <array name="story13">
-        <item>"Story 13"</item>
+        <item>"The jumper"</item>
         <item>@string/story13text</item>
     </array>
     <array name="story14">
-        <item>"Story 14"</item>
+        <item>"The money"</item>
         <item>@string/story14text</item>
     </array>
     <array name="story15">
-        <item>"Story 15"</item>
+        <item>"The princess and the pea"</item>
         <item>@string/story15text</item>
     </array>
     <array name="story16">
-        <item>"Story 16"</item>
+        <item>"The silver shilling"</item>
         <item>@string/story16text</item>
     </array>
     <array name="story17">
-        <item>"Story 17"</item>
+        <item>"Two brothers"</item>
         <item>@string/story17text</item>
     </array>
     <array name="story18">
-        <item>"Story 18"</item>
+        <item>"The frogs and the Ox"</item>
         <item>@string/story18text</item>
     </array>
     <array name="story19">
-        <item>"Story 19"</item>
+        <item>"Belling the Cat"</item>
         <item>@string/story19text</item>
     </array>
     <array name="story20">
-        <item>"Story 20"</item>
+        <item>"The Town Mouse and the Country Mouse"</item>
         <item>@string/story20text</item>
     </array>
     <array name="story21">
-        <item>"Story 21"</item>
+        <item>"The fox and the grapes"</item>
         <item>@string/story21text</item>
     </array>
     <array name="story22">
-        <item>"Story 22"</item>
+        <item>"The wolf and the crane"</item>
         <item>@string/story22text</item>
     </array>
     <array name="story23">
-        <item>"Story 23"</item>
+        <item>"The gnat and the bull"</item>
         <item>@string/story23text</item>
     </array>
     <array name="story24">
-        <item>"Story 24"</item>
+        <item>"The plane tree"</item>
         <item>@string/story24text</item>
     </array>
     <array name="story25">
-        <item>"Story 25"</item>
+        <item>"The owl and the grasshopper"</item>
         <item>@string/story25text</item>
     </array>
     <array name="story26">
-        <item>"Story 26"</item>
+        <item>"The oak and the reeds"</item>
         <item>@string/story26text</item>
     </array>
     <array name="story27">
-        <item>"Story 27"</item>
+        <item>"The crow and the pitcher"</item>
         <item>@string/story27text</item>
     </array>
     <array name="story28">
-        <item>"Story 28"</item>
+        <item>"The two goats"</item>
         <item>@string/story28text</item>
     </array>
     <array name="story29">
-        <item>"Story 29"</item>
+        <item>"The wild boar and the fox"</item>
         <item>@string/story29text</item>
+    </array>
+    <array name="story30">
+        <item>"The Heron"</item>
+        <item>@string/story30text</item>
+    </array>
+    <array name="story31">
+        <item>"The Fox and the Stork"</item>
+        <item>@string/story31text</item>
+    </array>
+    <array name="story32">
+        <item>"The Stag and his reflection"</item>
+        <item>@string/story32text</item>
+    </array>
+    <array name="story33">
+        <item>"The cock and the fox"</item>
+        <item>@string/story33text</item>
+    </array>
+    <array name="story34">
+        <item>"The Fox and the Goat"</item>
+        <item>@string/story34text</item>
+    </array>
+    <array name="story35">
+        <item>"The Fox and the Leopard"</item>
+        <item>@string/story35text</item>
+    </array>
+    <array name="story36">
+        <item>"The Frog and the Mouse"</item>
+        <item>@string/story36text</item>
+    </array>
+    <array name="story37">
+        <item>"The Eagle and the Beetle"</item>
+        <item>@string/story37text</item>
+    </array>
+    <array name="story38">
+        <item>"The Mother and the Wolf"</item>
+        <item>@string/story38text</item>
+    </array>
+    <array name="story39">
+        <item>"The Dog and his reflection"</item>
+        <item>@string/story39text</item>
     </array>
 
 </resources>
