@@ -1,27 +1,54 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:enabled="false"
-    android:orientation="horizontal"
-    android:paddingEnd="8dp" >
+    android:orientation="horizontal">
 
     <ImageButton
         android:id="@+id/left_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
         android:src="@drawable/baseline_arrow_left_black_18dp"
         />
 
     <TextView
         android:id="@+id/action_bar_title"
         android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:text="Name"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="18sp"
+        android:layout_weight="2"/>
+
+    <ToggleButton
+        android:id="@+id/favoriteToggle"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:background="@drawable/style_favorite_button"
+        android:textOff=""
+        android:textOn=""
+        />
+
+    <Button
+        android:id="@+id/unreadButton"
         android:layout_width="wrap_content"
-        android:text="Name"/>
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:text="Unread"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        />
 
     <ImageButton
         android:id="@+id/right_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
         android:src="@drawable/baseline_arrow_right_black_18dp"
         />
 

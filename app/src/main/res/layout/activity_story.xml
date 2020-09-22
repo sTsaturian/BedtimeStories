@@ -3,19 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/storyNameView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        tools:text="Story name"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView"
-        app:layout_constraintEnd_toStartOf="@id/favoriteToggle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:layout_height="match_parent"
+    android:background="@drawable/rabbit_background"
+    android:backgroundTint="#80FFFFFF"
+    android:backgroundTintMode="src_over">
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -27,12 +18,24 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/storyNameView">
+        app:layout_constraintTop_toTopOf="parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/storyNameView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="48sp"
+            tools:text="Story Name"
+            android:gravity="center"
+            />
 
         <TextView
             android:id="@+id/storyTextView"
@@ -44,34 +47,11 @@
             android:maxLength="100000"
             android:textSize="24sp"
             tools:text="StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah StoryText blah blah blah " />
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="100dp" />
     </LinearLayout>
     </ScrollView>
 
-    <ToggleButton
-        android:id="@+id/favoriteToggle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="66dp"
-        android:background="@drawable/style_favorite_button"
-        android:scaleX="0.6"
-        android:textOff=""
-        android:textOn=""
-        app:layout_constraintBottom_toTopOf="@id/scrollView"
-        app:layout_constraintEnd_toStartOf="@id/unreadButton"
-        app:layout_constraintStart_toEndOf="@id/storyNameView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/unreadButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mark unread"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@id/scrollView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/favoriteToggle"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

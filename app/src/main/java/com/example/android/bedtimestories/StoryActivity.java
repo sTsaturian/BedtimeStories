@@ -32,7 +32,7 @@ public class StoryActivity extends AppCompatActivity {
     private Handler mHandler;
     private ArrayList<Story> storyList;
     private TextView titleView;
-    private TextView nameView;
+    private TextView storyNameView;
     private TextView storyTextView;
     private ToggleButton favButton;
     private Button unreadButton;
@@ -53,7 +53,8 @@ public class StoryActivity extends AppCompatActivity {
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setDisplayShowCustomEnabled(true);
-        actionBar.setCustomView(actionBarLayout);
+        ActionBar.LayoutParams layoutParams = new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT);
+        actionBar.setCustomView(actionBarLayout, layoutParams);
 
         Intent intent = getIntent();
         storyID = intent.getIntExtra("storyID", 0);
@@ -61,7 +62,7 @@ public class StoryActivity extends AppCompatActivity {
         int position = intent.getIntExtra("index", -1);
 
         titleView = findViewById(R.id.action_bar_title);
-        nameView = findViewById(R.id.storyNameView);
+        storyNameView = findViewById(R.id.storyNameView);
         storyTextView = findViewById(R.id.storyTextView);
         favButton = findViewById(R.id.favoriteToggle);
         unreadButton = findViewById(R.id.unreadButton);
@@ -78,7 +79,7 @@ public class StoryActivity extends AppCompatActivity {
         final Story story = StoryUtils.getStory(id);
         storyTextView.setText(getString(story.getResourceID()));
         titleView.setText(story.getName());
-        nameView.setText(story.getName());
+        storyNameView.setText(story.getName());
 
         favButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
