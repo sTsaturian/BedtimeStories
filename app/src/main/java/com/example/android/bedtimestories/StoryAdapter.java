@@ -40,7 +40,7 @@ public class StoryAdapter extends ArrayAdapter<Story> {
         storyNameTextView.setText(currentStory.getName());
 
         ImageView favoriteImageView = listItemView.findViewById(R.id.favoriteImage);
-        if (!currentStory.isFavorite()) favoriteImageView.setVisibility(View.GONE);
+        if (!currentStory.isFavorite()) favoriteImageView.setVisibility(View.INVISIBLE);
         else favoriteImageView.setVisibility(View.VISIBLE);
 
         if (currentStory.isRead()) listItemView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.read_story_color));
