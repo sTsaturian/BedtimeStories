@@ -1,63 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/default_activity_style"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/animalsCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:padding="16dp"
-        android:layout_gravity="center"
+        style="@style/default_textview_style"
         android:text="Animal Stories"
     />
 
     <TextView
         android:id="@+id/kidsCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:padding="16dp"
-        android:layout_gravity="center"
+        style="@style/default_textview_style"
         android:text="Kid Stories"
     />
 
     <TextView
         android:id="@+id/aesopCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:padding="16dp"
-        android:layout_gravity="center"
-        android:text="Aesop Fables"
+        style="@style/default_textview_style"
+        android:text="Aesop's Fables"
         />
 
     <TextView
         android:id="@+id/grimmCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:padding="16dp"
-        android:layout_gravity="center"
+        style="@style/default_textview_style"
         android:text="Brothers Grimm Stories"
         />
 
     <TextView
         android:id="@+id/andersenCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:padding="16dp"
-        android:layout_gravity="center"
+        style="@style/default_textview_style"
         android:text="Hans Christian Andersen's Stories"
         />
 

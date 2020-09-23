@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
+
 import java.util.ArrayList;
 
 /**
@@ -40,6 +42,9 @@ public class StoryAdapter extends ArrayAdapter<Story> {
         ImageView favoriteImageView = listItemView.findViewById(R.id.favoriteImage);
         if (!currentStory.isFavorite()) favoriteImageView.setVisibility(View.GONE);
         else favoriteImageView.setVisibility(View.VISIBLE);
+
+        if (currentStory.isRead()) listItemView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.read_story_color));
+        else listItemView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.unread_story_color));
 
         return listItemView;
     }

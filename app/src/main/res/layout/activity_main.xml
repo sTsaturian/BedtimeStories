@@ -1,71 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/default_activity_style"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/allStories"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="All stories"
-        app:layout_constraintBottom_toTopOf="@id/categoriesButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/allStoriesView"
+        style="@style/default_textview_style"
+        android:text="All Stories"
+        />
 
-    <Button
-        android:id="@+id/categoriesButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
+    <TextView
+        android:id="@+id/categoriesView"
+        style="@style/default_textview_style"
         android:text="Categories"
-        app:layout_constraintBottom_toTopOf="@id/favoritesButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/allStories" />
+        />
 
-    <Button
-        android:id="@+id/favoritesButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="Favorites"
-        app:layout_constraintBottom_toTopOf="@id/continueLastButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/categoriesButton" />
+    <TextView
+        android:id="@+id/favoritesView"
+        style="@style/default_textview_style"
+        android:text="Favorites" />
 
-    <Button
-        android:id="@+id/continueLastButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="Continue Last"
-        app:layout_constraintBottom_toTopOf="@id/randomStoryButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/favoritesButton" />
+    <TextView
+        android:id="@+id/continueLastView"
+        style="@style/default_textview_style"
+        android:text="Continue Last" />
 
-    <Button
-        android:id="@+id/randomStoryButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="Random Story"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/continueLastButton" />
+    <TextView
+        android:id="@+id/randomStoryView"
+        style="@style/default_textview_style"
+        android:text="Random Story" />
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

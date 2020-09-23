@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -38,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         TextView titleView = findViewById(R.id.action_bar_title);
         titleView.setText("Bedtime Stories");
 
-        Button allStoriesView = findViewById(R.id.allStories);
+        TextView allStoriesView = findViewById(R.id.allStoriesView);
         allStoriesView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button categoriesView = findViewById(R.id.categoriesButton);
+        TextView categoriesView = findViewById(R.id.categoriesView);
         categoriesView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button favoritesView = findViewById(R.id.favoritesButton);
+        TextView favoritesView = findViewById(R.id.favoritesView);
         favoritesView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button continueLast = findViewById(R.id.continueLastButton);
+        TextView continueLast = findViewById(R.id.continueLastView);
         continueLast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button randomStory = findViewById(R.id.randomStoryButton);
+        TextView randomStory = findViewById(R.id.randomStoryView);
         randomStory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

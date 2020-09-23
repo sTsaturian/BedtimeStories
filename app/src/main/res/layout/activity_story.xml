@@ -2,11 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/rabbit_background"
-    android:backgroundTint="#80FFFFFF"
-    android:backgroundTintMode="src_over">
+    style="@style/default_activity_style"
+>
+    <!-- android:backgroundTint="#80FFFFFF"-->
+    <!-- android:backgroundTintMode="src_over" -->
 
     <ScrollView
         android:id="@+id/scrollView"
