@@ -29,24 +29,28 @@ public class StoryListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Intent intent = getIntent();
+        final String categoryName = intent.getStringExtra("categoryName");
+        final ArrayList<Story> stories = StoryUtils.getStoryList(categoryName);
+
+        if (stories.isEmpty() && categoryName.equals("Favorites")){
+            setContentView(R.layout.empty_favorites);
+            return;
+        }
         setContentView(R.layout.activity_storylist);
 
         final ViewGroup actionBarLayout = (ViewGroup) getLayoutInflater().inflate(
                 R.layout.action_bar,null);
-        // Set up your ActionBar
+
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setDisplayShowCustomEnabled(true);
         actionBar.setCustomView(actionBarLayout);
 
-        Intent intent = getIntent();
-        final String categoryName = intent.getStringExtra("categoryName");
-
         TextView titleView = findViewById(R.id.action_bar_title);
         titleView.setText(categoryName);
-
-        final ArrayList<Story> stories = StoryUtils.getStoryList(categoryName);
 
         StoryAdapter storyAdapter = new StoryAdapter(this, stories);
         listView = findViewById(R.id.story_list);
@@ -71,11 +75,10 @@ public class StoryListActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Log.i("StoryListActivity", "Start");
-        if (!mFirstAppearance) {
+        if (listView != null && !mFirstAppearance) {
             listView.invalidateViews();
             Log.i("StoryListActivity", "Refreshed");
         }
-
     }
 
     @Override

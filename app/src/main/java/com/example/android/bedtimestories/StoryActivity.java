@@ -43,6 +43,7 @@ public class StoryActivity extends AppCompatActivity {
     private ImageButton rightButton;
     private int storyID;
     private Context mContext = this;
+    private boolean isSetupPhase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +80,7 @@ public class StoryActivity extends AppCompatActivity {
     }
 
     private void fillViews(final int id, final int pos){
+        isSetupPhase = true;
         storyID = id;
         final Story story = StoryUtils.getStory(id);
         storyTextView.setText(getString(story.getResourceID()));
@@ -99,12 +101,12 @@ public class StoryActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     StoryUtils.changeFavoriteStatus(id, true);
-                    showToast("Story added to favorites");
+                    if (!isSetupPhase) showToast("Story added to favorites");
                     Log.i("StoryActivity", "Changed story "+id + " to favorite");
                 }
                 else {
                     StoryUtils.changeFavoriteStatus(id, false);
-                    showToast("Story removed from favorites");
+                    if (!isSetupPhase) showToast("Story removed from favorites");
                     Log.i("StoryActivity", "Changed story "+id + " to not favorite");
                 }
             }
@@ -123,15 +125,17 @@ public class StoryActivity extends AppCompatActivity {
                 if (story.isRead()){
                     markAsUnread(id);
                     unreadButton.setText("Read");
-                    showToast("Story marked as unread");
+                    if (!isSetupPhase) showToast("Story marked as unread");
                 }
                 else{
                     markAsRead(id);
                     unreadButton.setText("Unread");
-                    showToast("Story marked as read");
+                    if (!isSetupPhase) showToast("Story marked as read");
                 }
             }
         });
+
+        isSetupPhase = false;
 
         mHandler.removeCallbacksAndMessages(null);
         mHandler.postDelayed(new Runnable() {
