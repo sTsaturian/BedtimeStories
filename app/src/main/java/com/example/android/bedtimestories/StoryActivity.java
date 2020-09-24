@@ -87,14 +87,6 @@ public class StoryActivity extends AppCompatActivity {
         titleView.setText(story.getName());
         storyNameView.setText(story.getName());
 
-        if (story.isFavorite()){
-            Log.i("StoryActivity", "Story " + story.getID() +" is favorite, so check the favorite button");
-            favButton.setChecked(true);
-        }
-        else {
-            Log.i("StoryActivity", "Story " + story.getID() +" is not favorite, so uncheck the favorite button");
-            favButton.setChecked(false);
-        }
 
         favButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -112,11 +104,13 @@ public class StoryActivity extends AppCompatActivity {
             }
         });
 
-        if (story.isRead()){
-            unreadButton.setVisibility(View.VISIBLE);
+        if (story.isFavorite()){
+            Log.i("StoryActivity", "Story " + story.getID() +" is favorite, so check the favorite button");
+            favButton.setChecked(true);
         }
-        else{
-            unreadButton.setVisibility(View.INVISIBLE);
+        else {
+            Log.i("StoryActivity", "Story " + story.getID() +" is not favorite, so uncheck the favorite button");
+            favButton.setChecked(false);
         }
 
         unreadButton.setOnClickListener(new Button.OnClickListener(){
@@ -135,6 +129,15 @@ public class StoryActivity extends AppCompatActivity {
             }
         });
 
+        if (story.isRead()){
+            unreadButton.setVisibility(View.VISIBLE);
+            unreadButton.setText("Unread");
+        }
+        else{
+            unreadButton.setVisibility(View.INVISIBLE);
+            unreadButton.setText("Read");
+        }
+
         isSetupPhase = false;
 
         mHandler.removeCallbacksAndMessages(null);
@@ -148,6 +151,7 @@ public class StoryActivity extends AppCompatActivity {
             @Override
             public void run() {
                 markAsRead(id);
+                unreadButton.setText("Unread");
                 unreadButton.setVisibility(View.VISIBLE);
             }
         }, DELAY_FOR_READ);
