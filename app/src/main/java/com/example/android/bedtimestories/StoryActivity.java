@@ -1,10 +1,12 @@
 package com.example.android.bedtimestories;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,7 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import androidx.appcompat.app.ActionBar;
@@ -39,6 +42,7 @@ public class StoryActivity extends AppCompatActivity {
     private ImageButton leftButton;
     private ImageButton rightButton;
     private int storyID;
+    private Context mContext = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,19 +85,6 @@ public class StoryActivity extends AppCompatActivity {
         titleView.setText(story.getName());
         storyNameView.setText(story.getName());
 
-        favButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    StoryUtils.changeFavoriteStatus(id, true);
-                    Log.i("StoryActivity", "Changed story "+id + " to favorite");
-                }
-                else {
-                    StoryUtils.changeFavoriteStatus(id, false);
-                    Log.i("StoryActivity", "Changed story "+id + " to not favorite");
-                }
-            }
-        });
         if (story.isFavorite()){
             Log.i("StoryActivity", "Story " + story.getID() +" is favorite, so check the favorite button");
             favButton.setChecked(true);
@@ -103,6 +94,21 @@ public class StoryActivity extends AppCompatActivity {
             favButton.setChecked(false);
         }
 
+        favButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    StoryUtils.changeFavoriteStatus(id, true);
+                    showToast("Story added to favorites");
+                    Log.i("StoryActivity", "Changed story "+id + " to favorite");
+                }
+                else {
+                    StoryUtils.changeFavoriteStatus(id, false);
+                    showToast("Story removed from favorites");
+                    Log.i("StoryActivity", "Changed story "+id + " to not favorite");
+                }
+            }
+        });
 
         if (story.isRead()){
             unreadButton.setVisibility(View.VISIBLE);
@@ -114,7 +120,16 @@ public class StoryActivity extends AppCompatActivity {
         unreadButton.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
-                markAsUnread(id);
+                if (story.isRead()){
+                    markAsUnread(id);
+                    unreadButton.setText("Read");
+                    showToast("Story marked as unread");
+                }
+                else{
+                    markAsRead(id);
+                    unreadButton.setText("Unread");
+                    showToast("Story marked as read");
+                }
             }
         });
 
@@ -209,6 +224,12 @@ public class StoryActivity extends AppCompatActivity {
 
     private void markAsUnread(int storyID){
         StoryUtils.changeReadStatus(storyID, false);
+    }
+
+    private void showToast(String text){
+        Toast toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.TOP| Gravity.END, 16, 128);
+        toast.show();
     }
 
 
