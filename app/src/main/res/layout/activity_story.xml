@@ -4,8 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/default_activity_style"
 >
-    <!-- android:backgroundTint="#80FFFFFF"-->
-    <!-- android:backgroundTintMode="src_over" -->
 
     <ScrollView
         android:id="@+id/scrollView"

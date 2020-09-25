@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -41,8 +42,8 @@ public class StoryActivity extends AppCompatActivity {
     private Button unreadButton;
     private ImageButton leftButton;
     private ImageButton rightButton;
+    private ScrollView scrollView;
     private int storyID;
-    private Context mContext = this;
     private boolean isSetupPhase;
 
     @Override
@@ -73,6 +74,7 @@ public class StoryActivity extends AppCompatActivity {
         unreadButton = findViewById(R.id.unreadButton);
         leftButton = findViewById(R.id.left_button);
         rightButton = findViewById(R.id.right_button);
+        scrollView = findViewById(R.id.scrollView);
 
         mHandler = new Handler(Looper.getMainLooper());
 
@@ -86,7 +88,7 @@ public class StoryActivity extends AppCompatActivity {
         storyTextView.setText(getString(story.getResourceID()));
         titleView.setText(story.getName());
         storyNameView.setText(story.getName());
-
+        scrollView.scrollTo(0, 0);
 
         favButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

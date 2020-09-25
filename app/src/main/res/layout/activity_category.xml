@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/default_activity_style"
-    android:orientation="vertical">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/default_activity_style">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    >
 
     <TextView
         android:id="@+id/animalsCategory"
@@ -33,4 +38,30 @@
         android:text="Hans Christian Andersen's Stories"
         />
 
+    <TextView
+        style="@style/default_textview_style"
+        android:text="Fake view"
+        />
+
+    <TextView
+        style="@style/default_textview_style"
+        android:text="Fake view"
+        />
+
+    <TextView
+        style="@style/default_textview_style"
+        android:text="Fake view"
+        />
+
+    <TextView
+        style="@style/default_textview_style"
+        android:text="Fake view"
+        />
+
+    <TextView
+        style="@style/default_textview_style"
+        android:text="Fake view"
+        />
+
 </LinearLayout>
+</ScrollView>
