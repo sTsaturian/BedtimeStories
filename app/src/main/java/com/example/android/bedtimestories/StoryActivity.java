@@ -120,12 +120,12 @@ public class StoryActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (story.isRead()){
                     markAsUnread(id);
-                    unreadButton.setText("Read");
+                    unreadButton.setText("Mark\nRead");
                     if (!isSetupPhase) showToast("Story marked as unread");
                 }
                 else{
                     markAsRead(id);
-                    unreadButton.setText("Unread");
+                    unreadButton.setText("Mark\nUnread");
                     if (!isSetupPhase) showToast("Story marked as read");
                 }
             }
@@ -133,11 +133,11 @@ public class StoryActivity extends AppCompatActivity {
 
         if (story.isRead()){
             unreadButton.setVisibility(View.VISIBLE);
-            unreadButton.setText("Unread");
+            unreadButton.setText("Mark\nUnread");
         }
         else{
             unreadButton.setVisibility(View.INVISIBLE);
-            unreadButton.setText("Read");
+            unreadButton.setText("Mark\nRead");
         }
 
         isSetupPhase = false;
@@ -153,7 +153,7 @@ public class StoryActivity extends AppCompatActivity {
             @Override
             public void run() {
                 markAsRead(id);
-                unreadButton.setText("Unread");
+                unreadButton.setText("Mark\nUnread");
                 unreadButton.setVisibility(View.VISIBLE);
             }
         }, DELAY_FOR_READ);
@@ -239,6 +239,7 @@ public class StoryActivity extends AppCompatActivity {
     private void showToast(String text){
         Toast toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.TOP| Gravity.END, 16, 128);
+        toast.setText(text);
         toast.show();
     }
 

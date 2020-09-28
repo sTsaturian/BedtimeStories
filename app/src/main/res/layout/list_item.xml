@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         tools:text="Story Name"
         android:layout_gravity="center"
+        android:textAllCaps="true"
         android:gravity="center"
         android:layout_weight="1"
         />

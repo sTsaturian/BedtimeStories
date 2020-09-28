@@ -57,7 +57,7 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategoryActivity.this, StoryListActivity.class);
-                intent.putExtra("categoryName", "Aesop Fables");
+                intent.putExtra("categoryName", "Aesop's Fables");
                 startActivity(intent);
             }
         });
@@ -77,7 +77,7 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategoryActivity.this, StoryListActivity.class);
-                intent.putExtra("categoryName", "Andersen Stories");
+                intent.putExtra("categoryName", "Hans Christian Andersen's Stories");
                 startActivity(intent);
             }
         });

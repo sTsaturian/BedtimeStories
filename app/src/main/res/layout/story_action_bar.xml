@@ -2,6 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:enabled="false"
     android:orientation="horizontal">
 
@@ -20,9 +21,10 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:textAllCaps="true"
-        android:text="Name"
+        tools:text="Name"
+        android:textStyle="bold"
         app:autoSizeTextType="uniform"
-        app:autoSizeMaxTextSize="18sp"
+        app:autoSizeMaxTextSize="16sp"
         android:layout_weight="2"/>
 
     <ToggleButton
@@ -40,9 +42,11 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:text="Unread"
+        tools:text="Make\nUnread"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="16sp"
         android:textAlignment="center"
-        android:visibility="invisible"
+        android:textStyle="normal"
         />
 
     <ImageButton
