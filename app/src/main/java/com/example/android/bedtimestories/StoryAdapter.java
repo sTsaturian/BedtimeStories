@@ -37,7 +37,7 @@ public class StoryAdapter extends ArrayAdapter<Story> {
         }
 
         TextView storyNameTextView = listItemView.findViewById(R.id.storyName);
-        storyNameTextView.setText(currentStory.getName());
+        storyNameTextView.setText(currentStory.getName() + " " + currentStory.getID());
 
         ImageView favoriteImageView = listItemView.findViewById(R.id.favoriteImage);
         if (!currentStory.isFavorite()) favoriteImageView.setVisibility(View.INVISIBLE);

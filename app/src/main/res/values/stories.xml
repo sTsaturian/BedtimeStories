@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="story_arrays">
         <item>@array/story0</item>
@@ -480,129 +480,6 @@
         <item>@array/story476</item>
         <item>@array/story477</item>
         <item>@array/story478</item>
-        <item>@array/story479</item>
-        <item>@array/story480</item>
-        <item>@array/story481</item>
-        <item>@array/story482</item>
-        <item>@array/story483</item>
-        <item>@array/story484</item>
-        <item>@array/story485</item>
-        <item>@array/story486</item>
-        <item>@array/story487</item>
-        <item>@array/story488</item>
-        <item>@array/story489</item>
-        <item>@array/story490</item>
-        <item>@array/story491</item>
-        <item>@array/story492</item>
-        <item>@array/story493</item>
-        <item>@array/story494</item>
-        <item>@array/story495</item>
-        <item>@array/story496</item>
-        <item>@array/story497</item>
-        <item>@array/story498</item>
-        <item>@array/story499</item>
-        <item>@array/story500</item>
-        <item>@array/story501</item>
-        <item>@array/story502</item>
-        <item>@array/story503</item>
-        <item>@array/story504</item>
-        <item>@array/story505</item>
-        <item>@array/story506</item>
-        <item>@array/story507</item>
-        <item>@array/story508</item>
-        <item>@array/story509</item>
-        <item>@array/story510</item>
-        <item>@array/story511</item>
-        <item>@array/story512</item>
-        <item>@array/story513</item>
-        <item>@array/story514</item>
-        <item>@array/story515</item>
-        <item>@array/story516</item>
-        <item>@array/story517</item>
-        <item>@array/story518</item>
-        <item>@array/story519</item>
-        <item>@array/story520</item>
-        <item>@array/story521</item>
-        <item>@array/story522</item>
-        <item>@array/story523</item>
-        <item>@array/story524</item>
-        <item>@array/story525</item>
-        <item>@array/story526</item>
-        <item>@array/story527</item>
-        <item>@array/story528</item>
-        <item>@array/story529</item>
-        <item>@array/story530</item>
-        <item>@array/story531</item>
-        <item>@array/story532</item>
-        <item>@array/story533</item>
-        <item>@array/story534</item>
-        <item>@array/story535</item>
-        <item>@array/story536</item>
-        <item>@array/story537</item>
-        <item>@array/story538</item>
-        <item>@array/story539</item>
-        <item>@array/story540</item>
-        <item>@array/story541</item>
-        <item>@array/story542</item>
-        <item>@array/story543</item>
-        <item>@array/story544</item>
-        <item>@array/story545</item>
-        <item>@array/story546</item>
-        <item>@array/story547</item>
-        <item>@array/story548</item>
-        <item>@array/story549</item>
-        <item>@array/story550</item>
-        <item>@array/story551</item>
-        <item>@array/story552</item>
-        <item>@array/story553</item>
-        <item>@array/story554</item>
-        <item>@array/story555</item>
-        <item>@array/story556</item>
-        <item>@array/story557</item>
-        <item>@array/story558</item>
-        <item>@array/story559</item>
-        <item>@array/story560</item>
-        <item>@array/story561</item>
-        <item>@array/story562</item>
-        <item>@array/story563</item>
-        <item>@array/story564</item>
-        <item>@array/story565</item>
-        <item>@array/story566</item>
-        <item>@array/story567</item>
-        <item>@array/story568</item>
-        <item>@array/story569</item>
-        <item>@array/story570</item>
-        <item>@array/story571</item>
-        <item>@array/story572</item>
-        <item>@array/story573</item>
-        <item>@array/story574</item>
-        <item>@array/story575</item>
-        <item>@array/story576</item>
-        <item>@array/story577</item>
-        <item>@array/story578</item>
-        <item>@array/story579</item>
-        <item>@array/story580</item>
-        <item>@array/story581</item>
-        <item>@array/story582</item>
-        <item>@array/story583</item>
-        <item>@array/story584</item>
-        <item>@array/story585</item>
-        <item>@array/story586</item>
-        <item>@array/story587</item>
-        <item>@array/story588</item>
-        <item>@array/story589</item>
-        <item>@array/story590</item>
-        <item>@array/story591</item>
-        <item>@array/story592</item>
-        <item>@array/story593</item>
-        <item>@array/story594</item>
-        <item>@array/story595</item>
-        <item>@array/story596</item>
-        <item>@array/story597</item>
-        <item>@array/story598</item>
-        <item>@array/story599</item>
-
-
     </array>
     <array name="story0">
         <item>"The boy who cried wolf"</item>
@@ -613,19 +490,19 @@
         <item>@string/story1text</item>
     </array>
     <array name="story2">
-        <item>"The fox and the crow"</item>
+        <item>"The Fox and the Crow"</item>
         <item>@string/story2text</item>
     </array>
     <array name="story3">
-        <item>"The lion and the mouse"</item>
+        <item>"The Lion and the Mouse"</item>
         <item>@string/story3text</item>
     </array>
     <array name="story4">
-        <item>"The tortoise and the hare"</item>
+        <item>"The Tortoise and the Hare"</item>
         <item>@string/story4text</item>
     </array>
     <array name="story5">
-        <item>"The wind and the sun"</item>
+        <item>"The Wind and the Sun"</item>
         <item>@string/story5text</item>
     </array>
     <array name="story6">
@@ -645,7 +522,7 @@
         <item>@string/story9text</item>
     </array>
     <array name="story10">
-        <item>"The frog prince"</item>
+        <item>"The Frog King or Iron Henry"</item>
         <item>@string/story10text</item>
     </array>
     <array name="story11">
@@ -657,7 +534,7 @@
         <item>@string/story12text</item>
     </array>
     <array name="story13">
-        <item>"The jumper"</item>
+        <item>"The Jumper"</item>
         <item>@string/story13text</item>
     </array>
     <array name="story14">
@@ -677,7 +554,7 @@
         <item>@string/story17text</item>
     </array>
     <array name="story18">
-        <item>"The frogs and the Ox"</item>
+        <item>"The Frogs and the Ox"</item>
         <item>@string/story18text</item>
     </array>
     <array name="story19">
@@ -1237,1773 +1114,1287 @@
         <item>@string/story157text</item>
     </array>
     <array name="story158">
-        <item>""</item>
+        <item>"The Tinder-Box"</item>
         <item>@string/story158text</item>
     </array>
     <array name="story159">
-        <item>""</item>
+        <item>"Little Claus and Big Claus"</item>
         <item>@string/story159text</item>
     </array>
     <array name="story160">
-        <item>""</item>
+        <item>"Little Ida\'s Flowers"</item>
         <item>@string/story160text</item>
     </array>
     <array name="story161">
-        <item>""</item>
+        <item>"Little Tiny or Thumbelina"</item>
         <item>@string/story161text</item>
     </array>
     <array name="story162">
-        <item>""</item>
+        <item>"The Saucy Boy"</item>
         <item>@string/story162text</item>
     </array>
     <array name="story163">
-        <item>""</item>
+        <item>"The Flea and the Professor"</item>
         <item>@string/story163text</item>
     </array>
     <array name="story164">
-        <item>""</item>
+        <item>"The Daisy"</item>
         <item>@string/story164text</item>
     </array>
     <array name="story165">
-        <item>""</item>
+        <item>"The Brave Tin Soldier"</item>
         <item>@string/story165text</item>
     </array>
     <array name="story166">
-        <item>""</item>
+        <item>"The Cripple"</item>
         <item>@string/story166text</item>
     </array>
     <array name="story167">
-        <item>""</item>
+        <item>"The Garden of Paradise"</item>
         <item>@string/story167text</item>
     </array>
     <array name="story168">
-        <item>""</item>
+        <item>"The Flying Trunk"</item>
         <item>@string/story168text</item>
     </array>
     <array name="story169">
-        <item>""</item>
+        <item>"The Storks"</item>
         <item>@string/story169text</item>
     </array>
     <array name="story170">
-        <item>""</item>
+        <item>"The Elf of the Rose"</item>
         <item>@string/story170text</item>
     </array>
     <array name="story171">
-        <item>""</item>
+        <item>"The Wicked Prince"</item>
         <item>@string/story171text</item>
     </array>
     <array name="story172">
-        <item>""</item>
+        <item>"The Metal Pig"</item>
         <item>@string/story172text</item>
     </array>
     <array name="story173">
-        <item>""</item>
+        <item>"The Shepherd\'s Story of the Bond of Friendship"</item>
         <item>@string/story173text</item>
     </array>
     <array name="story174">
-        <item>""</item>
+        <item>"A Rose from Homer\'s Grave"</item>
         <item>@string/story174text</item>
     </array>
     <array name="story175">
-        <item>""</item>
+        <item>"The Buckwheat"</item>
         <item>@string/story175text</item>
     </array>
     <array name="story176">
-        <item>""</item>
+        <item>"Ole-Luk-Oie, the Dream-God"</item>
         <item>@string/story176text</item>
     </array>
     <array name="story177">
-        <item>""</item>
+        <item>"The Swineherd"</item>
         <item>@string/story177text</item>
     </array>
     <array name="story178">
-        <item>""</item>
+        <item>"The Angel"</item>
         <item>@string/story178text</item>
     </array>
     <array name="story179">
-        <item>""</item>
+        <item>"The Nightingale"</item>
         <item>@string/story179text</item>
     </array>
     <array name="story180">
-        <item>""</item>
+        <item>"The Ugly Duckling"</item>
         <item>@string/story180text</item>
     </array>
     <array name="story181">
-        <item>""</item>
+        <item>"The Top and Ball"</item>
         <item>@string/story181text</item>
     </array>
     <array name="story182">
-        <item>""</item>
+        <item>"The Fir Tree"</item>
         <item>@string/story182text</item>
     </array>
     <array name="story183">
-        <item>""</item>
+        <item>"The Bishop of Børglum and His Warriors"</item>
         <item>@string/story183text</item>
     </array>
     <array name="story184">
-        <item>""</item>
+        <item>"The Little Elder-Tree Mother"</item>
         <item>@string/story184text</item>
     </array>
     <array name="story185">
-        <item>""</item>
+        <item>"The Elfin Hill"</item>
         <item>@string/story185text</item>
     </array>
     <array name="story186">
-        <item>""</item>
+        <item>"The Red Shoes"</item>
         <item>@string/story186text</item>
     </array>
     <array name="story187">
-        <item>""</item>
+        <item>"The Shepherdess and the Sweep"</item>
         <item>@string/story187text</item>
     </array>
     <array name="story188">
-        <item>""</item>
+        <item>"Holger Danske"</item>
         <item>@string/story188text</item>
     </array>
     <array name="story189">
-        <item>""</item>
+        <item>"The Bell"</item>
         <item>@string/story189text</item>
     </array>
     <array name="story190">
-        <item>""</item>
+        <item>"Grandmother"</item>
         <item>@string/story190text</item>
     </array>
     <array name="story191">
-        <item>""</item>
+        <item>"The Darning-Needle"</item>
         <item>@string/story191text</item>
     </array>
     <array name="story192">
-        <item>""</item>
+        <item>"The Little Match-Seller"</item>
         <item>@string/story192text</item>
     </array>
     <array name="story193">
-        <item>""</item>
+        <item>"By the Almshouse Window"</item>
         <item>@string/story193text</item>
     </array>
     <array name="story194">
-        <item>""</item>
+        <item>"The Old Street Lamp"</item>
         <item>@string/story194text</item>
     </array>
     <array name="story195">
-        <item>""</item>
+        <item>"The Neighbouring Families"</item>
         <item>@string/story195text</item>
     </array>
     <array name="story196">
-        <item>""</item>
+        <item>"Little Tuk"</item>
         <item>@string/story196text</item>
     </array>
     <array name="story197">
-        <item>""</item>
+        <item>"The Shadow"</item>
         <item>@string/story197text</item>
     </array>
     <array name="story198">
-        <item>""</item>
+        <item>"The Old House"</item>
         <item>@string/story198text</item>
     </array>
     <array name="story199">
-        <item>""</item>
+        <item>"The Happy Family"</item>
         <item>@string/story199text</item>
     </array>
     <array name="story200">
-        <item>""</item>
+        <item>"The Story of a Mother"</item>
         <item>@string/story200text</item>
     </array>
     <array name="story201">
-        <item>""</item>
+        <item>"The Shirt-Collar"</item>
         <item>@string/story201text</item>
     </array>
     <array name="story202">
-        <item>""</item>
+        <item>"The Flax"</item>
         <item>@string/story202text</item>
     </array>
     <array name="story203">
-        <item>""</item>
+        <item>"The Phoenix Bird"</item>
         <item>@string/story203text</item>
     </array>
     <array name="story204">
-        <item>""</item>
+        <item>"A Story"</item>
         <item>@string/story204text</item>
     </array>
     <array name="story205">
-        <item>""</item>
+        <item>"The Puppet-Show Man"</item>
         <item>@string/story205text</item>
     </array>
     <array name="story206">
-        <item>""</item>
+        <item>"The Dumb Book"</item>
         <item>@string/story206text</item>
     </array>
     <array name="story207">
-        <item>""</item>
+        <item>"The Old Grave-Stone"</item>
         <item>@string/story207text</item>
     </array>
     <array name="story208">
-        <item>""</item>
+        <item>"The Conceited Apple-Branch"</item>
         <item>@string/story208text</item>
     </array>
     <array name="story209">
-        <item>""</item>
+        <item>"The Loveliest Rose in the World"</item>
         <item>@string/story209text</item>
     </array>
     <array name="story210">
-        <item>""</item>
+        <item>"In a Thousand Years"</item>
         <item>@string/story210text</item>
     </array>
     <array name="story211">
-        <item>""</item>
+        <item>"The Swan\'s Nest"</item>
         <item>@string/story211text</item>
     </array>
     <array name="story212">
-        <item>""</item>
+        <item>"The Story of the Year"</item>
         <item>@string/story212text</item>
     </array>
     <array name="story213">
-        <item>""</item>
+        <item>"There Is No Doubt About It"</item>
         <item>@string/story213text</item>
     </array>
     <array name="story214">
-        <item>""</item>
+        <item>"A Cheerful Temper"</item>
         <item>@string/story214text</item>
     </array>
     <array name="story215">
-        <item>""</item>
+        <item>"A Great Grief"</item>
         <item>@string/story215text</item>
     </array>
     <array name="story216">
-        <item>""</item>
+        <item>"Everything in the Right Place"</item>
         <item>@string/story216text</item>
     </array>
     <array name="story217">
-        <item>""</item>
+        <item>"The Goblin and the Huckster"</item>
         <item>@string/story217text</item>
     </array>
     <array name="story218">
-        <item>""</item>
+        <item>"The Gardener and the Manor"</item>
         <item>@string/story218text</item>
     </array>
     <array name="story219">
-        <item>""</item>
+        <item>"The Pea Blossom"</item>
         <item>@string/story219text</item>
     </array>
     <array name="story220">
-        <item>""</item>
+        <item>"She Was Good for Nothing"</item>
         <item>@string/story220text</item>
     </array>
     <array name="story221">
-        <item>""</item>
+        <item>"The Last Pearl"</item>
         <item>@string/story221text</item>
     </array>
     <array name="story222">
-        <item>""</item>
+        <item>"Two Maidens"</item>
         <item>@string/story222text</item>
     </array>
     <array name="story223">
-        <item>""</item>
+        <item>"In the Uttermost Parts of the Sea"</item>
         <item>@string/story223text</item>
     </array>
     <array name="story224">
-        <item>""</item>
+        <item>"A Leaf from Heaven"</item>
         <item>@string/story224text</item>
     </array>
     <array name="story225">
-        <item>""</item>
+        <item>"Jack the Dullard"</item>
         <item>@string/story225text</item>
     </array>
     <array name="story226">
-        <item>""</item>
+        <item>"Ib and Little Christina"</item>
         <item>@string/story226text</item>
     </array>
     <array name="story227">
-        <item>""</item>
+        <item>"The Thorny Road of Honor"</item>
         <item>@string/story227text</item>
     </array>
     <array name="story228">
-        <item>""</item>
+        <item>"The Jewish Maiden"</item>
         <item>@string/story228text</item>
     </array>
     <array name="story229">
-        <item>""</item>
+        <item>"The Bell-Deep"</item>
         <item>@string/story229text</item>
     </array>
     <array name="story230">
-        <item>""</item>
+        <item>"The Bottle Neck"</item>
         <item>@string/story230text</item>
     </array>
     <array name="story231">
-        <item>""</item>
+        <item>"Soup from a Sausage Skewer"</item>
         <item>@string/story231text</item>
     </array>
     <array name="story232">
-        <item>""</item>
+        <item>"The Old Bachelor\'s Nightcap"</item>
         <item>@string/story232text</item>
     </array>
     <array name="story233">
-        <item>""</item>
+        <item>"Something"</item>
         <item>@string/story233text</item>
     </array>
     <array name="story234">
-        <item>""</item>
+        <item>"The Last Dream of the Old Oak"</item>
         <item>@string/story234text</item>
     </array>
     <array name="story235">
-        <item>""</item>
+        <item>"The Great Sea-Serpent"</item>
         <item>@string/story235text</item>
     </array>
     <array name="story236">
-        <item>""</item>
+        <item>"The Races"</item>
         <item>@string/story236text</item>
     </array>
     <array name="story237">
-        <item>""</item>
+        <item>"The Philosopher\'s Stone"</item>
         <item>@string/story237text</item>
     </array>
     <array name="story238">
-        <item>""</item>
+        <item>"The Story of the Wind"</item>
         <item>@string/story238text</item>
     </array>
     <array name="story239">
-        <item>""</item>
+        <item>"The Girl Who Trod on the Loaf"</item>
         <item>@string/story239text</item>
     </array>
     <array name="story240">
-        <item>""</item>
+        <item>"Ole the Tower-Keeper"</item>
         <item>@string/story240text</item>
     </array>
     <array name="story241">
-        <item>""</item>
+        <item>"Anne Lisbeth"</item>
         <item>@string/story241text</item>
     </array>
     <array name="story242">
-        <item>""</item>
+        <item>"Children\'s Prattle"</item>
         <item>@string/story242text</item>
     </array>
     <array name="story243">
-        <item>""</item>
+        <item>"The Pen and the Inkstand"</item>
         <item>@string/story243text</item>
     </array>
     <array name="story244">
-        <item>""</item>
+        <item>"The Farm-Yard Cock and the Weather-Cock"</item>
         <item>@string/story244text</item>
     </array>
     <array name="story245">
-        <item>""</item>
+        <item>"Beauty of Form and Beauty of Mind"</item>
         <item>@string/story245text</item>
     </array>
     <array name="story246">
-        <item>""</item>
+        <item>"The Butterfly"</item>
         <item>@string/story246text</item>
     </array>
     <array name="story247">
-        <item>""</item>
+        <item>"The Snow Queen: First Story"</item>
         <item>@string/story247text</item>
     </array>
     <array name="story248">
-        <item>""</item>
+        <item>"The Snow Queen: Second Story"</item>
         <item>@string/story248text</item>
     </array>
     <array name="story249">
-        <item>""</item>
+        <item>"The Snow Queen: Third Story"</item>
         <item>@string/story249text</item>
     </array>
     <array name="story250">
-        <item>""</item>
+        <item>"The Snow Queen: Fourth Story"</item>
         <item>@string/story250text</item>
     </array>
     <array name="story251">
-        <item>""</item>
+        <item>"The Snow Queen: Fifth Story"</item>
         <item>@string/story251text</item>
     </array>
     <array name="story252">
-        <item>""</item>
+        <item>"The Snow Queen: Sixth Story"</item>
         <item>@string/story252text</item>
     </array>
     <array name="story253">
-        <item>""</item>
+        <item>"The Snow Queen: Seventh Story"</item>
         <item>@string/story253text</item>
     </array>
     <array name="story254">
-        <item>""</item>
+        <item>"The Mail-Coach Passengers"</item>
         <item>@string/story254text</item>
     </array>
     <array name="story255">
-        <item>""</item>
+        <item>"The Beetle Who Went on His Travels"</item>
         <item>@string/story255text</item>
     </array>
     <array name="story256">
-        <item>""</item>
+        <item>"What the Old Man Does Is Always Right"</item>
         <item>@string/story256text</item>
     </array>
     <array name="story257">
-        <item>""</item>
+        <item>"The Snow Man"</item>
         <item>@string/story257text</item>
     </array>
     <array name="story258">
-        <item>""</item>
+        <item>"The Portuguese Duck"</item>
         <item>@string/story258text</item>
     </array>
     <array name="story259">
-        <item>""</item>
+        <item>"The Psyche"</item>
         <item>@string/story259text</item>
     </array>
     <array name="story260">
-        <item>""</item>
+        <item>"The Snail and the Rose-Tree"</item>
         <item>@string/story260text</item>
     </array>
     <array name="story261">
-        <item>""</item>
+        <item>"The Snowdrop"</item>
         <item>@string/story261text</item>
     </array>
     <array name="story262">
-        <item>""</item>
+        <item>"The Bird of Popular Song"</item>
         <item>@string/story262text</item>
     </array>
     <array name="story263">
-        <item>""</item>
+        <item>"The Will-o\'-the-Wisp Is in the Town"</item>
         <item>@string/story263text</item>
     </array>
     <array name="story264">
-        <item>""</item>
+        <item>"The Windmill"</item>
         <item>@string/story264text</item>
     </array>
     <array name="story265">
-        <item>""</item>
+        <item>"The Golden Treasure"</item>
         <item>@string/story265text</item>
     </array>
     <array name="story266">
-        <item>""</item>
+        <item>"The Storm Shakes the Shield"</item>
         <item>@string/story266text</item>
     </array>
     <array name="story267">
-        <item>""</item>
+        <item>"Delaying Is Not Forgetting"</item>
         <item>@string/story267text</item>
     </array>
     <array name="story268">
-        <item>""</item>
+        <item>"Danish Popular Legends"</item>
         <item>@string/story268text</item>
     </array>
     <array name="story269">
-        <item>""</item>
+        <item>"Our Aunt"</item>
         <item>@string/story269text</item>
     </array>
     <array name="story270">
-        <item>""</item>
+        <item>"The Toad"</item>
         <item>@string/story270text</item>
     </array>
     <array name="story271">
-        <item>""</item>
+        <item>"The Nis and the Dame"</item>
         <item>@string/story271text</item>
     </array>
     <array name="story272">
-        <item>""</item>
+        <item>"The Most Incredible Thing"</item>
         <item>@string/story272text</item>
     </array>
     <array name="story273">
-        <item>""</item>
+        <item>"The Court Cards"</item>
         <item>@string/story273text</item>
     </array>
     <array name="story274">
-        <item>""</item>
+        <item>"Good Luck Can Lie in a Pin"</item>
         <item>@string/story274text</item>
     </array>
     <array name="story275">
-        <item>""</item>
+        <item>"Sunshine Stories"</item>
         <item>@string/story275text</item>
     </array>
     <array name="story276">
-        <item>""</item>
+        <item>"What One Can Invent"</item>
         <item>@string/story276text</item>
     </array>
     <array name="story277">
-        <item>""</item>
+        <item>"The Thistle\'s Experiences"</item>
         <item>@string/story277text</item>
     </array>
     <array name="story278">
-        <item>""</item>
+        <item>"Poultry Meg\'s Family"</item>
         <item>@string/story278text</item>
     </array>
     <array name="story279">
-        <item>""</item>
+        <item>"The Candles"</item>
         <item>@string/story279text</item>
     </array>
     <array name="story280">
-        <item>""</item>
+        <item>"The griffin"</item>
         <item>@string/story280text</item>
     </array>
     <array name="story281">
-        <item>""</item>
+        <item>"The hand with the knife"</item>
         <item>@string/story281text</item>
     </array>
     <array name="story282">
-        <item>""</item>
+        <item>"Hans in luck"</item>
         <item>@string/story282text</item>
     </array>
     <array name="story283">
-        <item>""</item>
+        <item>"Hans married"</item>
         <item>@string/story283text</item>
     </array>
     <array name="story284">
-        <item>""</item>
+        <item>"Hans my hedgehog"</item>
         <item>@string/story284text</item>
     </array>
     <array name="story285">
-        <item>""</item>
+        <item>"Hansel and Gretel"</item>
         <item>@string/story285text</item>
     </array>
     <array name="story286">
-        <item>""</item>
+        <item>"The aged mother"</item>
         <item>@string/story286text</item>
     </array>
     <array name="story287">
-        <item>""</item>
+        <item>"All-kinds-of-fur"</item>
         <item>@string/story287text</item>
     </array>
     <array name="story288">
-        <item>""</item>
+        <item>"The almond tree"</item>
         <item>@string/story288text</item>
     </array>
     <array name="story289">
-        <item>""</item>
+        <item>"The beam"</item>
         <item>@string/story289text</item>
     </array>
     <array name="story290">
-        <item>""</item>
+        <item>"Bearskin"</item>
         <item>@string/story290text</item>
     </array>
     <array name="story291">
-        <item>""</item>
+        <item>"The bittern and the hoopoe"</item>
         <item>@string/story291text</item>
     </array>
     <array name="story292">
-        <item>""</item>
+        <item>"The blue light"</item>
         <item>@string/story292text</item>
     </array>
     <array name="story293">
-        <item>""</item>
+        <item>"The boots of buffalo-leather"</item>
         <item>@string/story293text</item>
     </array>
     <array name="story294">
-        <item>""</item>
+        <item>"The Bremen town musicians"</item>
         <item>@string/story294text</item>
     </array>
     <array name="story295">
-        <item>""</item>
+        <item>"Brides on their trial"</item>
         <item>@string/story295text</item>
     </array>
     <array name="story296">
-        <item>""</item>
+        <item>"The bright sun brings it to light"</item>
         <item>@string/story296text</item>
     </array>
     <array name="story297">
-        <item>""</item>
+        <item>"Brother Lustig"</item>
         <item>@string/story297text</item>
     </array>
     <array name="story298">
-        <item>""</item>
+        <item>"The brother and sister"</item>
         <item>@string/story298text</item>
     </array>
     <array name="story299">
-        <item>""</item>
+        <item>"Cat and mouse in partnership"</item>
         <item>@string/story299text</item>
     </array>
     <array name="story300">
-        <item>""</item>
+        <item>"Cinderella"</item>
         <item>@string/story300text</item>
     </array>
     <array name="story301">
-        <item>""</item>
+        <item>"Clever Else"</item>
         <item>@string/story301text</item>
     </array>
     <array name="story302">
-        <item>""</item>
+        <item>"Clever Grethel"</item>
         <item>@string/story302text</item>
     </array>
     <array name="story303">
-        <item>""</item>
+        <item>"The crumbs on the table"</item>
         <item>@string/story303text</item>
     </array>
     <array name="story304">
-        <item>""</item>
+        <item>"The crystal ball"</item>
         <item>@string/story304text</item>
     </array>
     <array name="story305">
-        <item>""</item>
+        <item>"The cunning little tailor"</item>
         <item>@string/story305text</item>
     </array>
     <array name="story306">
-        <item>""</item>
+        <item>"Death and the goose herder"</item>
         <item>@string/story306text</item>
     </array>
     <array name="story307">
-        <item>""</item>
+        <item>"The death of the little hen"</item>
         <item>@string/story307text</item>
     </array>
     <array name="story308">
-        <item>""</item>
+        <item>"The devil and his grandmother"</item>
         <item>@string/story308text</item>
     </array>
     <array name="story309">
-        <item>""</item>
+        <item>"The devil with the three golden hairs"</item>
         <item>@string/story309text</item>
     </array>
     <array name="story310">
-        <item>""</item>
+        <item>"The Devil's sooty brother"</item>
         <item>@string/story310text</item>
     </array>
     <array name="story311">
-        <item>""</item>
+        <item>"The Ditmarsch tale of wonders"</item>
         <item>@string/story311text</item>
     </array>
     <array name="story312">
-        <item>""</item>
+        <item>"Doctor Know-all"</item>
         <item>@string/story312text</item>
     </array>
     <array name="story313">
-        <item>""</item>
+        <item>"The dog and the sparrow"</item>
         <item>@string/story313text</item>
     </array>
     <array name="story314">
-        <item>""</item>
+        <item>"Domestic servants"</item>
         <item>@string/story314text</item>
     </array>
     <array name="story315">
-        <item>""</item>
+        <item>"Donkey cabbages"</item>
         <item>@string/story315text</item>
     </array>
     <array name="story316">
-        <item>""</item>
+        <item>"The donkey"</item>
         <item>@string/story316text</item>
     </array>
     <array name="story317">
-        <item>""</item>
+        <item>"The ear of corn"</item>
         <item>@string/story317text</item>
     </array>
     <array name="story318">
-        <item>""</item>
+        <item>"The duration of life"</item>
         <item>@string/story318text</item>
     </array>
     <array name="story319">
-        <item>""</item>
+        <item>"The elves"</item>
         <item>@string/story319text</item>
     </array>
     <array name="story320">
-        <item>""</item>
+        <item>"Ferdinand the faithful"</item>
         <item>@string/story320text</item>
     </array>
     <array name="story321">
-        <item>""</item>
+        <item>"The fisherman and his wife"</item>
         <item>@string/story321text</item>
     </array>
     <array name="story322">
-        <item>""</item>
+        <item>"Fitcher's Bird"</item>
         <item>@string/story322text</item>
     </array>
     <array name="story323">
-        <item>""</item>
+        <item>"The flail from heaven"</item>
         <item>@string/story323text</item>
     </array>
     <array name="story324">
-        <item>""</item>
+        <item>"The four skilful brothers"</item>
         <item>@string/story324text</item>
     </array>
     <array name="story325">
-        <item>""</item>
+        <item>"The fox and the cat"</item>
         <item>@string/story325text</item>
     </array>
     <array name="story326">
-        <item>""</item>
+        <item>"The fox and the horse"</item>
         <item>@string/story326text</item>
     </array>
     <array name="story327">
-        <item>""</item>
+        <item>"The fox and the geese"</item>
         <item>@string/story327text</item>
     </array>
     <array name="story328">
-        <item>""</item>
+        <item>"Frau Trude"</item>
         <item>@string/story328text</item>
     </array>
     <array name="story329">
-        <item>""</item>
+        <item>"Frederick and Catherine"</item>
         <item>@string/story329text</item>
     </array>
     <array name="story330">
-        <item>""</item>
+        <item>"The Hare and the Hedgehog"</item>
         <item>@string/story330text</item>
     </array>
     <array name="story331">
-        <item>""</item>
+        <item>"Fundevogel"</item>
         <item>@string/story331text</item>
     </array>
     <array name="story332">
-        <item>""</item>
+        <item>"Gambling Hansel"</item>
         <item>@string/story332text</item>
     </array>
     <array name="story333">
-        <item>""</item>
+        <item>"The giant and the tailor"</item>
         <item>@string/story333text</item>
     </array>
     <array name="story334">
-        <item>""</item>
+        <item>"The girl without hands"</item>
         <item>@string/story334text</item>
     </array>
     <array name="story335">
-        <item>""</item>
+        <item>"The glass coffin"</item>
         <item>@string/story335text</item>
     </array>
     <array name="story336">
-        <item>""</item>
+        <item>"The gnome"</item>
         <item>@string/story336text</item>
     </array>
     <array name="story337">
-        <item>""</item>
+        <item>"God's food"</item>
         <item>@string/story337text</item>
     </array>
     <array name="story338">
-        <item>""</item>
+        <item>"Godfather Death"</item>
         <item>@string/story338text</item>
     </array>
     <array name="story339">
-        <item>""</item>
+        <item>"The godfather"</item>
         <item>@string/story339text</item>
     </array>
     <array name="story340">
-        <item>""</item>
+        <item>"Going a-travelling"</item>
         <item>@string/story340text</item>
     </array>
     <array name="story341">
-        <item>""</item>
+        <item>"The gold-children"</item>
         <item>@string/story341text</item>
     </array>
     <array name="story342">
-        <item>""</item>
+        <item>"The golden bird"</item>
         <item>@string/story342text</item>
     </array>
     <array name="story343">
-        <item>""</item>
+        <item>"The golden goose"</item>
         <item>@string/story343text</item>
     </array>
     <array name="story344">
-        <item>""</item>
+        <item>"The golden key"</item>
         <item>@string/story344text</item>
     </array>
     <array name="story345">
-        <item>""</item>
+        <item>"The good bargain"</item>
         <item>@string/story345text</item>
     </array>
     <array name="story346">
-        <item>""</item>
+        <item>"The goose girl"</item>
         <item>@string/story346text</item>
     </array>
     <array name="story347">
-        <item>""</item>
+        <item>"The goose-girl at the well"</item>
         <item>@string/story347text</item>
     </array>
     <array name="story348">
-        <item>""</item>
+        <item>"The fox and his cousin"</item>
         <item>@string/story348text</item>
     </array>
     <array name="story349">
-        <item>""</item>
+        <item>"The grave-mound"</item>
         <item>@string/story349text</item>
     </array>
     <array name="story350">
-        <item>""</item>
+        <item>"Herr Korbes"</item>
         <item>@string/story350text</item>
     </array>
     <array name="story351">
-        <item>""</item>
+        <item>"How children played slaughter with each other"</item>
         <item>@string/story351text</item>
     </array>
     <array name="story352">
-        <item>""</item>
+        <item>"The hut in the forest"</item>
         <item>@string/story352text</item>
     </array>
     <array name="story353">
-        <item>""</item>
+        <item>"Iron John"</item>
         <item>@string/story353text</item>
     </array>
     <array name="story354">
-        <item>""</item>
+        <item>"The iron stove"</item>
         <item>@string/story354text</item>
     </array>
     <array name="story355">
-        <item>""</item>
+        <item>"The jew among thorns"</item>
         <item>@string/story355text</item>
     </array>
     <array name="story356">
-        <item>""</item>
+        <item>"Jorinda and Joringel"</item>
         <item>@string/story356text</item>
     </array>
     <array name="story357">
-        <item>""</item>
+        <item>"King Thrushbeard"</item>
         <item>@string/story357text</item>
     </array>
     <array name="story358">
-        <item>""</item>
+        <item>"The king of the golden mountain"</item>
         <item>@string/story358text</item>
     </array>
     <array name="story359">
-        <item>""</item>
+        <item>"The king's son who feared nothing"</item>
         <item>@string/story359text</item>
     </array>
     <array name="story360">
-        <item>""</item>
+        <item>"The knapsack, the hat, and the horn"</item>
         <item>@string/story360text</item>
     </array>
     <array name="story361">
-        <item>""</item>
+        <item>"Knoist and his three sons"</item>
         <item>@string/story361text</item>
     </array>
     <array name="story362">
-        <item>""</item>
+        <item>"The lambkin and the little fish"</item>
         <item>@string/story362text</item>
     </array>
     <array name="story363">
-        <item>""</item>
+        <item>"Lazy Harry"</item>
         <item>@string/story363text</item>
     </array>
     <array name="story364">
-        <item>""</item>
+        <item>"The lazy spinner"</item>
         <item>@string/story364text</item>
     </array>
     <array name="story365">
-        <item>""</item>
+        <item>"Lean Lisa"</item>
         <item>@string/story365text</item>
     </array>
     <array name="story366">
-        <item>""</item>
+        <item>"The little folks' presents"</item>
         <item>@string/story366text</item>
     </array>
     <array name="story367">
-        <item>""</item>
+        <item>"The little peasant"</item>
         <item>@string/story367text</item>
     </array>
     <array name="story368">
-        <item>""</item>
+        <item>"The Lord's animals and the Devil's"</item>
         <item>@string/story368text</item>
     </array>
     <array name="story369">
-        <item>""</item>
+        <item>"The louse and the flea"</item>
         <item>@string/story369text</item>
     </array>
     <array name="story370">
-        <item>""</item>
+        <item>"Maid Maleen"</item>
         <item>@string/story370text</item>
     </array>
     <array name="story371">
-        <item>""</item>
+        <item>"Master Pfriem"</item>
         <item>@string/story371text</item>
     </array>
     <array name="story372">
-        <item>""</item>
+        <item>"The master-thief"</item>
         <item>@string/story372text</item>
     </array>
     <array name="story373">
-        <item>""</item>
+        <item>"The moon"</item>
         <item>@string/story373text</item>
     </array>
     <array name="story374">
-        <item>""</item>
+        <item>"Mother Hulda"</item>
         <item>@string/story374text</item>
     </array>
     <array name="story375">
-        <item>""</item>
+        <item>"The mouse, the bird, and the sausage"</item>
         <item>@string/story375text</item>
     </array>
     <array name="story376">
-        <item>""</item>
+        <item>"The nail"</item>
         <item>@string/story376text</item>
     </array>
     <array name="story377">
-        <item>""</item>
+        <item>"The Nightingale and the Blindworm"</item>
         <item>@string/story377text</item>
     </array>
     <array name="story378">
-        <item>""</item>
+        <item>"The nix of the mill-pond"</item>
         <item>@string/story378text</item>
     </array>
     <array name="story379">
-        <item>""</item>
+        <item>"Odds and ends"</item>
         <item>@string/story379text</item>
     </array>
     <array name="story380">
-        <item>""</item>
+        <item>"Old Hildebrand"</item>
         <item>@string/story380text</item>
     </array>
     <array name="story381">
-        <item>""</item>
+        <item>"Old Rinkrank"</item>
         <item>@string/story381text</item>
     </array>
     <array name="story382">
-        <item>""</item>
+        <item>"Old Sultan"</item>
         <item>@string/story382text</item>
     </array>
     <array name="story383">
-        <item>""</item>
+        <item>"The old beggar-woman"</item>
         <item>@string/story383text</item>
     </array>
     <array name="story384">
-        <item>""</item>
+        <item>"The old man and his grandson"</item>
         <item>@string/story384text</item>
     </array>
     <array name="story385">
-        <item>""</item>
+        <item>"The old man made young again"</item>
         <item>@string/story385text</item>
     </array>
     <array name="story386">
-        <item>""</item>
+        <item>"The old woman in the wood"</item>
         <item>@string/story386text</item>
     </array>
     <array name="story387">
-        <item>""</item>
+        <item>"One-eye, two-eyes, and three-eyes"</item>
         <item>@string/story387text</item>
     </array>
     <array name="story388">
-        <item>""</item>
+        <item>"Our Lady's Child"</item>
         <item>@string/story388text</item>
     </array>
     <array name="story389">
-        <item>""</item>
+        <item>"The owl"</item>
         <item>@string/story389text</item>
     </array>
     <array name="story390">
-        <item>""</item>
+        <item>"The pack of ragamuffins"</item>
         <item>@string/story390text</item>
     </array>
     <array name="story391">
-        <item>""</item>
+        <item>"The peasant and the devil"</item>
         <item>@string/story391text</item>
     </array>
     <array name="story392">
-        <item>""</item>
+        <item>"The peasant in heaven"</item>
         <item>@string/story392text</item>
     </array>
     <array name="story393">
-        <item>""</item>
+        <item>"The peasant's wise daughter"</item>
         <item>@string/story393text</item>
     </array>
     <array name="story394">
-        <item>""</item>
+        <item>"The pink"</item>
         <item>@string/story394text</item>
     </array>
     <array name="story395">
-        <item>""</item>
+        <item>"The poor boy in the grave"</item>
         <item>@string/story395text</item>
     </array>
     <array name="story396">
-        <item>""</item>
+        <item>"The poor man and the rich man"</item>
         <item>@string/story396text</item>
     </array>
     <array name="story397">
-        <item>""</item>
+        <item>"The poor miller's boy and the cat"</item>
         <item>@string/story397text</item>
     </array>
     <array name="story398">
-        <item>""</item>
+        <item>"Poverty and humility lead to heaven"</item>
         <item>@string/story398text</item>
     </array>
     <array name="story399">
-        <item>""</item>
+        <item>"Princess Mouseskin"</item>
         <item>@string/story399text</item>
     </array>
     <array name="story400">
-        <item>""</item>
+        <item>"Puss in Boots"</item>
         <item>@string/story400text</item>
     </array>
     <array name="story401">
-        <item>""</item>
+        <item>"The queen bee"</item>
         <item>@string/story401text</item>
     </array>
     <array name="story402">
-        <item>""</item>
+        <item>"The rabbit's bride"</item>
         <item>@string/story402text</item>
     </array>
     <array name="story403">
-        <item>""</item>
+        <item>"The raven"</item>
         <item>@string/story403text</item>
     </array>
     <array name="story404">
-        <item>""</item>
+        <item>"The riddle"</item>
         <item>@string/story404text</item>
     </array>
     <array name="story405">
-        <item>""</item>
+        <item>"A riddling tale"</item>
         <item>@string/story405text</item>
     </array>
     <array name="story406">
-        <item>""</item>
+        <item>"The robber bridegroom"</item>
         <item>@string/story406text</item>
     </array>
     <array name="story407">
-        <item>""</item>
+        <item>"Roland"</item>
         <item>@string/story407text</item>
     </array>
     <array name="story408">
-        <item>""</item>
+        <item>"The rose"</item>
         <item>@string/story408text</item>
     </array>
     <array name="story409">
-        <item>""</item>
+        <item>"The sea-hare"</item>
         <item>@string/story409text</item>
     </array>
     <array name="story410">
-        <item>""</item>
+        <item>"The seven Swabians"</item>
         <item>@string/story410text</item>
     </array>
     <array name="story411">
-        <item>""</item>
+        <item>"The seven ravens"</item>
         <item>@string/story411text</item>
     </array>
     <array name="story412">
-        <item>""</item>
+        <item>"Sharing joy and sorrow"</item>
         <item>@string/story412text</item>
     </array>
     <array name="story413">
-        <item>""</item>
+        <item>"The shepherd boy"</item>
         <item>@string/story413text</item>
     </array>
     <array name="story414">
-        <item>""</item>
+        <item>"The shoes that were danced to pieces"</item>
         <item>@string/story414text</item>
     </array>
     <array name="story415">
-        <item>""</item>
+        <item>"Simeli mountain"</item>
         <item>@string/story415text</item>
     </array>
     <array name="story416">
-        <item>""</item>
+        <item>"The singing bone"</item>
         <item>@string/story416text</item>
     </array>
     <array name="story417">
-        <item>""</item>
+        <item>"The singing, springing lark"</item>
         <item>@string/story417text</item>
     </array>
     <array name="story418">
-        <item>""</item>
+        <item>"The six servants"</item>
         <item>@string/story418text</item>
     </array>
     <array name="story419">
-        <item>""</item>
+        <item>"Six soldiers of fortune"</item>
         <item>@string/story419text</item>
     </array>
     <array name="story420">
-        <item>""</item>
+        <item>"The six swans"</item>
         <item>@string/story420text</item>
     </array>
     <array name="story421">
-        <item>""</item>
+        <item>"The skilful huntsman"</item>
         <item>@string/story421text</item>
     </array>
     <array name="story422">
-        <item>""</item>
+        <item>"Sleeping Beauty"</item>
         <item>@string/story422text</item>
     </array>
     <array name="story423">
-        <item>""</item>
+        <item>"Snow-White and Rose-Red"</item>
         <item>@string/story423text</item>
     </array>
     <array name="story424">
-        <item>""</item>
+        <item>"Snow-white"</item>
         <item>@string/story424text</item>
     </array>
     <array name="story425">
-        <item>""</item>
+        <item>"The sole"</item>
         <item>@string/story425text</item>
     </array>
     <array name="story426">
-        <item>""</item>
+        <item>"The sparrow and his four children"</item>
         <item>@string/story426text</item>
     </array>
     <array name="story427">
-        <item>""</item>
+        <item>"The spindle, the shuttle, and the needle"</item>
         <item>@string/story427text</item>
     </array>
     <array name="story428">
-        <item>""</item>
+        <item>"The spirit in the glass bottle"</item>
         <item>@string/story428text</item>
     </array>
     <array name="story429">
-        <item>""</item>
+        <item>"St. Joseph in the forest"</item>
         <item>@string/story429text</item>
     </array>
     <array name="story430">
-        <item>""</item>
+        <item>"The star-money"</item>
         <item>@string/story430text</item>
     </array>
     <array name="story431">
-        <item>""</item>
+        <item>"The stolen farthings"</item>
         <item>@string/story431text</item>
     </array>
     <array name="story432">
-        <item>""</item>
+        <item>"Stories about snakes"</item>
         <item>@string/story432text</item>
     </array>
     <array name="story433">
-        <item>""</item>
+        <item>"The story of the youth who went forth to learn what fear was"</item>
         <item>@string/story433text</item>
     </array>
     <array name="story434">
-        <item>""</item>
+        <item>"Straw, coal, and bean"</item>
         <item>@string/story434text</item>
     </array>
     <array name="story435">
-        <item>""</item>
+        <item>"Strong Hans"</item>
         <item>@string/story435text</item>
     </array>
     <array name="story436">
-        <item>""</item>
+        <item>"Sweet porridge"</item>
         <item>@string/story436text</item>
     </array>
     <array name="story437">
-        <item>""</item>
+        <item>"The tailor in heaven"</item>
         <item>@string/story437text</item>
     </array>
     <array name="story438">
-        <item>""</item>
+        <item>"The thief and his master"</item>
         <item>@string/story438text</item>
     </array>
     <array name="story439">
-        <item>""</item>
+        <item>"The three apprentices"</item>
         <item>@string/story439text</item>
     </array>
     <array name="story440">
-        <item>""</item>
-        <item>@string/story440text</item>
-    </array>
-    <array name="story441">
-        <item>""</item>
+        <item>"The three army-surgeons"</item>
         <item>@string/story441text</item>
     </array>
-    <array name="story442">
-        <item>""</item>
+    <array name="story441">
+        <item>"The three black princesses"</item>
         <item>@string/story442text</item>
     </array>
-    <array name="story443">
-        <item>""</item>
+    <array name="story442">
+        <item>"The three brothers"</item>
         <item>@string/story443text</item>
     </array>
-    <array name="story444">
-        <item>""</item>
+    <array name="story443">
+        <item>"The three children of fortune"</item>
         <item>@string/story444text</item>
     </array>
+    <array name="story444">
+        <item>"The three feathers"</item>
+        <item>@string/story440text</item>
+    </array>
     <array name="story445">
-        <item>""</item>
+        <item>"The three green twigs"</item>
         <item>@string/story445text</item>
     </array>
     <array name="story446">
-        <item>""</item>
+        <item>"The three languages"</item>
         <item>@string/story446text</item>
     </array>
     <array name="story447">
-        <item>""</item>
+        <item>"The three little birds"</item>
         <item>@string/story447text</item>
     </array>
     <array name="story448">
-        <item>""</item>
+        <item>"The three little men in the wood"</item>
         <item>@string/story448text</item>
     </array>
     <array name="story449">
-        <item>""</item>
+        <item>"The three sluggards"</item>
         <item>@string/story449text</item>
     </array>
     <array name="story450">
-        <item>""</item>
+        <item>"The three snake-leaves"</item>
         <item>@string/story450text</item>
     </array>
     <array name="story451">
-        <item>""</item>
+        <item>"The three spinners"</item>
         <item>@string/story451text</item>
     </array>
     <array name="story452">
-        <item>""</item>
+        <item>"Thumbling's travels"</item>
         <item>@string/story452text</item>
     </array>
     <array name="story453">
-        <item>""</item>
+        <item>"Tom Thumb"</item>
         <item>@string/story453text</item>
     </array>
     <array name="story454">
-        <item>""</item>
+        <item>"The true bride"</item>
         <item>@string/story454text</item>
     </array>
     <array name="story455">
-        <item>""</item>
+        <item>"Trusty John"</item>
         <item>@string/story455text</item>
     </array>
     <array name="story456">
-        <item>""</item>
+        <item>"The turnip"</item>
         <item>@string/story456text</item>
     </array>
     <array name="story457">
-        <item>""</item>
+        <item>"The twelve brothers"</item>
         <item>@string/story457text</item>
     </array>
     <array name="story458">
-        <item>""</item>
+        <item>"The twelve huntsmen"</item>
         <item>@string/story458text</item>
     </array>
     <array name="story459">
-        <item>""</item>
+        <item>"The twelve idle servants"</item>
         <item>@string/story459text</item>
     </array>
     <array name="story460">
-        <item>""</item>
+        <item>"The two brothers"</item>
         <item>@string/story460text</item>
     </array>
     <array name="story461">
-        <item>""</item>
+        <item>"The two kings' children"</item>
         <item>@string/story461text</item>
     </array>
     <array name="story462">
-        <item>""</item>
+        <item>"The two travellers"</item>
         <item>@string/story462text</item>
     </array>
     <array name="story463">
-        <item>""</item>
+        <item>"The ungrateful son"</item>
         <item>@string/story463text</item>
     </array>
     <array name="story464">
-        <item>""</item>
+        <item>"The valiant little tailor"</item>
         <item>@string/story464text</item>
     </array>
     <array name="story465">
-        <item>""</item>
+        <item>"The water of life"</item>
         <item>@string/story465text</item>
     </array>
     <array name="story466">
-        <item>""</item>
+        <item>"The water-nix"</item>
         <item>@string/story466text</item>
     </array>
     <array name="story467">
-        <item>""</item>
+        <item>"The wedding of Mrs. Fox"</item>
         <item>@string/story467text</item>
     </array>
     <array name="story468">
-        <item>""</item>
+        <item>"The white bride and the black one"</item>
         <item>@string/story468text</item>
     </array>
     <array name="story469">
-        <item>""</item>
+        <item>"The willow-wren and the bear"</item>
         <item>@string/story469text</item>
     </array>
     <array name="story470">
-        <item>""</item>
+        <item>"The willow-wren"</item>
         <item>@string/story470text</item>
     </array>
     <array name="story471">
-        <item>""</item>
+        <item>"Wise folks"</item>
         <item>@string/story471text</item>
     </array>
     <array name="story472">
-        <item>""</item>
+        <item>"The wise servant"</item>
         <item>@string/story472text</item>
     </array>
     <array name="story473">
-        <item>""</item>
+        <item>"The Wishing-Table, Gold-Ass, and Cudgel"</item>
         <item>@string/story473text</item>
     </array>
     <array name="story474">
-        <item>""</item>
+        <item>"The wolf and the fox"</item>
         <item>@string/story474text</item>
     </array>
     <array name="story475">
-        <item>""</item>
+        <item>"The wolf and the man"</item>
         <item>@string/story475text</item>
     </array>
     <array name="story476">
-        <item>""</item>
+        <item>"The wolf and the seven young kids"</item>
         <item>@string/story476text</item>
     </array>
     <array name="story477">
-        <item>""</item>
+        <item>"The wonderful musician"</item>
         <item>@string/story477text</item>
     </array>
     <array name="story478">
-        <item>""</item>
+        <item>"The young giant"</item>
         <item>@string/story478text</item>
     </array>
-    <array name="story479">
-        <item>""</item>
-        <item>@string/story479text</item>
-    </array>
-    <array name="story480">
-        <item>""</item>
-        <item>@string/story480text</item>
-    </array>
-    <array name="story481">
-        <item>""</item>
-        <item>@string/story481text</item>
-    </array>
-    <array name="story482">
-        <item>""</item>
-        <item>@string/story482text</item>
-    </array>
-    <array name="story483">
-        <item>""</item>
-        <item>@string/story483text</item>
-    </array>
-    <array name="story484">
-        <item>""</item>
-        <item>@string/story484text</item>
-    </array>
-    <array name="story485">
-        <item>""</item>
-        <item>@string/story485text</item>
-    </array>
-    <array name="story486">
-        <item>""</item>
-        <item>@string/story486text</item>
-    </array>
-    <array name="story487">
-        <item>""</item>
-        <item>@string/story487text</item>
-    </array>
-    <array name="story488">
-        <item>""</item>
-        <item>@string/story488text</item>
-    </array>
-    <array name="story489">
-        <item>""</item>
-        <item>@string/story489text</item>
-    </array>
-    <array name="story490">
-        <item>""</item>
-        <item>@string/story490text</item>
-    </array>
-    <array name="story491">
-        <item>""</item>
-        <item>@string/story491text</item>
-    </array>
-    <array name="story492">
-        <item>""</item>
-        <item>@string/story492text</item>
-    </array>
-    <array name="story493">
-        <item>""</item>
-        <item>@string/story493text</item>
-    </array>
-    <array name="story494">
-        <item>""</item>
-        <item>@string/story494text</item>
-    </array>
-    <array name="story495">
-        <item>""</item>
-        <item>@string/story495text</item>
-    </array>
-    <array name="story496">
-        <item>""</item>
-        <item>@string/story496text</item>
-    </array>
-    <array name="story497">
-        <item>""</item>
-        <item>@string/story497text</item>
-    </array>
-    <array name="story498">
-        <item>""</item>
-        <item>@string/story498text</item>
-    </array>
-    <array name="story499">
-        <item>""</item>
-        <item>@string/story499text</item>
-    </array>
-    <array name="story500">
-        <item>""</item>
-        <item>@string/story500text</item>
-    </array>
-    <array name="story501">
-        <item>""</item>
-        <item>@string/story501text</item>
-    </array>
-    <array name="story502">
-        <item>""</item>
-        <item>@string/story502text</item>
-    </array>
-    <array name="story503">
-        <item>""</item>
-        <item>@string/story503text</item>
-    </array>
-    <array name="story504">
-        <item>""</item>
-        <item>@string/story504text</item>
-    </array>
-    <array name="story505">
-        <item>""</item>
-        <item>@string/story505text</item>
-    </array>
-    <array name="story506">
-        <item>""</item>
-        <item>@string/story506text</item>
-    </array>
-    <array name="story507">
-        <item>""</item>
-        <item>@string/story507text</item>
-    </array>
-    <array name="story508">
-        <item>""</item>
-        <item>@string/story508text</item>
-    </array>
-    <array name="story509">
-        <item>""</item>
-        <item>@string/story509text</item>
-    </array>
-    <array name="story510">
-        <item>""</item>
-        <item>@string/story510text</item>
-    </array>
-    <array name="story511">
-        <item>""</item>
-        <item>@string/story511text</item>
-    </array>
-    <array name="story512">
-        <item>""</item>
-        <item>@string/story512text</item>
-    </array>
-    <array name="story513">
-        <item>""</item>
-        <item>@string/story513text</item>
-    </array>
-    <array name="story514">
-        <item>""</item>
-        <item>@string/story514text</item>
-    </array>
-    <array name="story515">
-        <item>""</item>
-        <item>@string/story515text</item>
-    </array>
-    <array name="story516">
-        <item>""</item>
-        <item>@string/story516text</item>
-    </array>
-    <array name="story517">
-        <item>""</item>
-        <item>@string/story517text</item>
-    </array>
-    <array name="story518">
-        <item>""</item>
-        <item>@string/story518text</item>
-    </array>
-    <array name="story519">
-        <item>""</item>
-        <item>@string/story519text</item>
-    </array>
-    <array name="story520">
-        <item>""</item>
-        <item>@string/story520text</item>
-    </array>
-    <array name="story521">
-        <item>""</item>
-        <item>@string/story521text</item>
-    </array>
-    <array name="story522">
-        <item>""</item>
-        <item>@string/story522text</item>
-    </array>
-    <array name="story523">
-        <item>""</item>
-        <item>@string/story523text</item>
-    </array>
-    <array name="story524">
-        <item>""</item>
-        <item>@string/story524text</item>
-    </array>
-    <array name="story525">
-        <item>""</item>
-        <item>@string/story525text</item>
-    </array>
-    <array name="story526">
-        <item>""</item>
-        <item>@string/story526text</item>
-    </array>
-    <array name="story527">
-        <item>""</item>
-        <item>@string/story527text</item>
-    </array>
-    <array name="story528">
-        <item>""</item>
-        <item>@string/story528text</item>
-    </array>
-    <array name="story529">
-        <item>""</item>
-        <item>@string/story529text</item>
-    </array>
-    <array name="story530">
-        <item>""</item>
-        <item>@string/story530text</item>
-    </array>
-    <array name="story531">
-        <item>""</item>
-        <item>@string/story531text</item>
-    </array>
-    <array name="story532">
-        <item>""</item>
-        <item>@string/story532text</item>
-    </array>
-    <array name="story533">
-        <item>""</item>
-        <item>@string/story533text</item>
-    </array>
-    <array name="story534">
-        <item>""</item>
-        <item>@string/story534text</item>
-    </array>
-    <array name="story535">
-        <item>""</item>
-        <item>@string/story535text</item>
-    </array>
-    <array name="story536">
-        <item>""</item>
-        <item>@string/story536text</item>
-    </array>
-    <array name="story537">
-        <item>""</item>
-        <item>@string/story537text</item>
-    </array>
-    <array name="story538">
-        <item>""</item>
-        <item>@string/story538text</item>
-    </array>
-    <array name="story539">
-        <item>""</item>
-        <item>@string/story539text</item>
-    </array>
-    <array name="story540">
-        <item>""</item>
-        <item>@string/story540text</item>
-    </array>
-    <array name="story541">
-        <item>""</item>
-        <item>@string/story541text</item>
-    </array>
-    <array name="story542">
-        <item>""</item>
-        <item>@string/story542text</item>
-    </array>
-    <array name="story543">
-        <item>""</item>
-        <item>@string/story543text</item>
-    </array>
-    <array name="story544">
-        <item>""</item>
-        <item>@string/story544text</item>
-    </array>
-    <array name="story545">
-        <item>""</item>
-        <item>@string/story545text</item>
-    </array>
-    <array name="story546">
-        <item>""</item>
-        <item>@string/story546text</item>
-    </array>
-    <array name="story547">
-        <item>""</item>
-        <item>@string/story547text</item>
-    </array>
-    <array name="story548">
-        <item>""</item>
-        <item>@string/story548text</item>
-    </array>
-    <array name="story549">
-        <item>""</item>
-        <item>@string/story549text</item>
-    </array>
-    <array name="story550">
-        <item>""</item>
-        <item>@string/story550text</item>
-    </array>
-    <array name="story551">
-        <item>""</item>
-        <item>@string/story551text</item>
-    </array>
-    <array name="story552">
-        <item>""</item>
-        <item>@string/story552text</item>
-    </array>
-    <array name="story553">
-        <item>""</item>
-        <item>@string/story553text</item>
-    </array>
-    <array name="story554">
-        <item>""</item>
-        <item>@string/story554text</item>
-    </array>
-    <array name="story555">
-        <item>""</item>
-        <item>@string/story555text</item>
-    </array>
-    <array name="story556">
-        <item>""</item>
-        <item>@string/story556text</item>
-    </array>
-    <array name="story557">
-        <item>""</item>
-        <item>@string/story557text</item>
-    </array>
-    <array name="story558">
-        <item>""</item>
-        <item>@string/story558text</item>
-    </array>
-    <array name="story559">
-        <item>""</item>
-        <item>@string/story559text</item>
-    </array>
-    <array name="story560">
-        <item>""</item>
-        <item>@string/story560text</item>
-    </array>
-    <array name="story561">
-        <item>""</item>
-        <item>@string/story561text</item>
-    </array>
-    <array name="story562">
-        <item>""</item>
-        <item>@string/story562text</item>
-    </array>
-    <array name="story563">
-        <item>""</item>
-        <item>@string/story563text</item>
-    </array>
-    <array name="story564">
-        <item>""</item>
-        <item>@string/story564text</item>
-    </array>
-    <array name="story565">
-        <item>""</item>
-        <item>@string/story565text</item>
-    </array>
-    <array name="story566">
-        <item>""</item>
-        <item>@string/story566text</item>
-    </array>
-    <array name="story567">
-        <item>""</item>
-        <item>@string/story567text</item>
-    </array>
-    <array name="story568">
-        <item>""</item>
-        <item>@string/story568text</item>
-    </array>
-    <array name="story569">
-        <item>""</item>
-        <item>@string/story569text</item>
-    </array>
-    <array name="story570">
-        <item>""</item>
-        <item>@string/story570text</item>
-    </array>
-    <array name="story571">
-        <item>""</item>
-        <item>@string/story571text</item>
-    </array>
-    <array name="story572">
-        <item>""</item>
-        <item>@string/story572text</item>
-    </array>
-    <array name="story573">
-        <item>""</item>
-        <item>@string/story573text</item>
-    </array>
-    <array name="story574">
-        <item>""</item>
-        <item>@string/story574text</item>
-    </array>
-    <array name="story575">
-        <item>""</item>
-        <item>@string/story575text</item>
-    </array>
-    <array name="story576">
-        <item>""</item>
-        <item>@string/story576text</item>
-    </array>
-    <array name="story577">
-        <item>""</item>
-        <item>@string/story577text</item>
-    </array>
-    <array name="story578">
-        <item>""</item>
-        <item>@string/story578text</item>
-    </array>
-    <array name="story579">
-        <item>""</item>
-        <item>@string/story579text</item>
-    </array>
-    <array name="story580">
-        <item>""</item>
-        <item>@string/story580text</item>
-    </array>
-    <array name="story581">
-        <item>""</item>
-        <item>@string/story581text</item>
-    </array>
-    <array name="story582">
-        <item>""</item>
-        <item>@string/story582text</item>
-    </array>
-    <array name="story583">
-        <item>""</item>
-        <item>@string/story583text</item>
-    </array>
-    <array name="story584">
-        <item>""</item>
-        <item>@string/story584text</item>
-    </array>
-    <array name="story585">
-        <item>""</item>
-        <item>@string/story585text</item>
-    </array>
-    <array name="story586">
-        <item>""</item>
-        <item>@string/story586text</item>
-    </array>
-    <array name="story587">
-        <item>""</item>
-        <item>@string/story587text</item>
-    </array>
-    <array name="story588">
-        <item>""</item>
-        <item>@string/story588text</item>
-    </array>
-    <array name="story589">
-        <item>""</item>
-        <item>@string/story589text</item>
-    </array>
-    <array name="story590">
-        <item>""</item>
-        <item>@string/story590text</item>
-    </array>
-    <array name="story591">
-        <item>""</item>
-        <item>@string/story591text</item>
-    </array>
-    <array name="story592">
-        <item>""</item>
-        <item>@string/story592text</item>
-    </array>
-    <array name="story593">
-        <item>""</item>
-        <item>@string/story593text</item>
-    </array>
-    <array name="story594">
-        <item>""</item>
-        <item>@string/story594text</item>
-    </array>
-    <array name="story595">
-        <item>""</item>
-        <item>@string/story595text</item>
-    </array>
-    <array name="story596">
-        <item>""</item>
-        <item>@string/story596text</item>
-    </array>
-    <array name="story597">
-        <item>""</item>
-        <item>@string/story597text</item>
-    </array>
-    <array name="story598">
-        <item>""</item>
-        <item>@string/story598text</item>
-    </array>
-    <array name="story599">
-        <item>""</item>
-        <item>@string/story599text</item>
-    </array>
-
-
 </resources>
