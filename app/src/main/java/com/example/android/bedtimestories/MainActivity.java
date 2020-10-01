@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, StoryActivity.class);
                 intent.putExtra("storyID", StoryUtils.last());
+                intent.putExtra("categoryName", "All Stories");
                 startActivity(intent);
             }
         });
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, StoryActivity.class);
                 intent.putExtra("storyID", StoryUtils.random());
+                intent.putExtra("categoryName", "All Stories");
                 startActivity(intent);
             }
         });

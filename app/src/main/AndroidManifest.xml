@@ -33,6 +33,7 @@
         <activity
             android:name=".StoryListActivity"
             android:label="Stories"
+            android:launchMode="singleTop"
             android:parentActivityName=".CategoryActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -42,11 +43,11 @@
         <activity
             android:name=".StoryActivity"
             android:label="Story"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".StoryListActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".StoryListActivity"/>
         </activity>
     </application>
 

@@ -3,6 +3,7 @@ package com.example.android.bedtimestories;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
 
 import java.util.ArrayList;
 
@@ -25,13 +27,14 @@ public class StoryListActivity extends AppCompatActivity {
 
     private boolean mFirstAppearance;
     private ListView listView;
+    private String categoryName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         Intent intent = getIntent();
-        final String categoryName = intent.getStringExtra("categoryName");
+        categoryName = intent.getStringExtra("categoryName");
         final ArrayList<Story> stories = StoryUtils.getStoryList(categoryName);
 
         if (stories.isEmpty() && categoryName.equals("Favorites")){
@@ -62,6 +65,7 @@ public class StoryListActivity extends AppCompatActivity {
                 Intent intent = new Intent(StoryListActivity.this, StoryActivity.class);
                 intent.putExtra("storyID", stories.get(position).getID());
                 intent.putExtra("storyList", stories);
+                intent.putExtra("categoryName", categoryName);
                 intent.putExtra("index", position);
                 startActivity(intent);
             }
@@ -104,5 +108,21 @@ public class StoryListActivity extends AppCompatActivity {
         super.onPause();
         mFirstAppearance = false;
         Log.i("StoryListActivity", "Pause");
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == android.R.id.home) {
+            if (categoryName.equals("All Stories") || categoryName.equals("Favorites")){
+                Intent intent = new Intent(StoryListActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+            else{
+                Intent intent = new Intent(StoryListActivity.this, CategoryActivity.class);
+                startActivity(intent);
+            }
+            return true;
+        }
+        return false;
     }
 }

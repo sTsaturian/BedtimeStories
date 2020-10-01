@@ -1,6 +1,6 @@
 package com.example.android.bedtimestories;
 
-import android.content.Context;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -32,7 +32,7 @@ import java.util.ArrayList;
 public class StoryActivity extends AppCompatActivity {
 
     private static final int DELAY_FOR_READ = 10000;
-    private final int DELAY_FOR_LAST = 5000;
+    private static final int DELAY_FOR_LAST = 5000;
     private Handler mHandler;
     private ArrayList<Story> storyList;
     private TextView titleView;
@@ -44,29 +44,55 @@ public class StoryActivity extends AppCompatActivity {
     private ImageButton rightButton;
     private ScrollView scrollView;
     private int storyID;
+    private String categoryName;
     private boolean isSetupPhase;
 
+    /**
+     * this method is called on creation. It sets up the action bar,
+     * initializes the member variables and then calls fillViews()
+    */
     @Override
+    @SuppressWarnings("unchecked")
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story);
 
-        final ViewGroup actionBarLayout = (ViewGroup) getLayoutInflater().inflate(
-                R.layout.story_action_bar,null);
-        // Set up your ActionBar
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setDisplayShowTitleEnabled(false);
-        actionBar.setDisplayShowCustomEnabled(true);
-        ActionBar.LayoutParams layoutParams = new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT);
-        actionBar.setCustomView(actionBarLayout, layoutParams);
+        setupActionBar();
 
         Intent intent = getIntent();
         storyID = intent.getIntExtra("storyID", 0);
+        categoryName = intent.getStringExtra("categoryName");
         storyList = (ArrayList<Story>) intent.getSerializableExtra("storyList");
         int position = intent.getIntExtra("index", -1);
 
+        findViews();
+
+        mHandler = new Handler(Looper.getMainLooper());
+
+        fillViews(storyID, position);
+    }
+
+    /**
+     * This inflates the custom action bar.
+     */
+    private void setupActionBar() {
+        final ViewGroup actionBarLayout = (ViewGroup) getLayoutInflater().inflate(
+                R.layout.story_action_bar,null);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayShowHomeEnabled(true);
+            actionBar.setDisplayShowTitleEnabled(false);
+            actionBar.setDisplayShowCustomEnabled(true);
+            ActionBar.LayoutParams layoutParams = new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT);
+            actionBar.setCustomView(actionBarLayout, layoutParams);
+        }
+    }
+
+    /**
+     * This sets the member variables for views.
+     */
+    private void findViews() {
         titleView = findViewById(R.id.action_bar_title);
         storyNameView = findViewById(R.id.storyNameView);
         storyTextView = findViewById(R.id.storyTextView);
@@ -75,19 +101,21 @@ public class StoryActivity extends AppCompatActivity {
         leftButton = findViewById(R.id.left_button);
         rightButton = findViewById(R.id.right_button);
         scrollView = findViewById(R.id.scrollView);
-
-        mHandler = new Handler(Looper.getMainLooper());
-
-        fillViews(storyID, position);
     }
 
+    /**
+     * This method is called after creation and every time the storyID changes.
+     * It sets the content to display, listeners, and timers to mark the story read/unread
+     * @param id the story ID
+     * @param pos position of the story in the underlying story list
+     */
     private void fillViews(final int id, final int pos){
         isSetupPhase = true;
         storyID = id;
         final Story story = StoryUtils.getStory(id);
         storyTextView.setText(getString(story.getResourceID()));
         titleView.setText(story.getName());
-        storyNameView.setText(story.getName());
+        storyNameView.setText(story.getName() + " " + storyID);
         scrollView.scrollTo(0, 0);
 
         favButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -119,12 +147,12 @@ public class StoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (story.isRead()){
-                    markAsUnread(id);
+                    StoryUtils.changeReadStatus(id, false);
                     unreadButton.setText("Mark\nRead");
                     if (!isSetupPhase) showToast("Story marked as unread");
                 }
                 else{
-                    markAsRead(id);
+                    StoryUtils.changeReadStatus(id, true);
                     unreadButton.setText("Mark\nUnread");
                     if (!isSetupPhase) showToast("Story marked as read");
                 }
@@ -141,22 +169,6 @@ public class StoryActivity extends AppCompatActivity {
         }
 
         isSetupPhase = false;
-
-        mHandler.removeCallbacksAndMessages(null);
-        mHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                setAsLast(id);
-            }
-        }, DELAY_FOR_LAST);
-        if (!story.isRead()) mHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                markAsRead(id);
-                unreadButton.setText("Mark\nUnread");
-                unreadButton.setVisibility(View.VISIBLE);
-            }
-        }, DELAY_FOR_READ);
 
         if (storyList != null){
             leftButton.setOnClickListener(new Button.OnClickListener(){
@@ -199,12 +211,18 @@ public class StoryActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This resets the timers on pause.
+     */
     @Override
     protected void onPause() {
         super.onPause();
         mHandler.removeCallbacksAndMessages(null);
     }
 
+    /**
+     * This starts the timers on resume.
+     */
     @Override
     protected void onResume(){
         super.onResume();
@@ -212,30 +230,23 @@ public class StoryActivity extends AppCompatActivity {
         mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                setAsLast(storyID);
+                StoryUtils.setLastRead(storyID);
             }
         }, DELAY_FOR_LAST);
-        if (!story.isRead()) mHandler.postDelayed(new Runnable() {
+        if (!story.isRead() && !unreadButton.isShown()) mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                markAsRead(storyID);
+                StoryUtils.changeReadStatus(storyID, true);
+                unreadButton.setText("Mark\nUnread");
                 unreadButton.setVisibility(View.VISIBLE);
             }
         }, DELAY_FOR_READ);
     }
 
-    private void setAsLast(int storyID){
-        StoryUtils.setLastRead(storyID);
-    }
-
-    private void markAsRead(int storyID){
-        StoryUtils.changeReadStatus(storyID, true);
-    }
-
-    private void markAsUnread(int storyID){
-        StoryUtils.changeReadStatus(storyID, false);
-    }
-
+    /**
+     * This method shows the toast with given text in the top right corner
+     * @param text the text to show
+     */
     private void showToast(String text){
         Toast toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.TOP| Gravity.END, 16, 128);
@@ -243,14 +254,19 @@ public class StoryActivity extends AppCompatActivity {
         toast.show();
     }
 
-
-    // this makes the "up" button behave in the same way as the "back" button,
-    // it is needed because we can reach StoryActivity from both MainActivity and StoryList Activity
+    /**
+     * overrides the "up" button to navigate to StoryList activity with correct category
+     * it is needed because we can reach StoryActivity from both MainActivity and StoryList Activity
+     * @param item the menu item. we only override if the item is the "up" button
+     * @return boolean true if overriden, default value otherwise
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == android.R.id.home) {
-            onBackPressed();
+            Intent intent = new Intent(StoryActivity.this, StoryListActivity.class);
+            intent.putExtra("categoryName", categoryName);
+            startActivity(intent);
             return true;
         }
         return super.onOptionsItemSelected(item);
