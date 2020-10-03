@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
         setupActionBar();
 
+        StoryUtils.loadStoryLists(this);
+
         TextView allStoriesView = findViewById(R.id.allStoriesView);
         allStoriesView.setOnClickListener(new View.OnClickListener() {
             @Override
