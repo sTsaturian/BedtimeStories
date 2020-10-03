@@ -1,8 +1,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
     android:enabled="false"
     android:orientation="horizontal">
 
@@ -11,21 +11,20 @@
         android:layout_width="48dp"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:src="@drawable/baseline_arrow_left_black_18dp"
-        />
+        android:src="@drawable/baseline_arrow_left_black_18dp" />
 
     <TextView
         android:id="@+id/action_bar_title"
-        android:layout_height="wrap_content"
         android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_weight="2"
         android:gravity="center"
         android:textAllCaps="true"
-        tools:text="Name"
         android:textStyle="bold"
-        app:autoSizeTextType="uniform"
         app:autoSizeMaxTextSize="16sp"
-        android:layout_weight="2"/>
+        app:autoSizeTextType="uniform"
+        tools:text="Name" />
 
     <ToggleButton
         android:id="@+id/favoriteToggle"
@@ -34,28 +33,24 @@
         android:layout_gravity="center"
         android:background="@drawable/style_favorite_button"
         android:textOff=""
-        android:textOn=""
-        />
+        android:textOn="" />
 
     <Button
         android:id="@+id/unreadButton"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        tools:text="Make\nUnread"
-        app:autoSizeTextType="uniform"
-        app:autoSizeMaxTextSize="16sp"
         android:textAlignment="center"
         android:textStyle="normal"
-        />
+        app:autoSizeMaxTextSize="16sp"
+        app:autoSizeTextType="uniform"
+        tools:text="Make\nUnread" />
 
     <ImageButton
         android:id="@+id/right_button"
         android:layout_width="48dp"
         android:layout_height="match_parent"
-        android:src="@drawable/baseline_arrow_right_black_18dp"
-        />
-
+        android:src="@drawable/baseline_arrow_right_black_18dp" />
 
 
 </LinearLayout>

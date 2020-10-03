@@ -20,17 +20,7 @@ public class CategoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
-        final ViewGroup actionBarLayout = (ViewGroup) getLayoutInflater().inflate(
-                R.layout.action_bar,null);
-        // Set up your ActionBar
-        final ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setDisplayShowTitleEnabled(false);
-        actionBar.setDisplayShowCustomEnabled(true);
-        actionBar.setCustomView(actionBarLayout);
-
-        TextView titleView = findViewById(R.id.action_bar_title);
-        titleView.setText("Categories");
+        setupActionBar();
 
         TextView animalView = findViewById(R.id.animalsCategory);
         animalView.setOnClickListener(new View.OnClickListener() {
@@ -81,5 +71,23 @@ public class CategoryActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    /**
+     * Sets up the custom action bar.
+     */
+    private void setupActionBar() {
+        final ViewGroup actionBarLayout = (ViewGroup) getLayoutInflater().inflate(
+                R.layout.action_bar, null);
+        final ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayShowHomeEnabled(true);
+            actionBar.setDisplayShowTitleEnabled(false);
+            actionBar.setDisplayShowCustomEnabled(true);
+            actionBar.setCustomView(actionBarLayout);
+        }
+
+        TextView titleView = findViewById(R.id.action_bar_title);
+        titleView.setText(R.string.categories);
     }
 }

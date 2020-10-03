@@ -25,10 +25,8 @@ public class StoryAdapter extends ArrayAdapter<Story> {
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
-        // this uses method getItem from the original ArrayAdapter class
         Story currentStory = getItem(position);
 
-        // Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
 
         if (listItemView == null) {
@@ -43,8 +41,10 @@ public class StoryAdapter extends ArrayAdapter<Story> {
         if (!currentStory.isFavorite()) favoriteImageView.setVisibility(View.INVISIBLE);
         else favoriteImageView.setVisibility(View.VISIBLE);
 
-        if (currentStory.isRead()) listItemView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.read_story_color));
-        else listItemView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.unread_story_color));
+        if (currentStory.isRead())
+            listItemView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.read_story_color));
+        else
+            listItemView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.unread_story_color));
 
         return listItemView;
     }

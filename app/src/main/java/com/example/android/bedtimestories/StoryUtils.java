@@ -5,14 +5,13 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
-import android.util.Log;
 
 import java.util.ArrayList;
 
 import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 
 /**
- * The class contains various utility methods
+ * The class contains the lists of stories in each category along with various utility methods
  *
  * @author Sergei Tsaturian
  */
@@ -57,29 +56,45 @@ public class StoryUtils {
     private static SharedPreferences sharedPref;
 
     /**
-     * This method does all necessary initializations. This is called on start of the app.
+     * Does all necessary initializations. This is called on start of the app.
+     * Currently it loads the stories from stories.xml to the allStories
+     * and retrieves the read/favorite status from SharedPreferences.
      */
     public static void loadStoryLists(Context context) {
-        initializeAllStories(context);
+        sharedPref = getDefaultSharedPreferences(context);
+        allStories = new ArrayList<>();
+        Resources res = context.getResources();
+        TypedArray storiesArray = res.obtainTypedArray(R.array.story_arrays);
+        for (int id = 0; id < storiesArray.length(); id++) {
+            int arrayResourceId = storiesArray.getResourceId(id, 0);
+            TypedArray storyArray = res.obtainTypedArray(arrayResourceId);
+            String storyName = storyArray.getString(0);
+            @SuppressLint("ResourceType")
+            int resourceId = storyArray.getResourceId(1, 0);
+            int code = sharedPref.getInt(String.valueOf(id), 0);
+            allStories.add(new Story(id, storyName, resourceId, code));
+            storyArray.recycle();
+        }
+        storiesArray.recycle();
     }
 
     /**
-     * This method retrieves a random unread story from the list of all available stories
+     * Retrieves a random unread story from the list of all available stories
      *
      * @return int ID of a random unread story
      */
     public static int random() {
         ArrayList<Integer> indices = new ArrayList<>();
-        for (int id = 0; id < allStories.size(); id++){
+        for (int id = 0; id < allStories.size(); id++) {
             Story story = allStories.get(id);
             if (!story.isRead()) indices.add(id);
         }
-        if (indices.size() == 0) return (int)(Math.random() * allStories.size());
-        return indices.get((int)(Math.random() * indices.size()));
+        if (indices.size() == 0) return (int) (Math.random() * allStories.size());
+        return indices.get((int) (Math.random() * indices.size()));
     }
 
     /**
-     * This method retrieves the last read story
+     * Retrieves the last read story
      *
      * @return int ID of the last read story
      */
@@ -88,7 +103,7 @@ public class StoryUtils {
     }
 
     /**
-     * This method retrieves the story by given ID
+     * Retrieves the story by given ID
      *
      * @param storyID ID of the story to retrieve
      * @return Story the corresponding story
@@ -98,9 +113,15 @@ public class StoryUtils {
     }
 
     /**
-     * This method retrieves all stories with given category
+     * Retrieves all stories with given category
      *
-     * @param categoryName the name of the category. Could be "All Stories"
+     * @param categoryName the name of the category. Possible values:
+     *                     "All Stories"
+     *                     "Favorites"
+     *                     "Kid Stories"
+     *                     "Aesop's Fables"
+     *                     "Brothers Grimm Stories"
+     *                     "Hans Christian Andersen's Stories"
      * @return ArrayList<Story> all stories in the given category
      */
     public static ArrayList<Story> getStoryList(String categoryName) {
@@ -133,9 +154,14 @@ public class StoryUtils {
         return categoryStoryList;
     }
 
-    public static ArrayList<Story> getFavorites(){
+    /**
+     * Retrieves the list of all favorite stories.
+     *
+     * @return ArrayList<Story> the list of all favorite stories.
+     */
+    public static ArrayList<Story> getFavorites() {
         ArrayList<Story> favorites = new ArrayList<>();
-        for (Story story : allStories){
+        for (Story story : allStories) {
             if (story.isFavorite())
                 favorites.add(story);
         }
@@ -143,35 +169,15 @@ public class StoryUtils {
     }
 
     /**
-     * Helper method that creates the story list with all stories
-     */
-    private static void initializeAllStories(Context context) {
-        sharedPref = getDefaultSharedPreferences(context);
-        allStories = new ArrayList<>();
-        Resources res = context.getResources();
-        TypedArray storiesArray = res.obtainTypedArray(R.array.story_arrays);
-        for (int id = 0; id < storiesArray.length(); id++){
-            int arrayResourceId = storiesArray.getResourceId(id, 0);
-            TypedArray storyArray = res.obtainTypedArray(arrayResourceId);
-            String storyName = storyArray.getString(0);
-            @SuppressLint("ResourceType")
-            int resourceId = storyArray.getResourceId(1,0);
-            int code = sharedPref.getInt(String.valueOf(id), 0);
-            allStories.add(new Story(id, storyName, resourceId, code));
-            storyArray.recycle();
-        }
-        storiesArray.recycle();
-    }
-
-    /**
-     * This method marks/un-marks a story as favorite and saves the settings
-     * @param ID int ID of the story
+     * Marks/un-marks a story as favorite and saves the settings
+     *
+     * @param ID     int ID of the story
      * @param status boolean true if the story should be favorite, false otherwise
      */
-    public static void changeFavoriteStatus(int ID, boolean status){
+    public static void changeFavoriteStatus(int ID, boolean status) {
         Story story = getStory(ID);
         int oldCode = story.getCode();
-        int newCode = (status)? oldCode | 2 : oldCode & 1;
+        int newCode = (status) ? oldCode | 2 : oldCode & 1;
         story.setCode(newCode);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putInt(String.valueOf(ID), newCode);
@@ -179,26 +185,37 @@ public class StoryUtils {
     }
 
     /**
-     * This method marks/un-marks a story as read and saves the settings
-     * @param ID int ID of the story
+     * Marks/un-marks a story as read and saves the settings
+     *
+     * @param ID     int ID of the story
      * @param status boolean true if the story should be read, false otherwise
      */
-    public static void changeReadStatus(int ID, boolean status){
+    public static void changeReadStatus(int ID, boolean status) {
         Story story = getStory(ID);
         int oldCode = story.getCode();
-        int newCode = (status)? oldCode | 1 : oldCode & 2;
+        int newCode = (status) ? oldCode | 1 : oldCode & 2;
         story.setCode(newCode);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putInt(String.valueOf(ID), newCode);
         editor.apply();
     }
 
+    /**
+     * Sets the last read story to a given id.
+     *
+     * @param storyID the ID of the story to be set last read.
+     */
     public static void setLastRead(int storyID) {
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putInt("last_read", storyID);
         editor.apply();
     }
 
+    /**
+     * Retrieves the total number of stories.
+     *
+     * @return int the total number of stories.
+     */
     public static int getNumberOfStories() {
         return allStories.size();
     }

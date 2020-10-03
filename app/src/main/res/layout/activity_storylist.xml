@@ -3,5 +3,4 @@
     android:id="@+id/story_list"
     style="@style/activity_style_uniform_background"
     android:drawSelectorOnTop="true"
-    android:orientation="vertical"
-/>
+    android:orientation="vertical" />

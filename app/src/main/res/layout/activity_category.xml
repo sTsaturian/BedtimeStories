@@ -11,56 +11,31 @@
     <TextView
         android:id="@+id/animalsCategory"
         style="@style/default_textview_style"
-        android:text="Animal Stories"
+        android:text="@string/animal_stories"
     />
 
     <TextView
         android:id="@+id/kidsCategory"
         style="@style/default_textview_style"
-        android:text="Kid Stories"
+        android:text="@string/kid_stories"
     />
 
     <TextView
         android:id="@+id/aesopCategory"
         style="@style/default_textview_style"
-        android:text="Aesop's Fables"
+        android:text="@string/aesop_s_fables"
         />
 
     <TextView
         android:id="@+id/grimmCategory"
         style="@style/default_textview_style"
-        android:text="Brothers Grimm Stories"
+        android:text="@string/brothers_grimm_stories"
         />
 
     <TextView
         android:id="@+id/andersenCategory"
         style="@style/default_textview_style"
-        android:text="Hans Christian Andersen's Stories"
-        />
-
-    <TextView
-        style="@style/default_textview_style"
-        android:text="Fake view"
-        />
-
-    <TextView
-        style="@style/default_textview_style"
-        android:text="Fake view"
-        />
-
-    <TextView
-        style="@style/default_textview_style"
-        android:text="Fake view"
-        />
-
-    <TextView
-        style="@style/default_textview_style"
-        android:text="Fake view"
-        />
-
-    <TextView
-        style="@style/default_textview_style"
-        android:text="Fake view"
+        android:text="@string/hans_christian_andersen_s_stories"
         />
 
 </LinearLayout>

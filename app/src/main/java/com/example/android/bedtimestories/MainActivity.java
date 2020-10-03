@@ -15,27 +15,15 @@ import android.widget.TextView;
  * @author Sergei Tsaturian
  */
 
-
 public class MainActivity extends AppCompatActivity {
 
-    // loads data in the memory and displays the main buttons
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ViewGroup actionBarLayout = (ViewGroup) getLayoutInflater().inflate(
-                R.layout.action_bar,null);
-        // Set up your ActionBar
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayShowHomeEnabled(false);
-        actionBar.setDisplayShowTitleEnabled(false);
-        actionBar.setDisplayShowCustomEnabled(true);
-        actionBar.setCustomView(actionBarLayout);
-
-        TextView titleView = findViewById(R.id.action_bar_title);
-        titleView.setText("Bedtime Stories");
+        setupActionBar();
 
         TextView allStoriesView = findViewById(R.id.allStoriesView);
         allStoriesView.setOnClickListener(new View.OnClickListener() {
@@ -87,5 +75,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    /**
+     * Sets up the custom action bar.
+     */
+    private void setupActionBar() {
+        ViewGroup actionBarLayout = (ViewGroup) getLayoutInflater().inflate(
+                R.layout.action_bar, null);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayShowHomeEnabled(false);
+            actionBar.setDisplayShowTitleEnabled(false);
+            actionBar.setDisplayShowCustomEnabled(true);
+            actionBar.setCustomView(actionBarLayout);
+            TextView titleView = findViewById(R.id.action_bar_title);
+            titleView.setText(R.string.bedtime_stories);
+        }
     }
 }

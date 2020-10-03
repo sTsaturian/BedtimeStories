@@ -50,7 +50,7 @@ public class StoryActivity extends AppCompatActivity {
     /**
      * this method is called on creation. It sets up the action bar,
      * initializes the member variables and then calls fillViews()
-    */
+     */
     @Override
     @SuppressWarnings("unchecked")
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +78,7 @@ public class StoryActivity extends AppCompatActivity {
      */
     private void setupActionBar() {
         final ViewGroup actionBarLayout = (ViewGroup) getLayoutInflater().inflate(
-                R.layout.story_action_bar,null);
+                R.layout.story_action_bar, null);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayShowHomeEnabled(true);
@@ -106,10 +106,11 @@ public class StoryActivity extends AppCompatActivity {
     /**
      * This method is called after creation and every time the storyID changes.
      * It sets the content to display, listeners, and timers to mark the story read/unread
-     * @param id the story ID
+     *
+     * @param id  the story ID
      * @param pos position of the story in the underlying story list
      */
-    private void fillViews(final int id, final int pos){
+    private void fillViews(final int id, final int pos) {
         isSetupPhase = true;
         storyID = id;
         final Story story = StoryUtils.getStory(id);
@@ -124,34 +125,31 @@ public class StoryActivity extends AppCompatActivity {
                 if (isChecked) {
                     StoryUtils.changeFavoriteStatus(id, true);
                     if (!isSetupPhase) showToast("Story added to favorites");
-                    Log.i("StoryActivity", "Changed story "+id + " to favorite");
-                }
-                else {
+                    Log.i("StoryActivity", "Changed story " + id + " to favorite");
+                } else {
                     StoryUtils.changeFavoriteStatus(id, false);
                     if (!isSetupPhase) showToast("Story removed from favorites");
-                    Log.i("StoryActivity", "Changed story "+id + " to not favorite");
+                    Log.i("StoryActivity", "Changed story " + id + " to not favorite");
                 }
             }
         });
 
-        if (story.isFavorite()){
-            Log.i("StoryActivity", "Story " + story.getID() +" is favorite, so check the favorite button");
+        if (story.isFavorite()) {
+            Log.i("StoryActivity", "Story " + story.getID() + " is favorite, so check the favorite button");
             favButton.setChecked(true);
-        }
-        else {
-            Log.i("StoryActivity", "Story " + story.getID() +" is not favorite, so uncheck the favorite button");
+        } else {
+            Log.i("StoryActivity", "Story " + story.getID() + " is not favorite, so uncheck the favorite button");
             favButton.setChecked(false);
         }
 
-        unreadButton.setOnClickListener(new Button.OnClickListener(){
+        unreadButton.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (story.isRead()){
+                if (story.isRead()) {
                     StoryUtils.changeReadStatus(id, false);
                     unreadButton.setText("Mark\nRead");
                     if (!isSetupPhase) showToast("Story marked as unread");
-                }
-                else{
+                } else {
                     StoryUtils.changeReadStatus(id, true);
                     unreadButton.setText("Mark\nUnread");
                     if (!isSetupPhase) showToast("Story marked as read");
@@ -159,19 +157,18 @@ public class StoryActivity extends AppCompatActivity {
             }
         });
 
-        if (story.isRead()){
+        if (story.isRead()) {
             unreadButton.setVisibility(View.VISIBLE);
             unreadButton.setText("Mark\nUnread");
-        }
-        else{
+        } else {
             unreadButton.setVisibility(View.INVISIBLE);
             unreadButton.setText("Mark\nRead");
         }
 
         isSetupPhase = false;
 
-        if (storyList != null){
-            leftButton.setOnClickListener(new Button.OnClickListener(){
+        if (storyList != null) {
+            leftButton.setOnClickListener(new Button.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int newPosition = (pos + storyList.size() - 1) % storyList.size();
@@ -180,7 +177,7 @@ public class StoryActivity extends AppCompatActivity {
                     fillViews(newID, newPosition);
                 }
             });
-            rightButton.setOnClickListener(new Button.OnClickListener(){
+            rightButton.setOnClickListener(new Button.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int newPosition = (pos + 1) % storyList.size();
@@ -189,9 +186,8 @@ public class StoryActivity extends AppCompatActivity {
                     fillViews(newID, newPosition);
                 }
             });
-        }
-        else{
-            leftButton.setOnClickListener(new Button.OnClickListener(){
+        } else {
+            leftButton.setOnClickListener(new Button.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int numOfStories = StoryUtils.getNumberOfStories();
@@ -199,7 +195,7 @@ public class StoryActivity extends AppCompatActivity {
                     fillViews(newID, -1);
                 }
             });
-            rightButton.setOnClickListener(new Button.OnClickListener(){
+            rightButton.setOnClickListener(new Button.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int numOfStories = StoryUtils.getNumberOfStories();
@@ -224,7 +220,7 @@ public class StoryActivity extends AppCompatActivity {
      * This starts the timers on resume.
      */
     @Override
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
         Story story = StoryUtils.getStory(storyID);
         mHandler.postDelayed(new Runnable() {
@@ -245,11 +241,12 @@ public class StoryActivity extends AppCompatActivity {
 
     /**
      * This method shows the toast with given text in the top right corner
+     *
      * @param text the text to show
      */
-    private void showToast(String text){
+    private void showToast(String text) {
         Toast toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.TOP| Gravity.END, 16, 128);
+        toast.setGravity(Gravity.TOP | Gravity.END, 16, 128);
         toast.setText(text);
         toast.show();
     }
@@ -257,6 +254,7 @@ public class StoryActivity extends AppCompatActivity {
     /**
      * overrides the "up" button to navigate to StoryList activity with correct category
      * it is needed because we can reach StoryActivity from both MainActivity and StoryList Activity
+     *
      * @param item the menu item. we only override if the item is the "up" button
      * @return boolean true if overriden, default value otherwise
      */

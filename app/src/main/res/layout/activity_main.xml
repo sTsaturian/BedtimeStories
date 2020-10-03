@@ -2,39 +2,36 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/default_activity_style">
 
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/allStoriesView"
-        style="@style/default_textview_style"
-        android:text="All Stories"
-        />
+        <TextView
+            android:id="@+id/allStoriesView"
+            style="@style/default_textview_style"
+            android:text="@string/all_stories" />
 
-    <TextView
-        android:id="@+id/categoriesView"
-        style="@style/default_textview_style"
-        android:text="Categories"
-        />
+        <TextView
+            android:id="@+id/categoriesView"
+            style="@style/default_textview_style"
+            android:text="@string/categories" />
 
-    <TextView
-        android:id="@+id/favoritesView"
-        style="@style/default_textview_style"
-        android:text="Favorites" />
+        <TextView
+            android:id="@+id/favoritesView"
+            style="@style/default_textview_style"
+            android:text="@string/favorites" />
 
-    <TextView
-        android:id="@+id/continueLastView"
-        style="@style/default_textview_style"
-        android:text="Continue Last" />
+        <TextView
+            android:id="@+id/continueLastView"
+            style="@style/default_textview_style"
+            android:text="@string/continue_last" />
 
-    <TextView
-        android:id="@+id/randomStoryView"
-        style="@style/default_textview_style"
-        android:text="Random Story" />
+        <TextView
+            android:id="@+id/randomStoryView"
+            style="@style/default_textview_style"
+            android:text="@string/random_story" />
 
 
-
-</LinearLayout>
+    </LinearLayout>
 </ScrollView>

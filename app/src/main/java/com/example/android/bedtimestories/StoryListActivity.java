@@ -2,7 +2,6 @@ package com.example.android.bedtimestories;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +11,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NavUtils;
 
 import java.util.ArrayList;
 
@@ -25,7 +23,7 @@ import java.util.ArrayList;
 
 public class StoryListActivity extends AppCompatActivity {
 
-    private boolean mFirstAppearance;
+    private boolean isFirstAppearance;
     private ListView listView;
     private String categoryName;
 
@@ -35,25 +33,17 @@ public class StoryListActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         categoryName = intent.getStringExtra("categoryName");
+        if (categoryName == null)
+            finish();
         final ArrayList<Story> stories = StoryUtils.getStoryList(categoryName);
 
-        if (stories.isEmpty() && categoryName.equals("Favorites")){
+        setupActionBar();
+
+        if (stories.isEmpty() && categoryName.equals("Favorites")) {
             setContentView(R.layout.empty_favorites);
             return;
         }
         setContentView(R.layout.activity_storylist);
-
-        final ViewGroup actionBarLayout = (ViewGroup) getLayoutInflater().inflate(
-                R.layout.action_bar,null);
-
-        final ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setDisplayShowTitleEnabled(false);
-        actionBar.setDisplayShowCustomEnabled(true);
-        actionBar.setCustomView(actionBarLayout);
-
-        TextView titleView = findViewById(R.id.action_bar_title);
-        titleView.setText(categoryName);
 
         StoryAdapter storyAdapter = new StoryAdapter(this, stories);
         listView = findViewById(R.id.story_list);
@@ -70,54 +60,60 @@ public class StoryListActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        Log.i("StoryListActivity", "Create");
 
-        mFirstAppearance = true;
+        isFirstAppearance = true;
     }
 
+    /**
+     * This inflates the custom action bar.
+     */
+    private void setupActionBar() {
+        final ViewGroup actionBarLayout = (ViewGroup) getLayoutInflater().inflate(
+                R.layout.action_bar, null);
+        final ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayShowHomeEnabled(true);
+            actionBar.setDisplayShowTitleEnabled(false);
+            actionBar.setDisplayShowCustomEnabled(true);
+            actionBar.setCustomView(actionBarLayout);
+        }
+        TextView titleView = findViewById(R.id.action_bar_title);
+        titleView.setText(categoryName);
+    }
+
+
+    /**
+     * Redraws the views if navigated back to activity after pause,
+     * as the favorite/read status could be changed.
+     */
     @Override
     protected void onStart() {
         super.onStart();
-        Log.i("StoryListActivity", "Start");
-        if (listView != null && !mFirstAppearance) {
+        if (listView != null && !isFirstAppearance) {
             listView.invalidateViews();
-            Log.i("StoryListActivity", "Refreshed");
         }
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.i("StoryListActivity", "Stop");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.i("StoryListActivity", "Destroy");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.i("StoryListActivity", "Resume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        mFirstAppearance = false;
-        Log.i("StoryListActivity", "Pause");
+        isFirstAppearance = false;
     }
 
+    /**
+     * Overrides the "up" button to navigate to correct activity
+     * it is needed because we can reach StoryListActivity from both MainActivity and Category Activity
+     *
+     * @param item the menu item. The behaviour is only overridden if it is the up button.
+     * @return boolean true if overriden, default value otherwise
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == android.R.id.home) {
-            if (categoryName.equals("All Stories") || categoryName.equals("Favorites")){
+        if (item.getItemId() == android.R.id.home) {
+            if (categoryName.equals("All Stories") || categoryName.equals("Favorites")) {
                 Intent intent = new Intent(StoryListActivity.this, MainActivity.class);
                 startActivity(intent);
-            }
-            else{
+            } else {
                 Intent intent = new Intent(StoryListActivity.this, CategoryActivity.class);
                 startActivity(intent);
             }
