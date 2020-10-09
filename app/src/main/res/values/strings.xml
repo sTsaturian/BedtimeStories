@@ -1,8 +1,7 @@
 ﻿<resources>
-    <string name="app_name">BedtimeStories</string>
+    <string name="app_name">FairyTales</string>
     <string name="no_favorites">You have no favorite stories yet. To add a story to favorites, click the star button on top of it, and the story will appear here!</string>
     <string name="categories">Categories</string>
-    <string name="bedtime_stories">Bedtime Stories</string>
     <string name="animal_stories">Animal Stories</string>
     <string name="kid_stories">Kid Stories</string>
     <string name="aesop_s_fables">Aesop\'s Fables</string>

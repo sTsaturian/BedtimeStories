@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             actionBar.setDisplayShowCustomEnabled(true);
             actionBar.setCustomView(actionBarLayout);
             TextView titleView = findViewById(R.id.action_bar_title);
-            titleView.setText(R.string.bedtime_stories);
+            titleView.setText(R.string.app_name);
         }
     }
 }
