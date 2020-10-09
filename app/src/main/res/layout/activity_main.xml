@@ -32,6 +32,10 @@
             style="@style/default_text_view_style"
             android:text="@string/random_story" />
 
+        <TextView
+            android:id="@+id/clearDataView"
+            style="@style/default_text_view_style"
+            android:text="@string/clear_data" />
 
     </LinearLayout>
 </ScrollView>

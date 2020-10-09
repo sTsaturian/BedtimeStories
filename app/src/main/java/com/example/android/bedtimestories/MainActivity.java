@@ -3,9 +3,9 @@ package com.example.android.bedtimestories;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -28,54 +28,59 @@ public class MainActivity extends AppCompatActivity {
         StoryUtils.loadStoryLists(this);
 
         TextView allStoriesView = findViewById(R.id.allStoriesView);
-        allStoriesView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, StoryListActivity.class);
-                intent.putExtra("categoryName", "All Stories");
-                startActivity(intent);
-            }
+        allStoriesView.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, StoryListActivity.class);
+            intent.putExtra("categoryName", "All Stories");
+            startActivity(intent);
         });
 
         TextView categoriesView = findViewById(R.id.categoriesView);
-        categoriesView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
-                startActivity(intent);
-            }
+        categoriesView.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+            startActivity(intent);
         });
 
         TextView favoritesView = findViewById(R.id.favoritesView);
-        favoritesView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, StoryListActivity.class);
-                intent.putExtra("categoryName", "Favorites");
-                startActivity(intent);
-            }
+        favoritesView.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, StoryListActivity.class);
+            intent.putExtra("categoryName", "Favorites");
+            startActivity(intent);
         });
 
         TextView continueLast = findViewById(R.id.continueLastView);
-        continueLast.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, StoryActivity.class);
-                intent.putExtra("storyID", StoryUtils.last());
-                intent.putExtra("categoryName", "All Stories");
-                startActivity(intent);
-            }
+        continueLast.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, StoryActivity.class);
+            intent.putExtra("storyID", StoryUtils.last());
+            intent.putExtra("categoryName", "All Stories");
+            startActivity(intent);
         });
 
         TextView randomStory = findViewById(R.id.randomStoryView);
-        randomStory.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, StoryActivity.class);
-                intent.putExtra("storyID", StoryUtils.random());
-                intent.putExtra("categoryName", "All Stories");
-                startActivity(intent);
-            }
+        randomStory.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, StoryActivity.class);
+            intent.putExtra("storyID", StoryUtils.random());
+            intent.putExtra("categoryName", "All Stories");
+            startActivity(intent);
+        });
+
+        TextView clearDataView = findViewById(R.id.clearDataView);
+        clearDataView.setOnClickListener(view -> {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setMessage(R.string.do_you_want_to_clear_data)
+                    .setTitle(R.string.clear_data);
+            builder.setPositiveButton(R.string.ok, (dialog, id) -> {
+                // clear data, back stack, and restart activity
+                StoryUtils.clearData();
+                Intent newIntent = new Intent(MainActivity.this, MainActivity.class);
+                newIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(newIntent);
+                finish();
+            });
+            builder.setNegativeButton("Cancel", (dialog, id) -> {
+                // do nothing
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
         });
     }
 

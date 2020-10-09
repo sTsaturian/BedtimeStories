@@ -15,4 +15,7 @@
     <string name="favorite_indicator">Favorite indicator</string>
     <string name="previous_story">Previous story</string>
     <string name="next_story">Next Story</string>
+    <string name="clear_data">Clear data</string>
+    <string name="do_you_want_to_clear_data">Do you want to clear all the data? This will clear all your favorites and make all the stories unread. This action is irreversible.</string>
+    <string name="ok">OK</string>
 </resources>

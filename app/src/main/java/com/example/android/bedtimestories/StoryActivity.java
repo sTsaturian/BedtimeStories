@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -118,18 +117,15 @@ public class StoryActivity extends AppCompatActivity {
         storyNameView.setText(story.getName() + " " + storyID);
         scrollView.scrollTo(0, 0);
 
-        favButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    StoryUtils.changeFavoriteStatus(id, true);
-                    if (!isSetupPhase) showToast("Story added to favorites");
-                    Log.i("StoryActivity", "Changed story " + id + " to favorite");
-                } else {
-                    StoryUtils.changeFavoriteStatus(id, false);
-                    if (!isSetupPhase) showToast("Story removed from favorites");
-                    Log.i("StoryActivity", "Changed story " + id + " to not favorite");
-                }
+        favButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                StoryUtils.changeFavoriteStatus(id, true);
+                if (!isSetupPhase) showToast("Story added to favorites");
+                Log.i("StoryActivity", "Changed story " + id + " to favorite");
+            } else {
+                StoryUtils.changeFavoriteStatus(id, false);
+                if (!isSetupPhase) showToast("Story removed from favorites");
+                Log.i("StoryActivity", "Changed story " + id + " to not favorite");
             }
         });
 
@@ -141,18 +137,15 @@ public class StoryActivity extends AppCompatActivity {
             favButton.setChecked(false);
         }
 
-        unreadButton.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (story.isRead()) {
-                    StoryUtils.changeReadStatus(id, false);
-                    unreadButton.setText("Mark\nRead");
-                    if (!isSetupPhase) showToast("Story marked as unread");
-                } else {
-                    StoryUtils.changeReadStatus(id, true);
-                    unreadButton.setText("Mark\nUnread");
-                    if (!isSetupPhase) showToast("Story marked as read");
-                }
+        unreadButton.setOnClickListener(v -> {
+            if (story.isRead()) {
+                StoryUtils.changeReadStatus(id, false);
+                unreadButton.setText("Mark\nRead");
+                if (!isSetupPhase) showToast("Story marked as unread");
+            } else {
+                StoryUtils.changeReadStatus(id, true);
+                unreadButton.setText("Mark\nUnread");
+                if (!isSetupPhase) showToast("Story marked as read");
             }
         });
 
@@ -167,40 +160,28 @@ public class StoryActivity extends AppCompatActivity {
         isSetupPhase = false;
 
         if (storyList != null) {
-            leftButton.setOnClickListener(new Button.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int newPosition = (pos + storyList.size() - 1) % storyList.size();
-                    Story newStory = storyList.get(newPosition);
-                    int newID = newStory.getID();
-                    fillViews(newID, newPosition);
-                }
+            leftButton.setOnClickListener(v -> {
+                int newPosition = (pos + storyList.size() - 1) % storyList.size();
+                Story newStory = storyList.get(newPosition);
+                int newID = newStory.getID();
+                fillViews(newID, newPosition);
             });
-            rightButton.setOnClickListener(new Button.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int newPosition = (pos + 1) % storyList.size();
-                    Story newStory = storyList.get(newPosition);
-                    int newID = newStory.getID();
-                    fillViews(newID, newPosition);
-                }
+            rightButton.setOnClickListener(v -> {
+                int newPosition = (pos + 1) % storyList.size();
+                Story newStory = storyList.get(newPosition);
+                int newID = newStory.getID();
+                fillViews(newID, newPosition);
             });
         } else {
-            leftButton.setOnClickListener(new Button.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int numOfStories = StoryUtils.getNumberOfStories();
-                    int newID = (id + numOfStories - 1) % numOfStories;
-                    fillViews(newID, -1);
-                }
+            leftButton.setOnClickListener(v -> {
+                int numOfStories = StoryUtils.getNumberOfStories();
+                int newID = (id + numOfStories - 1) % numOfStories;
+                fillViews(newID, -1);
             });
-            rightButton.setOnClickListener(new Button.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int numOfStories = StoryUtils.getNumberOfStories();
-                    int newID = (id + 1) % numOfStories;
-                    fillViews(newID, -1);
-                }
+            rightButton.setOnClickListener(v -> {
+                int numOfStories = StoryUtils.getNumberOfStories();
+                int newID = (id + 1) % numOfStories;
+                fillViews(newID, -1);
             });
         }
 
@@ -231,19 +212,11 @@ public class StoryActivity extends AppCompatActivity {
     private void resetTimers() {
         mHandler.removeCallbacksAndMessages(null);
         Story story = StoryUtils.getStory(storyID);
-        mHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                StoryUtils.setLastRead(storyID);
-            }
-        }, DELAY_FOR_LAST);
-        if (!story.isRead() && !unreadButton.isShown()) mHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                StoryUtils.changeReadStatus(storyID, true);
-                unreadButton.setText("Mark\nUnread");
-                unreadButton.setVisibility(View.VISIBLE);
-            }
+        mHandler.postDelayed(() -> StoryUtils.setLastRead(storyID), DELAY_FOR_LAST);
+        if (!story.isRead() && !unreadButton.isShown()) mHandler.postDelayed(() -> {
+            StoryUtils.changeReadStatus(storyID, true);
+            unreadButton.setText("Mark\nUnread");
+            unreadButton.setVisibility(View.VISIBLE);
         }, DELAY_FOR_READ);
     }
 

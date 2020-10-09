@@ -219,4 +219,15 @@ public class StoryUtils {
     public static int getNumberOfStories() {
         return allStories.size();
     }
+
+    /**
+     * Resets status of all stories to not favorite/unread.
+     */
+    public static void clearData(){
+        for (Story story : allStories)
+            story.setCode(0);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.clear();
+        editor.apply();
+    }
 }
