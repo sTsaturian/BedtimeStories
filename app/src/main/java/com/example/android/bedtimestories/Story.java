@@ -9,9 +9,9 @@ import java.io.Serializable;
  */
 
 public class Story implements Serializable {
-    private int ID;
-    private String name;
-    private int resourceID;
+    private final int ID;
+    private final String name;
+    private final int resourceID;
     private int code;
 
     /**
@@ -69,7 +69,7 @@ public class Story implements Serializable {
     /**
      * Sets the code of the story to a specified integer value.
      *
-     * @param newCode
+     * @param newCode the value of the new code.
      */
     public void setCode(int newCode) {
         if (newCode >= 0 && newCode <= 3)

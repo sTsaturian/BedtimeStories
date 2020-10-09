@@ -11,7 +11,8 @@
         android:layout_width="48dp"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:src="@drawable/baseline_arrow_left_black_18dp" />
+        android:src="@drawable/baseline_arrow_left_black_18dp"
+        android:contentDescription="@string/previous_story" />
 
     <TextView
         android:id="@+id/action_bar_title"
@@ -50,7 +51,8 @@
         android:id="@+id/right_button"
         android:layout_width="48dp"
         android:layout_height="match_parent"
-        android:src="@drawable/baseline_arrow_right_black_18dp" />
+        android:src="@drawable/baseline_arrow_right_black_18dp"
+        android:contentDescription="@string/next_story" />
 
 
 </LinearLayout>

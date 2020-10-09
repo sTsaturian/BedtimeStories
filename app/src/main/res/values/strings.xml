@@ -13,4 +13,6 @@
     <string name="continue_last">Continue Last</string>
     <string name="random_story">Random Story</string>
     <string name="favorite_indicator">Favorite indicator</string>
+    <string name="previous_story">Previous story</string>
+    <string name="next_story">Next Story</string>
 </resources>

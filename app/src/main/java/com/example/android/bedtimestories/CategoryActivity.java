@@ -22,26 +22,6 @@ public class CategoryActivity extends AppCompatActivity {
 
         setupActionBar();
 
-        TextView animalView = findViewById(R.id.animalsCategory);
-        animalView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CategoryActivity.this, StoryListActivity.class);
-                intent.putExtra("categoryName", "Animal Stories");
-                startActivity(intent);
-            }
-        });
-
-        TextView kidsView = findViewById(R.id.kidsCategory);
-        kidsView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CategoryActivity.this, StoryListActivity.class);
-                intent.putExtra("categoryName", "Kid Stories");
-                startActivity(intent);
-            }
-        });
-
         TextView aesopView = findViewById(R.id.aesopCategory);
         aesopView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +48,26 @@ public class CategoryActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(CategoryActivity.this, StoryListActivity.class);
                 intent.putExtra("categoryName", "Hans Christian Andersen's Stories");
+                startActivity(intent);
+            }
+        });
+
+        TextView animalView = findViewById(R.id.animalsCategory);
+        animalView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CategoryActivity.this, StoryListActivity.class);
+                intent.putExtra("categoryName", "Animal Stories");
+                startActivity(intent);
+            }
+        });
+
+        TextView kidsView = findViewById(R.id.kidsCategory);
+        kidsView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CategoryActivity.this, StoryListActivity.class);
+                intent.putExtra("categoryName", "Kid Stories");
                 startActivity(intent);
             }
         });

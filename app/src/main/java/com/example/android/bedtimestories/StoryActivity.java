@@ -1,6 +1,5 @@
 package com.example.android.bedtimestories;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -205,10 +204,11 @@ public class StoryActivity extends AppCompatActivity {
             });
         }
 
+        resetTimers();
     }
 
     /**
-     * This resets the timers on pause.
+     * This stops the timers on pause.
      */
     @Override
     protected void onPause() {
@@ -222,6 +222,14 @@ public class StoryActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        resetTimers();
+    }
+
+    /**
+     * This resets the timers for marking the story read / last read.
+     */
+    private void resetTimers() {
+        mHandler.removeCallbacksAndMessages(null);
         Story story = StoryUtils.getStory(storyID);
         mHandler.postDelayed(new Runnable() {
             @Override
@@ -256,7 +264,7 @@ public class StoryActivity extends AppCompatActivity {
      * it is needed because we can reach StoryActivity from both MainActivity and StoryList Activity
      *
      * @param item the menu item. we only override if the item is the "up" button
-     * @return boolean true if overriden, default value otherwise
+     * @return boolean true if overridden, default value otherwise
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

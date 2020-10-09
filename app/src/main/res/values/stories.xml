@@ -1778,7 +1778,7 @@
         <item>@string/story323text</item>
     </array>
     <array name="story324">
-        <item>"The four skilful brothers"</item>
+        <item>"The four skillful brothers"</item>
         <item>@string/story324text</item>
     </array>
     <array name="story325">
@@ -2166,7 +2166,7 @@
         <item>@string/story420text</item>
     </array>
     <array name="story421">
-        <item>"The skilful huntsman"</item>
+        <item>"The skillful huntsman"</item>
         <item>@string/story421text</item>
     </array>
     <array name="story422">
@@ -2243,23 +2243,23 @@
     </array>
     <array name="story440">
         <item>"The three army-surgeons"</item>
-        <item>@string/story441text</item>
+        <item>@string/story440text</item>
     </array>
     <array name="story441">
         <item>"The three black princesses"</item>
-        <item>@string/story442text</item>
+        <item>@string/story441text</item>
     </array>
     <array name="story442">
         <item>"The three brothers"</item>
-        <item>@string/story443text</item>
+        <item>@string/story442text</item>
     </array>
     <array name="story443">
         <item>"The three children of fortune"</item>
-        <item>@string/story444text</item>
+        <item>@string/story443text</item>
     </array>
     <array name="story444">
         <item>"The three feathers"</item>
-        <item>@string/story440text</item>
+        <item>@string/story444text</item>
     </array>
     <array name="story445">
         <item>"The three green twigs"</item>

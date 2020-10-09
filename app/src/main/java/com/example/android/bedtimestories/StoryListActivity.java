@@ -105,7 +105,7 @@ public class StoryListActivity extends AppCompatActivity {
      * it is needed because we can reach StoryListActivity from both MainActivity and Category Activity
      *
      * @param item the menu item. The behaviour is only overridden if it is the up button.
-     * @return boolean true if overriden, default value otherwise
+     * @return boolean true if overridden, default value otherwise
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

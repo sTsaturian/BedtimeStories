@@ -9,27 +9,27 @@
 
         <TextView
             android:id="@+id/allStoriesView"
-            style="@style/default_textview_style"
+            style="@style/default_text_view_style"
             android:text="@string/all_stories" />
 
         <TextView
             android:id="@+id/categoriesView"
-            style="@style/default_textview_style"
+            style="@style/default_text_view_style"
             android:text="@string/categories" />
 
         <TextView
             android:id="@+id/favoritesView"
-            style="@style/default_textview_style"
+            style="@style/default_text_view_style"
             android:text="@string/favorites" />
 
         <TextView
             android:id="@+id/continueLastView"
-            style="@style/default_textview_style"
+            style="@style/default_text_view_style"
             android:text="@string/continue_last" />
 
         <TextView
             android:id="@+id/randomStoryView"
-            style="@style/default_textview_style"
+            style="@style/default_text_view_style"
             android:text="@string/random_story" />
 
 
