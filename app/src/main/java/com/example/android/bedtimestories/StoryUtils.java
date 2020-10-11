@@ -2,6 +2,7 @@ package com.example.android.bedtimestories;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -83,7 +84,10 @@ public class StoryUtils {
      *
      * @return int ID of a random unread story
      */
-    public static int random() {
+    public static int random(Context context) {
+        if (allStories == null){
+            loadStoryLists(context);
+        }
         ArrayList<Integer> indices = new ArrayList<>();
         for (int id = 0; id < allStories.size(); id++) {
             Story story = allStories.get(id);
@@ -108,7 +112,10 @@ public class StoryUtils {
      * @param storyID ID of the story to retrieve
      * @return Story the corresponding story
      */
-    public static Story getStory(int storyID) {
+    public static Story getStory(int storyID, Context context) {
+        if (allStories == null){
+            loadStoryLists(context);
+        }
         return allStories.get(storyID);
     }
 
@@ -124,9 +131,12 @@ public class StoryUtils {
      *                     "Hans Christian Andersen's Stories"
      * @return ArrayList<Story> all stories in the given category
      */
-    public static ArrayList<Story> getStoryList(String categoryName) {
+    public static ArrayList<Story> getStoryList(String categoryName, Context context) {
+        if (allStories == null){
+            loadStoryLists(context);
+        }
         if (categoryName.equals("All Stories")) return allStories;
-        if (categoryName.equals("Favorites")) return getFavorites();
+        if (categoryName.equals("Favorites")) return getFavorites(context);
 
         ArrayList<Story> categoryStoryList = new ArrayList<>();
 
@@ -159,7 +169,10 @@ public class StoryUtils {
      *
      * @return ArrayList<Story> the list of all favorite stories.
      */
-    public static ArrayList<Story> getFavorites() {
+    public static ArrayList<Story> getFavorites(Context context) {
+        if (allStories == null){
+            loadStoryLists(context);
+        }
         ArrayList<Story> favorites = new ArrayList<>();
         for (Story story : allStories) {
             if (story.isFavorite())
@@ -174,8 +187,11 @@ public class StoryUtils {
      * @param ID     int ID of the story
      * @param status boolean true if the story should be favorite, false otherwise
      */
-    public static void changeFavoriteStatus(int ID, boolean status) {
-        Story story = getStory(ID);
+    public static void changeFavoriteStatus(int ID, boolean status, Context context) {
+        if (sharedPref == null){
+            loadStoryLists(context);
+        }
+        Story story = getStory(ID, context);
         int oldCode = story.getCode();
         int newCode = (status) ? oldCode | 2 : oldCode & 1;
         story.setCode(newCode);
@@ -190,8 +206,11 @@ public class StoryUtils {
      * @param ID     int ID of the story
      * @param status boolean true if the story should be read, false otherwise
      */
-    public static void changeReadStatus(int ID, boolean status) {
-        Story story = getStory(ID);
+    public static void changeReadStatus(int ID, boolean status, Context context) {
+        if (sharedPref == null){
+            loadStoryLists(context);
+        }
+        Story story = getStory(ID, context);
         int oldCode = story.getCode();
         int newCode = (status) ? oldCode | 1 : oldCode & 2;
         story.setCode(newCode);
@@ -205,7 +224,10 @@ public class StoryUtils {
      *
      * @param storyID the ID of the story to be set last read.
      */
-    public static void setLastRead(int storyID) {
+    public static void setLastRead(int storyID, Context context) {
+        if (sharedPref == null){
+            loadStoryLists(context);
+        }
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putInt("last_read", storyID);
         editor.apply();
@@ -216,18 +238,25 @@ public class StoryUtils {
      *
      * @return int the total number of stories.
      */
-    public static int getNumberOfStories() {
+    public static int getNumberOfStories(Context context) {
+        if (allStories == null){
+            loadStoryLists(context);
+        }
         return allStories.size();
     }
 
     /**
      * Resets status of all stories to not favorite/unread.
      */
-    public static void clearData(){
+    public static void clearData(Context context){
+        if (allStories == null || sharedPref == null){
+            loadStoryLists(context);
+        }
         for (Story story : allStories)
             story.setCode(0);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.clear();
         editor.apply();
     }
+
 }

@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         TextView randomStory = findViewById(R.id.randomStoryView);
         randomStory.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, StoryActivity.class);
-            intent.putExtra("storyID", StoryUtils.random());
+            intent.putExtra("storyID", StoryUtils.random(this));
             intent.putExtra("categoryName", "All Stories");
             startActivity(intent);
         });
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                     .setTitle(R.string.clear_data);
             builder.setPositiveButton(R.string.ok, (dialog, id) -> {
                 // clear data, back stack, and restart activity
-                StoryUtils.clearData();
+                StoryUtils.clearData(this);
                 Intent newIntent = new Intent(MainActivity.this, MainActivity.class);
                 newIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(newIntent);

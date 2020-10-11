@@ -33,7 +33,7 @@ public class StoryListActivity extends AppCompatActivity {
         categoryName = intent.getStringExtra("categoryName");
         if (categoryName == null)
             finish();
-        final ArrayList<Story> stories = StoryUtils.getStoryList(categoryName);
+        final ArrayList<Story> stories = StoryUtils.getStoryList(categoryName, this);
 
         setupActionBar();
 
