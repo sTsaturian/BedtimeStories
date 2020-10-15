@@ -49,7 +49,6 @@ public class StoryListActivity extends AppCompatActivity {
 
         listView.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent1 = new Intent(StoryListActivity.this, StoryActivity.class);
-            intent1.putExtra("storyID", stories.get(position).getID());
             intent1.putExtra("storyList", stories);
             intent1.putExtra("categoryName", categoryName);
             intent1.putExtra("index", position);

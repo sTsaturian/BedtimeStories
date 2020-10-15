@@ -43,6 +43,7 @@ public class StoryActivity extends AppCompatActivity {
     private ScrollView scrollView;
     private int storyID;
     private int categoryName;
+    int position;
     private boolean isSetupPhase;
 
     /**
@@ -59,11 +60,11 @@ public class StoryActivity extends AppCompatActivity {
         setupActionBar();
 
         Intent intent = getIntent();
-        storyID = intent.getIntExtra("storyID", -1);
-        if (storyID == -1) StoryUtils.loadStoryLists(this);
         categoryName = intent.getIntExtra("categoryName", -1);
+        if (categoryName == -1) StoryUtils.loadStoryLists(this);
         storyList = (ArrayList<Story>) intent.getSerializableExtra("storyList");
-        int position = intent.getIntExtra("index", -1);
+        position = intent.getIntExtra("index", -1);
+        storyID = storyList.get(position).getID();
 
         findViews();
 
@@ -162,16 +163,16 @@ public class StoryActivity extends AppCompatActivity {
 
         if (storyList != null) {
             leftButton.setOnClickListener(v -> {
-                int newPosition = (pos + storyList.size() - 1) % storyList.size();
-                Story newStory = storyList.get(newPosition);
+                position = (pos + storyList.size() - 1) % storyList.size();
+                Story newStory = storyList.get(position);
                 int newID = newStory.getID();
-                fillViews(newID, newPosition);
+                fillViews(newID, position);
             });
             rightButton.setOnClickListener(v -> {
-                int newPosition = (pos + 1) % storyList.size();
-                Story newStory = storyList.get(newPosition);
+                position = (pos + 1) % storyList.size();
+                Story newStory = storyList.get(position);
                 int newID = newStory.getID();
-                fillViews(newID, newPosition);
+                fillViews(newID, position);
             });
         } else {
             leftButton.setOnClickListener(v -> {
@@ -213,7 +214,10 @@ public class StoryActivity extends AppCompatActivity {
     private void resetTimers() {
         mHandler.removeCallbacksAndMessages(null);
         Story story = StoryUtils.getStory(storyID, this);
-        mHandler.postDelayed(() -> StoryUtils.setLastRead(storyID, this), DELAY_FOR_LAST);
+        if (categoryName == R.string.favorites)
+            mHandler.postDelayed(() -> StoryUtils.setLastRead(R.string.all_stories, storyID, this), DELAY_FOR_LAST);
+        else
+            mHandler.postDelayed(() -> StoryUtils.setLastRead(categoryName, position, this), DELAY_FOR_LAST);
         if (!story.isRead() && !unreadButton.isShown()) mHandler.postDelayed(() -> {
             StoryUtils.changeReadStatus(storyID, true, this);
             unreadButton.setText("Mark\nUnread");

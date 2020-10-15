@@ -129,12 +129,21 @@ public class StoryUtils {
     }
 
     /**
-     * Retrieves the last read story
+     * Retrieves the last read category
      *
-     * @return int ID of the last read story
+     * @return int resource with the name of the last read category
      */
-    public static int last() {
-        return sharedPref.getInt("last_read", 0);
+    public static int lastCategory(){
+        return sharedPref.getInt("last_category", R.string.all_stories);
+    }
+
+    /**
+     * Retrieves the position of the last read story
+     *
+     * @return int position of the last read story in the last read category
+     */
+    public static int lastPosition() {
+        return sharedPref.getInt("last_position", 0);
     }
 
     /**
@@ -271,14 +280,17 @@ public class StoryUtils {
     /**
      * Sets the last read story to a given id.
      *
-     * @param storyID the ID of the story to be set last read.
+     * @param category the resource id of the name of the category which was last read.
+     *                 Cannot be "Favorites".
+     * @param position the position of the last read story.
      */
-    public static void setLastRead(int storyID, Context context) {
+    public static void setLastRead(int category, int position, Context context) {
         if (sharedPref == null) {
             loadStoryLists(context);
         }
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putInt("last_read", storyID);
+        editor.putInt("last_position", position);
+        editor.putInt("last_category", category);
         editor.apply();
     }
 

@@ -50,15 +50,18 @@ public class MainActivity extends AppCompatActivity {
         TextView continueLast = findViewById(R.id.continueLastView);
         continueLast.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, StoryActivity.class);
-            intent.putExtra("storyID", StoryUtils.last());
-            intent.putExtra("categoryName", R.string.all_stories);
+            int category = StoryUtils.lastCategory();
+            intent.putExtra("categoryName", category);
+            intent.putExtra("storyList", StoryUtils.getStoryList(category, this));
+            intent.putExtra("index", StoryUtils.lastPosition());
             startActivity(intent);
         });
 
         TextView randomStory = findViewById(R.id.randomStoryView);
         randomStory.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, StoryActivity.class);
-            intent.putExtra("storyID", StoryUtils.random(this));
+            intent.putExtra("index", StoryUtils.random(this));
+            intent.putExtra("storyList", StoryUtils.getStoryList(R.string.all_stories,this));
             intent.putExtra("categoryName", R.string.all_stories);
             startActivity(intent);
         });
