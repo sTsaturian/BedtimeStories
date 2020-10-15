@@ -59,12 +59,20 @@ public class StoryActivity extends AppCompatActivity {
 
         setupActionBar();
 
-        Intent intent = getIntent();
-        categoryName = intent.getIntExtra("categoryName", -1);
-        if (categoryName == -1) StoryUtils.loadStoryLists(this);
-        storyList = (ArrayList<Story>) intent.getSerializableExtra("storyList");
-        position = intent.getIntExtra("index", -1);
-        storyID = storyList.get(position).getID();
+        if (savedInstanceState == null) {
+            Intent intent = getIntent();
+            categoryName = intent.getIntExtra("categoryName", -1);
+            if (categoryName == -1) StoryUtils.loadStoryLists(this);
+            storyList = (ArrayList<Story>) intent.getSerializableExtra("storyList");
+            position = intent.getIntExtra("index", -1);
+            storyID = storyList.get(position).getID();
+        }
+        else{
+            storyID = savedInstanceState.getInt("storyID", -1);
+            categoryName = savedInstanceState.getInt("categoryName");
+            position = savedInstanceState.getInt("position");
+            storyList = (ArrayList<Story>) savedInstanceState.getSerializable("storyList");
+        }
 
         findViews();
 
@@ -254,5 +262,14 @@ public class StoryActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onSaveInstanceState (Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("storyID", storyID);
+        outState.putInt("categoryName", categoryName);
+        outState.putInt("position", position);
+        outState.putSerializable("storyList", storyList);
     }
 }
