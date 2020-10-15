@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.bedtimestories">
+    package="com.s_tsat.android.bedtimestories">
 
     <application
         android:icon="@mipmap/ic_launcher"
@@ -9,39 +9,39 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:allowBackup="true">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.s_tsat.android.bedtimestories.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".CategoryActivity"
+            android:name="com.s_tsat.android.bedtimestories.CategoryActivity"
             android:label="Categories"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName="com.s_tsat.android.bedtimestories.MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value="com.s_tsat.android.bedtimestories.MainActivity"/>
         </activity>
         <activity
-            android:name=".StoryListActivity"
+            android:name="com.s_tsat.android.bedtimestories.StoryListActivity"
             android:label="Stories"
             android:launchMode="singleTop"
-            android:parentActivityName=".CategoryActivity">
+            android:parentActivityName="com.s_tsat.android.bedtimestories.CategoryActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".CategoryActivity"/>
+                android:value="com.s_tsat.android.bedtimestories.CategoryActivity"/>
         </activity>
         <activity
-            android:name=".StoryActivity"
+            android:name="com.s_tsat.android.bedtimestories.StoryActivity"
             android:label="Story"
-            android:parentActivityName=".StoryListActivity">
+            android:parentActivityName="com.s_tsat.android.bedtimestories.StoryListActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".StoryListActivity"/>
+                android:value="com.s_tsat.android.bedtimestories.StoryListActivity"/>
         </activity>
     </application>
 

@@ -485,7 +485,7 @@
         <item>@array/story481</item>
     </array>
     <array name="story0">
-        <item>"The boy who cried wolf"</item>
+        <item>"The Boy who cried Wolf"</item>
         <item>@string/story0text</item>
     </array>
     <array name="story1">
@@ -509,7 +509,7 @@
         <item>@string/story5text</item>
     </array>
     <array name="story6">
-        <item>"The wolf in sheep\'s clothing"</item>
+        <item>"The Wolf in sheep\'s clothing"</item>
         <item>@string/story6text</item>
     </array>
     <array name="story7">
@@ -533,7 +533,7 @@
         <item>@string/story11text</item>
     </array>
     <array name="story12">
-        <item>"The emperor's new suit"</item>
+        <item>"The Emperor's new suit"</item>
         <item>@string/story12text</item>
     </array>
     <array name="story13">
@@ -541,15 +541,15 @@
         <item>@string/story13text</item>
     </array>
     <array name="story14">
-        <item>"The money"</item>
+        <item>"The Money"</item>
         <item>@string/story14text</item>
     </array>
     <array name="story15">
-        <item>"The princess and the pea"</item>
+        <item>"The Princess and the pea"</item>
         <item>@string/story15text</item>
     </array>
     <array name="story16">
-        <item>"The silver shilling"</item>
+        <item>"The Silver Shilling"</item>
         <item>@string/story16text</item>
     </array>
     <array name="story17">
@@ -569,39 +569,39 @@
         <item>@string/story20text</item>
     </array>
     <array name="story21">
-        <item>"The fox and the grapes"</item>
+        <item>"The Fox and the Grapes"</item>
         <item>@string/story21text</item>
     </array>
     <array name="story22">
-        <item>"The wolf and the crane"</item>
+        <item>"The Wolf and the Crane"</item>
         <item>@string/story22text</item>
     </array>
     <array name="story23">
-        <item>"The gnat and the bull"</item>
+        <item>"The Gnat and the Bull"</item>
         <item>@string/story23text</item>
     </array>
     <array name="story24">
-        <item>"The plane tree"</item>
+        <item>"The Plane Tree"</item>
         <item>@string/story24text</item>
     </array>
     <array name="story25">
-        <item>"The owl and the grasshopper"</item>
+        <item>"The Owl and the Grasshopper"</item>
         <item>@string/story25text</item>
     </array>
     <array name="story26">
-        <item>"The oak and the reeds"</item>
+        <item>"The Oak and the Reeds"</item>
         <item>@string/story26text</item>
     </array>
     <array name="story27">
-        <item>"The crow and the pitcher"</item>
+        <item>"The Crow and the Pitcher"</item>
         <item>@string/story27text</item>
     </array>
     <array name="story28">
-        <item>"The two goats"</item>
+        <item>"The Two Goats"</item>
         <item>@string/story28text</item>
     </array>
     <array name="story29">
-        <item>"The wild boar and the fox"</item>
+        <item>"The Wild Boar and the Fox"</item>
         <item>@string/story29text</item>
     </array>
     <array name="story30">
@@ -617,7 +617,7 @@
         <item>@string/story32text</item>
     </array>
     <array name="story33">
-        <item>"The cock and the fox"</item>
+        <item>"The Cock and the Fox"</item>
         <item>@string/story33text</item>
     </array>
     <array name="story34">
@@ -2381,23 +2381,23 @@
         <item>@string/story473text</item>
     </array>
     <array name="story474">
-        <item>"The wolf and the fox"</item>
+        <item>"The Wolf and the Fox"</item>
         <item>@string/story474text</item>
     </array>
     <array name="story475">
-        <item>"The wolf and the man"</item>
+        <item>"The Wolf and the Man"</item>
         <item>@string/story475text</item>
     </array>
     <array name="story476">
-        <item>"The wolf and the seven young kids"</item>
+        <item>"The Wolf and the seven young kids"</item>
         <item>@string/story476text</item>
     </array>
     <array name="story477">
-        <item>"The wonderful musician"</item>
+        <item>"The Wonderful Musician"</item>
         <item>@string/story477text</item>
     </array>
     <array name="story478">
-        <item>"The young giant"</item>
+        <item>"The Young Giant"</item>
         <item>@string/story478text</item>
     </array>
     <array name="story479">

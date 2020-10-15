@@ -1,11 +1,10 @@
-package com.example.android.bedtimestories;
+package com.s_tsat.android.bedtimestories;
 
 import androidx.annotation.NonNull;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -125,26 +124,22 @@ public class StoryActivity extends AppCompatActivity {
         final Story story = StoryUtils.getStory(id, this);
         storyTextView.setText(getString(story.getResourceID()));
         titleView.setText(story.getName());
-        storyNameView.setText(story.getName() + " " + storyID);
+        storyNameView.setText(story.getName());
         scrollView.scrollTo(0, 0);
 
         favButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 StoryUtils.changeFavoriteStatus(id, true, this);
                 if (!isSetupPhase) showToast("Story added to favorites");
-                Log.i("StoryActivity", "Changed story " + id + " to favorite");
             } else {
                 StoryUtils.changeFavoriteStatus(id, false, this);
                 if (!isSetupPhase) showToast("Story removed from favorites");
-                Log.i("StoryActivity", "Changed story " + id + " to not favorite");
             }
         });
 
         if (story.isFavorite()) {
-            Log.i("StoryActivity", "Story " + story.getID() + " is favorite, so check the favorite button");
             favButton.setChecked(true);
         } else {
-            Log.i("StoryActivity", "Story " + story.getID() + " is not favorite, so uncheck the favorite button");
             favButton.setChecked(false);
         }
 

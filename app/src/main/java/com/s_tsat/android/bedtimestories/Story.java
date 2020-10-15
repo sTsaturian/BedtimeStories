@@ -1,4 +1,4 @@
-package com.example.android.bedtimestories;
+package com.s_tsat.android.bedtimestories;
 
 import java.io.Serializable;
 

@@ -28,6 +28,16 @@
             android:text="@string/rudyard_kipling_stories" />
 
         <TextView
+            android:id="@+id/shortCategory"
+            style="@style/default_text_view_style"
+            android:text="@string/short_stories" />
+
+        <TextView
+            android:id="@+id/longCategory"
+            style="@style/default_text_view_style"
+            android:text="@string/long_stories" />
+
+        <TextView
             android:id="@+id/animalsCategory"
             style="@style/default_text_view_style"
             android:text="@string/animal_stories" />

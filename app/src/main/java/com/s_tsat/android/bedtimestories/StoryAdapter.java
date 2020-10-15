@@ -1,4 +1,4 @@
-package com.example.android.bedtimestories;
+package com.s_tsat.android.bedtimestories;
 
 import androidx.annotation.NonNull;
 import android.app.Activity;
@@ -37,7 +37,8 @@ public class StoryAdapter extends ArrayAdapter<Story> {
         }
 
         TextView storyNameTextView = listItemView.findViewById(R.id.storyName);
-        storyNameTextView.setText(currentStory.getName() + " " + currentStory.getID());
+        assert currentStory != null;
+        storyNameTextView.setText(currentStory.getName());
 
         ImageView favoriteImageView = listItemView.findViewById(R.id.favoriteImage);
         if (!currentStory.isFavorite()) favoriteImageView.setVisibility(View.INVISIBLE);

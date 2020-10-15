@@ -1,8 +1,7 @@
-package com.example.android.bedtimestories;
+package com.s_tsat.android.bedtimestories;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -47,6 +46,20 @@ public class CategoryActivity extends AppCompatActivity {
         kiplingView.setOnClickListener(view -> {
             Intent intent = new Intent(CategoryActivity.this, StoryListActivity.class);
             intent.putExtra("categoryName", R.string.rudyard_kipling_stories);
+            startActivity(intent);
+        });
+
+        TextView shortView = findViewById(R.id.shortCategory);
+        shortView.setOnClickListener(view -> {
+            Intent intent = new Intent(CategoryActivity.this, StoryListActivity.class);
+            intent.putExtra("categoryName", R.string.short_stories);
+            startActivity(intent);
+        });
+
+        TextView longView = findViewById(R.id.longCategory);
+        longView.setOnClickListener(view -> {
+            Intent intent = new Intent(CategoryActivity.this, StoryListActivity.class);
+            intent.putExtra("categoryName", R.string.long_stories);
             startActivity(intent);
         });
 
