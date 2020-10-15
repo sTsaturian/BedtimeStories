@@ -192,7 +192,7 @@ public class StoryUtils {
 
         ArrayList<Story> categoryStoryList = new ArrayList<>();
 
-        int[] idList = new int[0];
+        int[] idList;
         switch (categoryName) {
             case R.string.animal_stories:
                 idList = animalIDs;
@@ -242,6 +242,8 @@ public class StoryUtils {
             case R.string.long_stories:
                 idList = longIDs;
                 break;
+            default:
+                return allStories;
         }
         for (int ID : idList) {
             categoryStoryList.add(allStories.get(ID));

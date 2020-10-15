@@ -4,7 +4,12 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:enabled="false"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    app:contentInsetEnd="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetRight="0dp"
+    app:contentInsetStart="0dp"
+    app:contentInsetStartWithNavigation="0dp">
 
     <ImageButton
         android:id="@+id/left_button"

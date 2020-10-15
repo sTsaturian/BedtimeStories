@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -62,9 +63,12 @@ public class StoryActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             Intent intent = getIntent();
             categoryName = intent.getIntExtra("categoryName", -1);
+            Log.i("StoryActivity", getString(categoryName));
             if (categoryName == -1) StoryUtils.loadStoryLists(this);
             storyList = (ArrayList<Story>) intent.getSerializableExtra("storyList");
+            Log.i("StoryActivity", String.valueOf(storyList));
             position = intent.getIntExtra("index", -1);
+            Log.i("StoryActivity", String.valueOf(position));
             storyID = storyList.get(position).getID();
         }
         else{
