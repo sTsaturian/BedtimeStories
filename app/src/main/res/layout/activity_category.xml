@@ -13,14 +13,19 @@
             android:text="@string/aesop_s_fables" />
 
         <TextView
+            android:id="@+id/andersenCategory"
+            style="@style/default_text_view_style"
+            android:text="@string/hans_christian_andersen_s_stories" />
+
+        <TextView
             android:id="@+id/grimmCategory"
             style="@style/default_text_view_style"
             android:text="@string/brothers_grimm_stories" />
 
         <TextView
-            android:id="@+id/andersenCategory"
+            android:id="@+id/kiplingCategory"
             style="@style/default_text_view_style"
-            android:text="@string/hans_christian_andersen_s_stories" />
+            android:text="@string/rudyard_kipling_stories" />
 
         <TextView
             android:id="@+id/animalsCategory"

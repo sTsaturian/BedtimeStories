@@ -480,6 +480,9 @@
         <item>@array/story476</item>
         <item>@array/story477</item>
         <item>@array/story478</item>
+        <item>@array/story479</item>
+        <item>@array/story480</item>
+        <item>@array/story481</item>
     </array>
     <array name="story0">
         <item>"The boy who cried wolf"</item>
@@ -502,7 +505,7 @@
         <item>@string/story4text</item>
     </array>
     <array name="story5">
-        <item>"The Wind and the Sun"</item>
+        <item>"The beginning of the Armadillos"</item>
         <item>@string/story5text</item>
     </array>
     <array name="story6">
@@ -1614,7 +1617,7 @@
         <item>@string/story282text</item>
     </array>
     <array name="story283">
-        <item>"Hans married"</item>
+        <item>"The Butterfly that Stamped"</item>
         <item>@string/story283text</item>
     </array>
     <array name="story284">
@@ -1638,7 +1641,7 @@
         <item>@string/story288text</item>
     </array>
     <array name="story289">
-        <item>"The beam"</item>
+        <item>"The Crab That Played with the Sea"</item>
         <item>@string/story289text</item>
     </array>
     <array name="story290">
@@ -1666,7 +1669,7 @@
         <item>@string/story295text</item>
     </array>
     <array name="story296">
-        <item>"The bright sun brings it to light"</item>
+        <item>"The Cat That Walked by Himself"</item>
         <item>@string/story296text</item>
     </array>
     <array name="story297">
@@ -1738,7 +1741,7 @@
         <item>@string/story313text</item>
     </array>
     <array name="story314">
-        <item>"Domestic servants"</item>
+        <item>"The Elephant's Child"</item>
         <item>@string/story314text</item>
     </array>
     <array name="story315">
@@ -1862,7 +1865,7 @@
         <item>@string/story344text</item>
     </array>
     <array name="story345">
-        <item>"The good bargain"</item>
+        <item>"How the Whale Got His Throat"</item>
         <item>@string/story345text</item>
     </array>
     <array name="story346">
@@ -1902,7 +1905,7 @@
         <item>@string/story354text</item>
     </array>
     <array name="story355">
-        <item>"The jew among thorns"</item>
+        <item>"How the Camel Got His Hump"</item>
         <item>@string/story355text</item>
     </array>
     <array name="story356">
@@ -1926,7 +1929,7 @@
         <item>@string/story360text</item>
     </array>
     <array name="story361">
-        <item>"Knoist and his three sons"</item>
+        <item>"How the Rhinoceros Got His Skin"</item>
         <item>@string/story361text</item>
     </array>
     <array name="story362">
@@ -1942,7 +1945,7 @@
         <item>@string/story364text</item>
     </array>
     <array name="story365">
-        <item>"Lean Lisa"</item>
+        <item>"How the Leopard Got His Spots"</item>
         <item>@string/story365text</item>
     </array>
     <array name="story366">
@@ -2396,5 +2399,17 @@
     <array name="story478">
         <item>"The young giant"</item>
         <item>@string/story478text</item>
+    </array>
+    <array name="story479">
+        <item>"How the First Letter Was Written"</item>
+        <item>@string/story479text</item>
+    </array>
+    <array name="story480">
+        <item>"How the Alphabet Was Made"</item>
+        <item>@string/story480text</item>
+    </array>
+    <array name="story481">
+        <item>"The Sing-Song of Old Man Kangaroo"</item>
+        <item>@string/story481text</item>
     </array>
 </resources>

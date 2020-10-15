@@ -28,6 +28,13 @@ public class CategoryActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        TextView andersenView = findViewById(R.id.andersenCategory);
+        andersenView.setOnClickListener(view -> {
+            Intent intent = new Intent(CategoryActivity.this, StoryListActivity.class);
+            intent.putExtra("categoryName", R.string.hans_christian_andersen_s_stories);
+            startActivity(intent);
+        });
+
         TextView grimmView = findViewById(R.id.grimmCategory);
         grimmView.setOnClickListener(view -> {
             Intent intent = new Intent(CategoryActivity.this, StoryListActivity.class);
@@ -35,10 +42,10 @@ public class CategoryActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        TextView andersenView = findViewById(R.id.andersenCategory);
-        andersenView.setOnClickListener(view -> {
+        TextView kiplingView = findViewById(R.id.kiplingCategory);
+        kiplingView.setOnClickListener(view -> {
             Intent intent = new Intent(CategoryActivity.this, StoryListActivity.class);
-            intent.putExtra("categoryName", R.string.hans_christian_andersen_s_stories);
+            intent.putExtra("categoryName", R.string.rudyard_kipling_stories);
             startActivity(intent);
         });
 

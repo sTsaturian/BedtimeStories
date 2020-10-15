@@ -14,6 +14,7 @@
     <string name="aesop_s_fables">Aesop\'s Fables</string>
     <string name="brothers_grimm_stories">Brothers Grimm Stories</string>
     <string name="hans_christian_andersen_s_stories">Hans Christian Andersen\'s Stories</string>
+    <string name="rudyard_kipling_stories">Rudyard Kipling Stories</string>
     <string name="famous_stories">Famous Stories</string>
     <string name="happy_end_stories">Happy End Stories</string>
     <string name="royal_stories">Royal Stories</string>
@@ -30,5 +31,6 @@
     <string name="do_you_want_to_clear_data">Do you want to clear all the data? This will clear all your favorites and make all the stories unread. This action is irreversible.</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
+
 
 </resources>
