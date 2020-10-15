@@ -1,5 +1,6 @@
 package com.example.android.bedtimestories;
 
+import androidx.annotation.NonNull;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -264,8 +265,9 @@ public class StoryActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
     @Override
-    protected void onSaveInstanceState (Bundle outState) {
+    protected void onSaveInstanceState (@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt("storyID", storyID);
         outState.putInt("categoryName", categoryName);

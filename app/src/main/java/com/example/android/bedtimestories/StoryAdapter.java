@@ -1,5 +1,6 @@
 package com.example.android.bedtimestories;
 
+import androidx.annotation.NonNull;
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,7 +25,8 @@ public class StoryAdapter extends ArrayAdapter<Story> {
         super(context, R.layout.list_item, stories);
     }
 
-    public View getView(int position, View convertView, ViewGroup parent) {
+    @NonNull
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         Story currentStory = getItem(position);
 
         View listItemView = convertView;
