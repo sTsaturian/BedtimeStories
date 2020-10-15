@@ -1,20 +1,34 @@
 ﻿<resources>
     <string name="app_name">FairyTales</string>
-    <string name="no_favorites">You have no favorite stories yet. To add a story to favorites, click the star button on top of it, and the story will appear here!</string>
     <string name="categories">Categories</string>
-    <string name="animal_stories">Animal Stories</string>
-    <string name="kid_stories">Kid Stories</string>
-    <string name="aesop_s_fables">Aesop\'s Fables</string>
-    <string name="brothers_grimm_stories">Brothers Grimm Stories</string>
-    <string name="hans_christian_andersen_s_stories">Hans Christian Andersen\'s Stories</string>
-    <string name="all_stories">All Stories</string>
-    <string name="favorites">Favorites</string>
     <string name="continue_last">Continue Last</string>
-    <string name="random_story">Random Story</string>
-    <string name="favorite_indicator">Favorite indicator</string>
+    <string name="random_story">Random Unread Story</string>
     <string name="previous_story">Previous story</string>
     <string name="next_story">Next Story</string>
     <string name="clear_data">Clear data</string>
+
+    <string name="all_stories">All Stories</string>
+    <string name="favorites">Favorites</string>
+
+    <string name="animal_stories">Animal Stories</string>
+    <string name="aesop_s_fables">Aesop\'s Fables</string>
+    <string name="brothers_grimm_stories">Brothers Grimm Stories</string>
+    <string name="hans_christian_andersen_s_stories">Hans Christian Andersen\'s Stories</string>
+    <string name="famous_stories">Famous Stories</string>
+    <string name="happy_end_stories">Happy End Stories</string>
+    <string name="royal_stories">Royal Stories</string>
+    <string name="family_stories">Family Stories</string>
+    <string name="myth_creatures">Mythical Creatures</string>
+    <string name="object_stories">Objects and Plants</string>
+    <string name="religious_stories">Religious Stories</string>
+    <string name="soldier_stories">Soldier Stories</string>
+    <string name="food_for_thought">Food for Thought</string>
+
+    <string name="favorite_indicator">Favorite indicator</string>
+
+    <string name="no_favorites">You have no favorite stories yet. To add a story to favorites, click the star button on top of it, and the story will appear here!</string>
     <string name="do_you_want_to_clear_data">Do you want to clear all the data? This will clear all your favorites and make all the stories unread. This action is irreversible.</string>
     <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
 </resources>

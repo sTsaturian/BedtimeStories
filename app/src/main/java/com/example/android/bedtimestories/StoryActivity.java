@@ -42,7 +42,7 @@ public class StoryActivity extends AppCompatActivity {
     private ImageButton rightButton;
     private ScrollView scrollView;
     private int storyID;
-    private String categoryName;
+    private int categoryName;
     private boolean isSetupPhase;
 
     /**
@@ -61,7 +61,7 @@ public class StoryActivity extends AppCompatActivity {
         Intent intent = getIntent();
         storyID = intent.getIntExtra("storyID", -1);
         if (storyID == -1) StoryUtils.loadStoryLists(this);
-        categoryName = intent.getStringExtra("categoryName");
+        categoryName = intent.getIntExtra("categoryName", -1);
         storyList = (ArrayList<Story>) intent.getSerializableExtra("storyList");
         int position = intent.getIntExtra("index", -1);
 

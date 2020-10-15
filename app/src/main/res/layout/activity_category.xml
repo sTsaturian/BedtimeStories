@@ -28,10 +28,49 @@
             android:text="@string/animal_stories" />
 
         <TextView
-            android:id="@+id/kidsCategory"
+            android:id="@+id/famousCategory"
             style="@style/default_text_view_style"
-            android:text="@string/kid_stories" />
+            android:text="@string/famous_stories" />
 
+        <TextView
+            android:id="@+id/happyEndCategory"
+            style="@style/default_text_view_style"
+            android:text="@string/happy_end_stories" />
+
+        <TextView
+            android:id="@+id/royalCategory"
+            style="@style/default_text_view_style"
+            android:text="@string/royal_stories" />
+
+        <TextView
+            android:id="@+id/familyCategory"
+            style="@style/default_text_view_style"
+            android:text="@string/family_stories" />
+
+        <TextView
+            android:id="@+id/mythCategory"
+            style="@style/default_text_view_style"
+            android:text="@string/myth_creatures" />
+
+        <TextView
+            android:id="@+id/objectsCategory"
+            style="@style/default_text_view_style"
+            android:text="@string/object_stories" />
+
+        <TextView
+            android:id="@+id/religiousCategory"
+            style="@style/default_text_view_style"
+            android:text="@string/religious_stories" />
+
+        <TextView
+            android:id="@+id/soldierCategory"
+            style="@style/default_text_view_style"
+            android:text="@string/soldier_stories" />
+
+        <TextView
+            android:id="@+id/thoughtCategory"
+            style="@style/default_text_view_style"
+            android:text="@string/food_for_thought" />
 
     </LinearLayout>
 </ScrollView>

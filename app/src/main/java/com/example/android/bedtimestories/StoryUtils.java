@@ -2,7 +2,6 @@ package com.example.android.bedtimestories;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -19,9 +18,6 @@ import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 
 
 public class StoryUtils {
-
-    private static final int[] animalIDs = {2, 3, 4, 6, 10};
-    private static final int[] kidIDs = {};
     private static final int[] aesopIDs = {0, 1, 2, 3, 4, 5, 6, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,
             28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 41, 43, 44, 45, 46, 47, 48, 49,
             50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71,
@@ -51,6 +47,41 @@ public class StoryUtils {
             232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248,
             249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265,
             266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279};
+    private static final int[] animalIDs = {2, 3, 4, 6, 13, 18, 19, 20, 21, 22, 23, 25, 27, 28, 29,
+            30, 31, 32, 33, 34, 35, 36, 37, 39, 40, 41, 43, 44, 45, 46, 47, 48, 49, 52, 53, 54, 55,
+            56, 58, 59, 60, 61, 63, 64, 65, 66, 68, 69, 70, 71, 72, 73, 74, 75, 77, 78, 79, 80, 81,
+            82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 101, 102, 103, 105,
+            106, 107, 108, 109, 111, 113, 114, 115, 116, 117, 118, 120, 121, 123, 124, 125, 126,
+            127, 128, 129, 130, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144,
+            145, 147, 148, 149, 150, 151, 152, 161, 164, 169, 179, 180, 182, 195, 199, 212, 213,
+            235, 236, 244, 246, 255, 258, 291, 294, 299, 303, 307, 313, 316, 325, 326, 327, 330,
+            342, 348, 352, 369, 375, 377, 382, 390, 400, 402, 425, 426, 467, 469, 470, 474, 475,
+            476};
+    private static final int[] famousIDs = {0, 1, 2, 4, 6, 7, 8, 12, 15, 20, 62, 101, 161, 165, 176,
+            177, 179, 180, 247, 248, 249, 250, 251, 252, 253, 294, 300, 321, 399, 400, 422, 424};
+    private static final int[] happyEndIDs = {8, 10, 161, 180, 247, 248, 249, 250, 251, 252, 253,
+            282, 284, 287, 304, 315, 324, 334, 335, 341, 343, 354, 356, 357, 359, 378, 381, 386,
+            387, 393, 397, 400, 401, 403, 407, 409, 411, 417, 418, 422, 423, 427, 430, 433, 435,
+            442, 446, 454, 455, 458, 476};
+    private static final int[] royalIDs = {10, 12, 15, 163, 168, 171, 177, 179, 183, 197, 225, 268,
+            280, 284, 287, 292, 298, 305, 309, 316, 320, 334, 336, 342, 346, 347, 353, 354, 357,
+            358, 359, 370, 381, 393, 394, 399, 403, 409, 414, 418, 419, 420, 422, 424, 447, 449,
+            450, 451, 455, 457, 458, 461, 464, 465};
+    private static final int[] familyIDs = {1, 38, 50, 99, 131, 146, 166, 173, 184, 199, 200, 233,
+            247, 248, 249, 250, 251, 252, 253, 256, 265, 270, 182, 285, 288, 295, 298, 300, 324,
+            329, 343, 360, 362, 372, 374, 378, 380, 384, 387, 401, 411, 412, 415, 416, 417, 423,
+            429, 431, 433, 435, 438, 442, 443, 444, 448, 449, 453, 456, 457, 460, 463, 465, 468,
+            471, 473};
+    private static final int[] mythIDs = {9, 51, 158, 161, 162, 170, 176, 184, 185, 203, 217, 239,
+            263, 268, 271, 280, 281, 290, 304, 308, 309, 310, 319, 333, 336, 359, 366, 391, 417,
+            421, 424, 428, 439, 466, 478};
+    private static final int[] objectsIDs = {5, 14, 16, 24, 26, 100, 153, 160, 165, 168, 172, 175,
+            181, 182, 186, 187, 191, 194, 197, 198, 201, 202, 208, 219, 222, 229, 230, 238, 243,
+            257, 261, 264, 273, 277, 279};
+    private static final int[] religiousIDs = {171, 178, 204, 209, 221, 223, 224, 228, 233, 234,
+            237, 272};
+    private static final int[] soldierIDs = {158, 292, 293, 297, 419, 440};
+    private static final int[] thoughtIDs = {190, 193, 206, 214, 227, 286};
 
     private static ArrayList<Story> allStories;
 
@@ -85,7 +116,7 @@ public class StoryUtils {
      * @return int ID of a random unread story
      */
     public static int random(Context context) {
-        if (allStories == null){
+        if (allStories == null) {
             loadStoryLists(context);
         }
         ArrayList<Integer> indices = new ArrayList<>();
@@ -113,7 +144,7 @@ public class StoryUtils {
      * @return Story the corresponding story
      */
     public static Story getStory(int storyID, Context context) {
-        if (allStories == null){
+        if (allStories == null) {
             loadStoryLists(context);
         }
         return allStories.get(storyID);
@@ -122,40 +153,58 @@ public class StoryUtils {
     /**
      * Retrieves all stories with given category
      *
-     * @param categoryName the name of the category. Possible values:
-     *                     "All Stories"
-     *                     "Favorites"
-     *                     "Kid Stories"
-     *                     "Aesop's Fables"
-     *                     "Brothers Grimm Stories"
-     *                     "Hans Christian Andersen's Stories"
+     * @param categoryName the ID of the resource with the name of the category.
      * @return ArrayList<Story> all stories in the given category
      */
-    public static ArrayList<Story> getStoryList(String categoryName, Context context) {
-        if (allStories == null){
+    public static ArrayList<Story> getStoryList(int categoryName, Context context) {
+        if (allStories == null) {
             loadStoryLists(context);
         }
-        if (categoryName.equals("All Stories")) return allStories;
-        if (categoryName.equals("Favorites")) return getFavorites(context);
+        if (categoryName == R.string.all_stories) return allStories;
+        if (categoryName == R.string.favorites) return getFavorites(context);
 
         ArrayList<Story> categoryStoryList = new ArrayList<>();
 
         int[] idList = new int[0];
         switch (categoryName) {
-            case "Animal Stories":
+            case R.string.animal_stories:
                 idList = animalIDs;
                 break;
-            case "Kid Stories":
-                idList = kidIDs;
-                break;
-            case "Aesop's Fables":
+            case R.string.aesop_s_fables:
                 idList = aesopIDs;
                 break;
-            case "Brothers Grimm Stories":
+            case R.string.brothers_grimm_stories:
                 idList = grimmIDs;
                 break;
-            case "Hans Christian Andersen's Stories":
+            case R.string.hans_christian_andersen_s_stories:
                 idList = andersenIDs;
+                break;
+            case R.string.famous_stories:
+                idList = famousIDs;
+                break;
+            case R.string.happy_end_stories:
+                idList = happyEndIDs;
+                break;
+            case R.string.royal_stories:
+                idList = royalIDs;
+                break;
+            case R.string.family_stories:
+                idList = familyIDs;
+                break;
+            case R.string.myth_creatures:
+                idList = mythIDs;
+                break;
+            case R.string.object_stories:
+                idList = objectsIDs;
+                break;
+            case R.string.religious_stories:
+                idList = religiousIDs;
+                break;
+            case R.string.soldier_stories:
+                idList = soldierIDs;
+                break;
+            case R.string.food_for_thought:
+                idList = thoughtIDs;
                 break;
         }
         for (int ID : idList) {
@@ -170,7 +219,7 @@ public class StoryUtils {
      * @return ArrayList<Story> the list of all favorite stories.
      */
     public static ArrayList<Story> getFavorites(Context context) {
-        if (allStories == null){
+        if (allStories == null) {
             loadStoryLists(context);
         }
         ArrayList<Story> favorites = new ArrayList<>();
@@ -188,7 +237,7 @@ public class StoryUtils {
      * @param status boolean true if the story should be favorite, false otherwise
      */
     public static void changeFavoriteStatus(int ID, boolean status, Context context) {
-        if (sharedPref == null){
+        if (sharedPref == null) {
             loadStoryLists(context);
         }
         Story story = getStory(ID, context);
@@ -207,7 +256,7 @@ public class StoryUtils {
      * @param status boolean true if the story should be read, false otherwise
      */
     public static void changeReadStatus(int ID, boolean status, Context context) {
-        if (sharedPref == null){
+        if (sharedPref == null) {
             loadStoryLists(context);
         }
         Story story = getStory(ID, context);
@@ -225,7 +274,7 @@ public class StoryUtils {
      * @param storyID the ID of the story to be set last read.
      */
     public static void setLastRead(int storyID, Context context) {
-        if (sharedPref == null){
+        if (sharedPref == null) {
             loadStoryLists(context);
         }
         SharedPreferences.Editor editor = sharedPref.edit();
@@ -239,7 +288,7 @@ public class StoryUtils {
      * @return int the total number of stories.
      */
     public static int getNumberOfStories(Context context) {
-        if (allStories == null){
+        if (allStories == null) {
             loadStoryLists(context);
         }
         return allStories.size();
@@ -248,8 +297,8 @@ public class StoryUtils {
     /**
      * Resets status of all stories to not favorite/unread.
      */
-    public static void clearData(Context context){
-        if (allStories == null || sharedPref == null){
+    public static void clearData(Context context) {
+        if (allStories == null || sharedPref == null) {
             loadStoryLists(context);
         }
         for (Story story : allStories)

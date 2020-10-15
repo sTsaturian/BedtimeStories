@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         TextView allStoriesView = findViewById(R.id.allStoriesView);
         allStoriesView.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, StoryListActivity.class);
-            intent.putExtra("categoryName", "All Stories");
+            intent.putExtra("categoryName", R.string.all_stories);
             startActivity(intent);
         });
 
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         TextView favoritesView = findViewById(R.id.favoritesView);
         favoritesView.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, StoryListActivity.class);
-            intent.putExtra("categoryName", "Favorites");
+            intent.putExtra("categoryName", R.string.favorites);
             startActivity(intent);
         });
 
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         continueLast.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, StoryActivity.class);
             intent.putExtra("storyID", StoryUtils.last());
-            intent.putExtra("categoryName", "All Stories");
+            intent.putExtra("categoryName", R.string.all_stories);
             startActivity(intent);
         });
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         randomStory.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, StoryActivity.class);
             intent.putExtra("storyID", StoryUtils.random(this));
-            intent.putExtra("categoryName", "All Stories");
+            intent.putExtra("categoryName", R.string.all_stories);
             startActivity(intent);
         });
 
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(newIntent);
                 finish();
             });
-            builder.setNegativeButton("Cancel", (dialog, id) -> {
+            builder.setNegativeButton(R.string.cancel, (dialog, id) -> {
                 // do nothing
             });
             AlertDialog dialog = builder.create();

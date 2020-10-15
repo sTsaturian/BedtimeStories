@@ -23,21 +23,21 @@ public class StoryListActivity extends AppCompatActivity {
 
     private boolean isFirstAppearance;
     private ListView listView;
-    private String categoryName;
+    private int categoryName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         Intent intent = getIntent();
-        categoryName = intent.getStringExtra("categoryName");
-        if (categoryName == null)
+        categoryName = intent.getIntExtra("categoryName", -1);
+        if (categoryName == -1)
             finish();
         final ArrayList<Story> stories = StoryUtils.getStoryList(categoryName, this);
 
         setupActionBar();
 
-        if (stories.isEmpty() && categoryName.equals("Favorites")) {
+        if (stories.isEmpty() && categoryName == R.string.favorites) {
             setContentView(R.layout.empty_favorites);
             return;
         }
@@ -105,7 +105,7 @@ public class StoryListActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            if (categoryName.equals("All Stories") || categoryName.equals("Favorites")) {
+            if (categoryName == R.string.all_stories || categoryName == R.string.favorites) {
                 Intent intent = new Intent(StoryListActivity.this, MainActivity.class);
                 startActivity(intent);
             } else {
