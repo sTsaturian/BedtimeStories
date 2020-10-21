@@ -11,6 +11,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:textAllCaps="true"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@color/text_color"/>
 
 </LinearLayout>

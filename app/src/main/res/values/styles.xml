@@ -11,6 +11,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@drawable/backgrounds_3</item>
+        <item name="android:alpha">0.8</item>
     </style>
 
     <style name="activity_style_uniform_background" parent="@android:style/Animation.Activity">
@@ -26,6 +27,7 @@
         <item name="android:padding">16dp</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_color</item>
         <item name="android:background">@android:drawable/dialog_holo_light_frame</item>
     </style>
 

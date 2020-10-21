@@ -30,7 +30,8 @@
         android:textStyle="bold"
         app:autoSizeMaxTextSize="16sp"
         app:autoSizeTextType="uniform"
-        tools:text="Name" />
+        tools:text="Name"
+        android:textColor="@color/text_color"/>
 
     <ToggleButton
         android:id="@+id/favoriteToggle"
