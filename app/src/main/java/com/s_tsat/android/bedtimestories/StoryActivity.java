@@ -77,7 +77,7 @@ public class StoryActivity extends AppCompatActivity {
             categoryName = savedInstanceState.getInt("categoryName");
             position = savedInstanceState.getInt("position");
             storyList = (ArrayList<Story>) savedInstanceState.getSerializable("storyList");
-            scrollingPosition = savedInstanceState.getInt("scrollingPosition", 0);
+            scrollingPosition = -1;
         }
 
         findViews();
@@ -131,7 +131,8 @@ public class StoryActivity extends AppCompatActivity {
         storyTextView.setText(getString(story.getResourceID()));
         titleView.setText(story.getName());
         storyNameView.setText(story.getName());
-        scrollView.post(() -> scrollView.scrollTo(0, scrollPos));
+        if (scrollPos != -1)
+            scrollView.post(() -> scrollView.scrollTo(0, scrollPos));
         isLastRead = false;
 
         favButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
@@ -283,6 +284,5 @@ public class StoryActivity extends AppCompatActivity {
         outState.putInt("categoryName", categoryName);
         outState.putInt("position", position);
         outState.putSerializable("storyList", storyList);
-        outState.putInt("scrollingPosition", scrollView.getScrollY());
     }
 }
