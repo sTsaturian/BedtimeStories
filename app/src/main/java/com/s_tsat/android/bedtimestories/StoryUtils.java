@@ -349,4 +349,21 @@ public class StoryUtils {
         editor.apply();
     }
 
+    /**
+     * Sets the scrolling Y-coordinate of the last read story.
+     * @param scrollingPosition Y-coordinate of the corresponding scrollView
+     */
+    public static void setLastReadScrollingPosition(int scrollingPosition) {
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt("last_scrolling_position", scrollingPosition);
+        editor.apply();
+    }
+
+    /**
+     * Retrieves the scrolling Y-coordinate of the last read story.
+     * @return int Y-coordinate of ScrollView for the last read story
+     */
+    public static int getLastReadScrollingPosition() {
+        return sharedPref.getInt("last_scrolling_position", 0);
+    }
 }

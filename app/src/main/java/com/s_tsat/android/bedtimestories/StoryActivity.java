@@ -2,6 +2,7 @@ package com.s_tsat.android.bedtimestories;
 
 import androidx.annotation.NonNull;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -46,6 +47,7 @@ public class StoryActivity extends AppCompatActivity {
     private int categoryName;
     int position;
     private boolean isSetupPhase;
+    private boolean isLastRead;
 
     /**
      * this method is called on creation. It sets up the action bar,
@@ -60,29 +62,29 @@ public class StoryActivity extends AppCompatActivity {
 
         setupActionBar();
 
+        int scrollingPosition;
         if (savedInstanceState == null) {
             Intent intent = getIntent();
             categoryName = intent.getIntExtra("categoryName", -1);
-            Log.i("StoryActivity", getString(categoryName));
             if (categoryName == -1) StoryUtils.loadStoryLists(this);
             storyList = (ArrayList<Story>) intent.getSerializableExtra("storyList");
-            Log.i("StoryActivity", String.valueOf(storyList));
             position = intent.getIntExtra("index", -1);
-            Log.i("StoryActivity", String.valueOf(position));
             storyID = storyList.get(position).getID();
+            scrollingPosition = intent.getIntExtra("scrollingPosition", 0);
         }
         else{
             storyID = savedInstanceState.getInt("storyID", -1);
             categoryName = savedInstanceState.getInt("categoryName");
             position = savedInstanceState.getInt("position");
             storyList = (ArrayList<Story>) savedInstanceState.getSerializable("storyList");
+            scrollingPosition = savedInstanceState.getInt("scrollingPosition", 0);
         }
 
         findViews();
 
         mHandler = new Handler(Looper.getMainLooper());
 
-        fillViews(storyID, position);
+        fillViews(storyID, position, scrollingPosition);
     }
 
     /**
@@ -122,14 +124,15 @@ public class StoryActivity extends AppCompatActivity {
      * @param id  the story ID
      * @param pos position of the story in the underlying story list
      */
-    private void fillViews(final int id, final int pos) {
+    private void fillViews(final int id, final int pos, int scrollPos) {
         isSetupPhase = true;
         storyID = id;
         final Story story = StoryUtils.getStory(id, this);
         storyTextView.setText(getString(story.getResourceID()));
         titleView.setText(story.getName());
         storyNameView.setText(story.getName());
-        scrollView.scrollTo(0, 0);
+        scrollView.post(() -> scrollView.scrollTo(0, scrollPos));
+        isLastRead = false;
 
         favButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
@@ -141,11 +144,7 @@ public class StoryActivity extends AppCompatActivity {
             }
         });
 
-        if (story.isFavorite()) {
-            favButton.setChecked(true);
-        } else {
-            favButton.setChecked(false);
-        }
+        favButton.setChecked(story.isFavorite());
 
         unreadButton.setOnClickListener(v -> {
             if (story.isRead()) {
@@ -171,27 +170,31 @@ public class StoryActivity extends AppCompatActivity {
 
         if (storyList != null) {
             leftButton.setOnClickListener(v -> {
+                if (isLastRead) StoryUtils.setLastReadScrollingPosition(scrollView.getScrollY());
                 position = (pos + storyList.size() - 1) % storyList.size();
                 Story newStory = storyList.get(position);
                 int newID = newStory.getID();
-                fillViews(newID, position);
+                fillViews(newID, position, 0);
             });
             rightButton.setOnClickListener(v -> {
+                if (isLastRead) StoryUtils.setLastReadScrollingPosition(scrollView.getScrollY());
                 position = (pos + 1) % storyList.size();
                 Story newStory = storyList.get(position);
                 int newID = newStory.getID();
-                fillViews(newID, position);
+                fillViews(newID, position, 0);
             });
         } else {
             leftButton.setOnClickListener(v -> {
+                if (isLastRead) StoryUtils.setLastReadScrollingPosition(scrollView.getScrollY());
                 int numOfStories = StoryUtils.getNumberOfStories(this);
                 int newID = (id + numOfStories - 1) % numOfStories;
-                fillViews(newID, -1);
+                fillViews(newID, -1, 0);
             });
             rightButton.setOnClickListener(v -> {
+                if (isLastRead) StoryUtils.setLastReadScrollingPosition(scrollView.getScrollY());
                 int numOfStories = StoryUtils.getNumberOfStories(this);
                 int newID = (id + 1) % numOfStories;
-                fillViews(newID, -1);
+                fillViews(newID, -1, 0);
             });
         }
 
@@ -199,11 +202,12 @@ public class StoryActivity extends AppCompatActivity {
     }
 
     /**
-     * This stops the timers on pause.
+     * This stops the timers and remembers the last read position on pause.
      */
     @Override
     protected void onPause() {
         super.onPause();
+        if (isLastRead) StoryUtils.setLastReadScrollingPosition(scrollView.getScrollY());
         mHandler.removeCallbacksAndMessages(null);
     }
 
@@ -223,9 +227,16 @@ public class StoryActivity extends AppCompatActivity {
         mHandler.removeCallbacksAndMessages(null);
         Story story = StoryUtils.getStory(storyID, this);
         if (categoryName == R.string.favorites)
-            mHandler.postDelayed(() -> StoryUtils.setLastRead(R.string.all_stories, storyID, this), DELAY_FOR_LAST);
+            mHandler.postDelayed(() -> {
+                StoryUtils.setLastRead(R.string.all_stories, storyID, this);
+                isLastRead = true;
+            }, DELAY_FOR_LAST)
+            ;
         else
-            mHandler.postDelayed(() -> StoryUtils.setLastRead(categoryName, position, this), DELAY_FOR_LAST);
+            mHandler.postDelayed(() -> {
+                StoryUtils.setLastRead(categoryName, position, this);
+                isLastRead = true;
+                }, DELAY_FOR_LAST);
         if (!story.isRead() && !unreadButton.isShown()) mHandler.postDelayed(() -> {
             StoryUtils.changeReadStatus(storyID, true, this);
             unreadButton.setText("Mark\nUnread");
@@ -272,5 +283,6 @@ public class StoryActivity extends AppCompatActivity {
         outState.putInt("categoryName", categoryName);
         outState.putInt("position", position);
         outState.putSerializable("storyList", storyList);
+        outState.putInt("scrollingPosition", scrollView.getScrollY());
     }
 }

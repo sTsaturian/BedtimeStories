@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("categoryName", category);
             intent.putExtra("storyList", StoryUtils.getStoryList(category, this));
             intent.putExtra("index", StoryUtils.lastPosition());
+            intent.putExtra("scrollingPosition", StoryUtils.getLastReadScrollingPosition());
             startActivity(intent);
         });
 
