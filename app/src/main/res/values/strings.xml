@@ -5,7 +5,7 @@
     <string name="random_story">Random Unread Story</string>
     <string name="previous_story">Previous story</string>
     <string name="next_story">Next Story</string>
-    <string name="clear_data">Clear data</string>
+    <string name="clear_data">Clear Data</string>
 
     <string name="all_stories">All Stories</string>
     <string name="favorites">Favorites</string>
@@ -14,7 +14,7 @@
     <string name="aesop_s_fables">Aesop\'s Fables</string>
     <string name="brothers_grimm_stories">Brothers Grimm Stories</string>
     <string name="hans_christian_andersen_s_stories">Hans Christian Andersen\'s Stories</string>
-    <string name="rudyard_kipling_stories">Rudyard Kipling Stories</string>
+    <string name="rudyard_kipling_stories">Rudyard Kipling\'s Stories</string>
     <string name="famous_stories">Famous Stories</string>
     <string name="happy_end_stories">Happy End Stories</string>
     <string name="royal_stories">Royal Stories</string>
