@@ -2,7 +2,6 @@
 ## Introduction
 This is an Android application built using Java.
 The purpose of the application is to allow children or their parents to read stories.
-The UI of the application allows users to 
 
 ## Technologies
 * Android API 29
