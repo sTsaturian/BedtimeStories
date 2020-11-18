@@ -12,7 +12,8 @@ You can launch the app by copying the APK file /app/release/app-release.apk,
 or you can install the latest release version from [Google Play](https://play.google.com/store/apps/details?id=com.s_tsat.android.bedtimestories).
 
 ## Main functionality
-![Main screen](https://github.com/sTsaturian/BedtimeStories/blob/master/app/screens/Main.jpeg?raw=true)  
+<img src="https://github.com/sTsaturian/BedtimeStories/blob/master/app/screens/Main.jpeg?raw=true" alt="Main screen" width="400"/>
+
 From the main screen, you can select:
 * All Stories: browse the list of all stories to select one to read;
 * Categories: browse stories from several categories. A story can be in multiple categories;
@@ -23,13 +24,15 @@ From the main screen, you can select:
 
 The Categories screen shows the list of categories available for selection.
 After selecting the category (or after selecting All Stories from the main screen), you are redirected to the story list.
-![StoryList](https://github.com/sTsaturian/BedtimeStories/blob/master/app/screens/StoryList.jpeg?raw=true)
+
+<img src="https://github.com/sTsaturian/BedtimeStories/blob/master/app/screens/StoryList.jpeg?raw=true" alt="Story list" width="400"/>
 
 Here the read stories are displayed in different color, and favorite stories have a special icon.
 
 After selecting a story, a Story screen is open.
 
-![Story](https://github.com/sTsaturian/BedtimeStories/blob/master/app/screens/Story.jpeg?raw=true)
+<img src="https://github.com/sTsaturian/BedtimeStories/blob/master/app/screens/Story.jpeg?raw=true" alt="Story screen" width="400"/>
+
 Here you can read the actual story. The app supports vertical scrolling and rotations.
 Buttons on the top allow you to:
 * Mark/unmark the story as a favorite;
